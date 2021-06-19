@@ -17,9 +17,14 @@ class Restaurant extends Model
       
       public function user(){
         return $this->hasMany('App\User');
-    }
+      }
 
       public function categories(){
         return $this->belongsToMany('App\Category', 'category_restaurant');
-      }   
+      } 
+
+      public function foods(){
+        return $this->belongsTo('App\Food');
+      }
+
 }
