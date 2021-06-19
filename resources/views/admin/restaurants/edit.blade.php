@@ -28,6 +28,14 @@
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
+            
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input class="form-control @error('address') is-invalid @enderror" id="address" type="text" name="address" value="{{ old('address', $restaurant->address) }}">
+              @error('address')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
+            </div>
 
             <div>
               <img src="{{asset($restaurant->photo)}}" alt="">

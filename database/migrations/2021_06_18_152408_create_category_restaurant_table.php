@@ -14,7 +14,6 @@ class CreateCategoryRestaurantTable extends Migration
     public function up()
     {
         Schema::create('category_restaurant', function (Blueprint $table) {
-            $table->id();
             $table->unsignedBigInteger('category_id');
             
             $table->foreign('category_id')
