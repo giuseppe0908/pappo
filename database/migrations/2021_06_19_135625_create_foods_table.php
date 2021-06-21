@@ -18,7 +18,7 @@ class CreateFoodsTable extends Migration
             $table->string('name',100);
             $table->text('description');
             $table->float('price',5,2);
-            $table->boolean('avaible');
+            $table->boolean('available')->default(true);
             $table->string('photo');
             $table->timestamps();
         });

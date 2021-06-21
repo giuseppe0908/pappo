@@ -42,8 +42,8 @@ class FoodController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'desciption' => 'required|string',
-            'price' => 'required|string|max:100',
-            'avaible' => 'exists:genres,id',
+            'price' => 'required|numeric',
+            'available' => 'required|boolean',
             'photo' => 'image|max:100|nullable'
           ]);
 
