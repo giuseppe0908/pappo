@@ -15,7 +15,9 @@ class Food extends Model
         'restaurant_id',
       ];
 
-    public function restaurant(){
+    protected $table = 'foods';
+
+    public function restaurants(){
         return $this->hasMany('App\Restaurant');
     }
 

@@ -3,8 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Food;
-use Illuminate\Http\Request;
+use App\User;
+use App\Restaurant;
+
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Storage;
 
 
@@ -17,8 +22,11 @@ class FoodController extends Controller
      */
     public function index()
     {
-        $foods = Food:: all();
-        return view('admin.foods.index', compact('foods'));
+        $foods = Food::where('restaurant_id', Auth::id())
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+        return view('admin.restaurants.show', compact('foods'));
     }
 
     /**
@@ -41,26 +49,27 @@ class FoodController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
-            'desciption' => 'required|string',
+            'description' => 'required|string',
             'price' => 'required|numeric',
-            'available' => 'required|boolean',
+            'available' => 'boolean',
             'photo' => 'image|max:100|nullable'
           ]);
 
           $data = $request->all();
 
+          
           $photo = null;
           if (array_key_exists('photo', $data)) {
-            $photo = Storage::put('uploads', $data['photo']);
-          }
-
+              $photo = Storage::put('uploads', $data['photo']);
+            }
+            
           $food = new Food();
           $food->fill($data);
           $food->photo = 'storage/'.$photo;
+
           $food->save();
 
           return redirect()->route('admin.restaurants.index');
-
 
     }
 
@@ -95,7 +104,26 @@ class FoodController extends Controller
      */
     public function update(Request $request, Food $food)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            'available' => 'boolean',
+            'photo' => 'image|max:100|nullable'
+          ]);
+
+          $data = $request->all();
+
+          $photo = null;
+          if (array_key_exists('photo', $data)) {
+            $photo = Storage::put('uploads', $data['photo']);
+            $data['photo'] = 'storage/'.$photo;
+          }
+
+          $food->update($data);
+
+
+          return redirect()->route('admin.restaurants.index');
     }
 
     /**
