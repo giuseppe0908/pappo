@@ -14,7 +14,7 @@
             @method('POST')
 
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">Nome</label>
               <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name') }}">
               @error('name')
                 <small class="text-danger">{{ $message }}</small>
@@ -22,26 +22,26 @@
             </div>
 
             <div class="form-group">
-              <label for="desciption">Desciption</label>
-              <textarea class="form-control @error('desciption') is-invalid @enderror" id="desciption" name="desciption"> {{ old('desciption') }}</textarea>
-              @error('desciption')
+              <label for="description">Descrizione</label>
+              <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"> {{ old('description') }}</textarea>
+              @error('description')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
 
             <div class="form-group">
-              <label for="price">Price</label>
-              <input class="form-control @error('price') is-invalid @enderror" id="price" type="text" name="price" value="{{ old('price') }}">
+              <label for="price">Prezzo</label>
+              <input class="form-control @error('price') is-invalid @enderror" id="price" type="number" min="1" step="any" name="price" value="{{ old('price') }}">
               @error('price')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
 
             <div class="form-group">
-              <label for="available">Available</label>
-              <select class="form-control @error('available') is-invalid @enderror" id="available" name="available" multiple>
-                <option value="true">true</option>
-                <option value="false">false</option>
+              <label for="available">Disponibilità</label>
+              <select class="form-control @error('available') is-invalid @enderror" id="available" name="available">
+                <option value="1" {{ old('available') == 1 ? 'selected' : '' }}>Disponibile</option>
+                <option value="0"{{ old('available') == 0 ? 'selected' : '' }}>Non disponibile</option>
               </select>
               @error('available')
                 <small class="text-danger">{{ $message }}</small>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="form-group">
-              <label for="photo">Photo</label>
+              <label for="photo">Foto</label>
               <input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
               @error('photo')
                 <small class="text-danger">{{ $message }}</small>
@@ -58,7 +58,7 @@
 
             
 
-            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-primary" type="submit">Salva</button>
           </form>
       </div>
     </div>
