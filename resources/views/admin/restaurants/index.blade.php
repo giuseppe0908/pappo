@@ -14,7 +14,7 @@
                 <div class="card-header"><a href="{{route('admin.restaurants.show', ['restaurant' => $restaurant->slug])}}">{{$restaurant->name}}</a></div>
 
                 <div class="card-body">
-                  {{$restaurant->desciption}}
+                  {{$restaurant->description}}
 
                   <div class="">
                     <a href="{{route('admin.restaurants.edit', ['restaurant' => $restaurant->id])}}">Modifica</a>

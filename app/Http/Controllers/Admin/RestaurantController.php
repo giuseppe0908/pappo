@@ -52,7 +52,7 @@ class RestaurantController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
-            'desciption' => 'required|string',
+            'description' => 'required|string',
             'address' => 'required|string|max:100',
             'photo' => 'image|max:100|nullable',
             'category_ids.*' => 'exists:categories,id',
@@ -60,12 +60,12 @@ class RestaurantController extends Controller
 
           $data = $request->all();
 
-          $data['user_id'] = Auth::id();
-
-          $photo = null;
+          $photo = NULL;
           if (array_key_exists('photo', $data)) {
             $photo = Storage::put('uploads', $data['photo']);
           }
+
+          $data['user_id'] = Auth::id();
 
           $restaurant = new Restaurant();
           $restaurant->fill($data);
@@ -118,7 +118,7 @@ class RestaurantController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
-            'desciption' => 'required|string',
+            'description' => 'required|string',
             'address' => 'required|string|max:100',
             'photo' => 'image|max:100|nullable',
             'category_ids.*' => 'exists:categories,id',
@@ -137,7 +137,7 @@ class RestaurantController extends Controller
           $restaurant->update($data);
 
           if (array_key_exists('category_ids', $data)) {
-            $restaurant->categories()->sync($data['category_ids']); 
+            $restaurant->categories()->sync($data['category_ids']);
           } else {
             $restaurant->categories()->detach();
           }
