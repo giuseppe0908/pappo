@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <a href="{{route('admin.restaurants.create')}}">New Restaurants</a>
+        <a href="{{route('admin.restaurants.create')}}">Nuovo Ristorante</a>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -17,11 +17,11 @@
                   {{$restaurant->desciption}}
 
                   <div class="">
-                    <a href="{{route('admin.restaurants.edit', ['restaurant' => $restaurant->id])}}">Edit</a>
+                    <a href="{{route('admin.restaurants.edit', ['restaurant' => $restaurant->id])}}">Modifica</a>
                     <form action="{{route('admin.restaurants.destroy', ['restaurant' => $restaurant->id])}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" name="" value="Delete">
+                        <input type="submit" name="" value="Elimina">
                     </form>
                   </div>
                 </div>

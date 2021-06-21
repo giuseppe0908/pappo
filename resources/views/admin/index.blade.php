@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <a href="{{route('admin.restaurants.index')}}">Go to Restaurants</a>
+                    <a href="{{route('admin.restaurants.index')}}">Vai ai Ristoranti</a>
 
                 </div>
             </div>

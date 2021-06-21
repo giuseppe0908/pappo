@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Restaurant;
 use App\User;
 use App\Category;
+use App\Food;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -86,10 +87,11 @@ class RestaurantController extends Controller
      * @param  \App\Restaurant  $restaurant
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($slug, Food $food)
     {
+        $food = Food::all();
         $restaurant = Restaurant::where('slug', $slug)->first();
-        return view('admin.restaurants.show')->with('restaurant', $restaurant);
+        return view('admin.restaurants.show', compact('restaurant', 'food'));
     }
 
     /**

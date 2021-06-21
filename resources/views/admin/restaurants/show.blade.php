@@ -10,9 +10,11 @@
             {{$category->name}}
           @endforeach
         </p>
-
-        <img src="{{asset($restaurant->cover)}}" alt="{{$restaurant->name}}">
+        <img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
         <p>{{$restaurant->description}}</p>
-      </div>
+        <a href="{{route('admin.foods.create')}}">Aggiungi un piatto</a>
+      </div>  
+
+
 </div>
 @endsection
