@@ -38,12 +38,12 @@
             </div>
 
             <div class="form-group">
-              <label for="avaible">Avaible</label>
-              <select class="form-control @error('avaible') is-invalid @enderror" id="avaible" name="avaible" multiple>
+              <label for="available">Available</label>
+              <select class="form-control @error('available') is-invalid @enderror" id="available" name="available" multiple>
                 <option value="true">true</option>
                 <option value="false">false</option>
               </select>
-              @error('avaible')
+              @error('available')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
