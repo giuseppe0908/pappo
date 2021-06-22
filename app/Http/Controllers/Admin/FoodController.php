@@ -132,7 +132,7 @@ class FoodController extends Controller
           $food->update($data);
 
 
-          return redirect()->route('admin.restaurants.show');
+          return redirect()->route('admin.restaurants.index');
     }
 
     /**
