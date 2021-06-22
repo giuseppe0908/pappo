@@ -7,6 +7,7 @@ use App\User;
 use App\Restaurant;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -34,11 +35,16 @@ class FoodController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('admin.foods.create');
+    public function getRestaurant(Request $request)
+    {   
+        $restaurant = $request->all();
+        return view('admin.foods.create', compact('restaurant'));
     }
 
+    public function create()
+    {
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -52,16 +58,17 @@ class FoodController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric',
             'available' => 'boolean',
-            'photo' => 'image|max:100|nullable'
+            'photo' => 'image|max:100|nullable',
+            'restaurant_id' => 'exists:restaurants,id',
           ]);
 
-          $data = $request->all();
-
+          $data = $request->all();          
           
           $photo = null;
           if (array_key_exists('photo', $data)) {
               $photo = Storage::put('uploads', $data['photo']);
             }
+
             
           $food = new Food();
           $food->fill($data);

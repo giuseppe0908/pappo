@@ -12,6 +12,8 @@
           <form action="{{route('admin.foods.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             @method('POST')
+            <input type="hidden" name="restaurant_id" value="{{ $restaurant['id'] }}">
+
 
             <div class="form-group">
               <label for="name">Nome</label>

@@ -12,7 +12,15 @@
         </p>
         <img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
         <p>{{$restaurant->description}}</p>
-        <a href="{{route('admin.foods.create')}}">Aggiungi un piatto</a>
-      </div>
+        
+        <span class="btn btn-navbar" onclick="event.preventDefault();
+                                    document.getElementById('getRestaurant').submit();">Aggiungi piatto</span>
+                <form id="getRestaurant" action="{{route('admin.getrestaurant', ['id' => $restaurant->id])}}" method="post">
+                    @csrf
+                    @method('POST')
+                    <input type="hidden" name="id" value="{{ $restaurant->id }}">
+                </form>
+      </div>  
+
 </div>
 @endsection
