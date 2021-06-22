@@ -12,7 +12,19 @@
         </p>
         <img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
         <p>{{$restaurant->description}}</p>
+
         
+
+		@foreach($foods as $food)
+            <h4>{{$food->name}}</h4>
+			<p>{{$food->description}}</p>
+			<p>{{$food->price}}</p>
+			{{$food->avaible}}
+			<img src="{{asset($food->photo)}}" alt="{{$food->name}}">
+			<a href="{{route('admin.foods.edit', ['food' => $food->id])}}">Modifica</a>
+          @endforeach
+
+
         <span class="btn btn-navbar" onclick="event.preventDefault();
                                     document.getElementById('getRestaurant').submit();">Aggiungi piatto</span>
                 <form id="getRestaurant" action="{{route('admin.getrestaurant', ['id' => $restaurant->id])}}" method="post">

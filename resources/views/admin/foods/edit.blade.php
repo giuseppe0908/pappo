@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h3>Modify Restaurant</h3>
+        <h3>Modifica Piatto</h3>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -15,16 +15,16 @@
 
             <div class="form-group">
               <label for="name">Name</label>
-              <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name', $restaurant->name) }}">
+              <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name', $food->name) }}">
               @error('name')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
 
             <div class="form-group">
-              <label for="desciption">Desciption</label>
-              <textarea class="form-control @error('desciption') is-invalid @enderror" id="desciption" name="desciption"> {{ old('desciption', $restaurant->desciption) }}</textarea>
-              @error('desciption')
+              <label for="description">Descrizione</label>
+              <textarea class="form-control @error('desciption') is-invalid @enderror" id="description" name="description"> {{ old('description', $food->description) }}</textarea>
+              @error('description')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
