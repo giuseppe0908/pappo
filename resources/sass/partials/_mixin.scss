@@ -1,0 +1,36 @@
+@mixin container-center {
+  width: $center-container;
+  margin: 0 auto;
+}
+
+@mixin width-height ($width, $height) {
+  width: #{$width};
+  height: #{$height};
+}
+
+@mixin transform-translate ($top, $left) {
+  position: absolute;
+  top: #{$top};
+  left: #{$left};
+  transform: translate(-50%, -50%);
+}
+
+@mixin width($value) {
+  width: $value;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin background-box {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin clearfix {
+  clear: both;
+  content: '';
+  display: table;
+}

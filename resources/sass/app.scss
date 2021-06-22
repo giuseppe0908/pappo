@@ -1,8 +1,25 @@
+// Partials
+@import 'partials/_commons.scss';
+@import 'partials/_mixin.scss';
+@import 'partials/_normalize.scss';
+@import 'partials/_variables.scss';
+
+// Guest
+@import 'partials/guest/header/jumbotron/_jumbotron-index.scss';
+@import 'partials/guest/header/nav/_nav-index.scss';
+
+// user
+@import 'partials/user/login/nav/_user-nav.scss';
+@import 'partials/user/login/main/_user-login-main.scss';
+
+
+
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+// @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

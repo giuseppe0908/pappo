@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
                 'email' => 'dario.bianchi@ciao.com',
                 'password' => 'leggenDario'
             ]
-        ]; 
+        ];
 
         foreach ($users as $user) {
             $user_obj = new User();
