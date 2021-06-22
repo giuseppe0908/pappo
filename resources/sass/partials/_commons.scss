@@ -1,0 +1,108 @@
+.flex {
+    display: flex;
+}
+
+// margin 0 auto
+
+.auto_center {
+  margin: 0 auto;
+}
+
+// text 
+
+.text_size_extraSmall {
+  font-size: 0.6em;
+}
+
+.text_size_small {
+  font-size: 0.9em;
+}
+
+.text_size_normal {
+  font-size: 1.2em;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_bold {
+  font-weight: bold;
+}
+
+.text_light {
+  font-weight: lighter;
+}
+
+.line_height {
+  line-height: 1.5;
+}
+
+.font_size {
+  font-size: 0.9em;
+}
+
+.font_oblique {
+  font-style: oblique;
+}
+
+
+//margin/padding-top 10-100px
+
+$types: m, p;
+@each $type in $types {
+  @for $i from 1 through 50 {
+    .#{$type}t_#{$i} {
+      @if $type == m {
+        margin-top: 10px * $i;
+      } @else {
+        padding-top: 10px * $i;
+      }
+    }
+  }
+}
+
+//margin/padding-bottom 5-100px
+
+$types: m, p;
+@each $type in $types {
+  @for $i from 1 through 10 {
+    .#{$type}b_#{$i} {
+      @if $type == m {
+        margin-bottom: 5px * $i;
+      } @else {
+        padding-bottom: 5px * $i;
+      }
+    }
+  }
+}
+
+//margin/padding-left 5-70px
+
+$types: m, p;
+@each $type in $types {
+  @for $i from 1 through 15 {
+    .#{$type}l_#{$i} {
+      @if $type == m {
+        margin-left: 5px * $i;
+      } @else {
+        padding-left: 5px * $i;
+      }
+    }
+  }
+}
+
+//margin/padding-right 5-70px
+
+$types: m, p;
+@each $type in $types {
+  @for $i from 1 through 15 {
+    .#{$type}r_#{$i} {
+      @if $type == m {
+        margin-right: 5px * $i;
+      } @else {
+        padding-right: 5px * $i;
+      }
+    }
+  }
+}
