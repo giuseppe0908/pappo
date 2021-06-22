@@ -22,9 +22,9 @@
             </div>
 
             <div class="form-group">
-              <label for="desciption">Desciption</label>
-              <textarea class="form-control @error('desciption') is-invalid @enderror" id="desciption" name="desciption"> {{ old('desciption') }}</textarea>
-              @error('desciption')
+              <label for="description">description</label>
+              <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"> {{ old('description') }}</textarea>
+              @error('description')
                 <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
