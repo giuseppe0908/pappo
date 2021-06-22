@@ -88,7 +88,7 @@ class FoodController extends Controller
      */
     public function show(Food $food)
     {
-        return view('admin.foods.show',compact('food'));
+        return view('admin.restaurants.show',compact('food'));
     }
 
     /**
@@ -99,6 +99,7 @@ class FoodController extends Controller
      */
     public function edit(Food $food)
     {
+
         return view('admin.foods.edit',compact('food'));
     }
 
@@ -116,21 +117,22 @@ class FoodController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric',
             'available' => 'boolean',
-            'photo' => 'image|max:100|nullable'
+            'photo' => 'image|max:100|nullable',
+            'restaurant_id' => 'exists:restaurants,id',
           ]);
 
           $data = $request->all();
-
+          
           $photo = null;
           if (array_key_exists('photo', $data)) {
-            $photo = Storage::put('uploads', $data['photo']);
-            $data['photo'] = 'storage/'.$photo;
-          }
-
+              $photo = Storage::put('uploads', $data['photo']);
+              $data['photo'] = 'storage/'.$photo;
+            }
+            
           $food->update($data);
 
 
-          return redirect()->route('admin.restaurants.index');
+          return redirect()->route('admin.restaurants.show');
     }
 
     /**
