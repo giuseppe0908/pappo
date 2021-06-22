@@ -1,0 +1,62 @@
+#user_register {
+    height: calc(100vh - 100px);
+    background-color: #ffe3ac;
+    position: relative;
+    overflow: hidden;
+    .container {
+        .register_box {
+            padding-top: 30px;
+            .col-md-8 {
+                .card {
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    .card-header {
+                        background-color: #fff;
+                        text-align: center;
+                        h3 {
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .card-body {
+                        form {
+                            .form-group {
+                                .col-md-6 {
+                                    .form-control:focus {
+                                        border-color: #ffc043;
+                                        box-shadow: 0 0 0 0.2rem rgba(255, 227, 172, 0.80);
+                                    }
+                                }
+                            }
+                            .form-group {
+                                .col-md-8 {
+                                    a {
+                                        color: #05a357;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .register-img-r {
+        position: absolute;
+        right: -30px;
+        bottom: 0;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    .register-img-l {
+        position: absolute;
+        left: -150px;
+        bottom: 0;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+
+}

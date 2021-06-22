@@ -7,10 +7,12 @@
 // Guest
 @import 'partials/guest/header/jumbotron/_jumbotron-index.scss';
 @import 'partials/guest/header/nav/_nav-index.scss';
+@import 'partials/footer/_footer.scss';
 
-// user
+// User
 @import 'partials/user/login/nav/_user-nav.scss';
 @import 'partials/user/login/main/_user-login-main.scss';
+@import 'partials/user/register/main/_user-register-main.scss';
 
 
 
