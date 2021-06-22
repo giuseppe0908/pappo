@@ -18,7 +18,7 @@ class Food extends Model
     protected $table = 'foods';
 
     public function restaurants(){
-        return $this->hasMany('App\Restaurant');
+        return $this->hasMany('App\Restaurant', 'id', 'user_id');
     }
 
     public function orders(){
