@@ -13,6 +13,7 @@ class Restaurant extends Model
         'user_id',
         'slug',
         'address',
+        'telephone_number',
         'photo',
       ];
       
