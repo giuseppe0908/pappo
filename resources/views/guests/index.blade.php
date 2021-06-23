@@ -5,6 +5,9 @@
 @endsection
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev
 @section('content_guest')
 <section id="home">
     <div class="home-img flex">
@@ -13,6 +16,7 @@
         </div>
         <div class="r">
             <img src="./img/r.svg" alt="">
+<<<<<<< HEAD
 =======
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -99,6 +103,8 @@
                 @endforeach
                 </div>
             </div>
+>>>>>>> dev
+=======
 >>>>>>> dev
         </div>
     </div>

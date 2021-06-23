@@ -1,10 +1,63 @@
 #user_login {
     height: calc(100vh - 100px);
     background-color: $pink;
+    position: relative;
     .container {
         .form_login {
-            padding: 10px 0;
+            padding-top: 30px;
+            .col-md-8 {
+                .card {
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    border-radius: 10px;
+                    .card-header {
+                        border-radius: 10px 10px 0 0;
+                        background-color: #fff;
+                        text-align: center;
+                        h3 {
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .card-body {
+                        form {
+                            .form-group {
+                                .col-md-6 {
+                                    .form-control:focus {
+                                        border-color: #f4afa7;
+                                        box-shadow: 0 0 0 0.2rem rgba(253, 240, 239, 0.80);
+                                    }
+                                }
+                            }
+                            .form-group {
+                                .col-md-8 {
+                                    a {
+                                        color: #05a357;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-
     }
-}
+    .login-img-r {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    .login-img-l {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+}   
+

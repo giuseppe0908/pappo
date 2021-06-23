@@ -17,3 +17,8 @@ mix.sass('resources/sass/app.scss', 'public/css')
    .options({
        processCssUrls: false
    });
+
+mix.sass('resources/sass/pappo.scss', 'public/css')
+    .options({
+        processCssUrls: false
+    });
