@@ -3,12 +3,20 @@ var app = new Vue({
   el: "#root",
   data: {
       categories: [],
+      restaurants:[],
   },
   mounted: function (){
       axios.get('http://localhost:8000/api/categories').then((response)=> {
-          this.categories = response.data;
+          this.categories = response.data.data;
           console.log(this.categories);
       });
+
+      axios.get('http://localhost:8000/api/restaurants').then((response)=> {
+          this.restaurants = response.data.data;
+          console.log(this.restaurants);
+      });
+
+
     },
       
 });

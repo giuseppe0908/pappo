@@ -26,7 +26,9 @@
         <div>
             <p v-for="category in categories">
                 @{{category.name}}
+              
             </p>
+            
         </div>
     </div>
 </section>

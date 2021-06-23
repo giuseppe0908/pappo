@@ -97,14 +97,19 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: "#root",
   data: {
-    categories: []
+    categories: [],
+    restaurants: []
   },
   mounted: function mounted() {
     var _this = this;
 
     axios.get('http://localhost:8000/api/categories').then(function (response) {
-      _this.categories = response.data;
+      _this.categories = response.data.data;
       console.log(_this.categories);
+    });
+    axios.get('http://localhost:8000/api/restaurants').then(function (response) {
+      _this.restaurants = response.data.data;
+      console.log(_this.restaurants);
     });
   }
 });
@@ -118,7 +123,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\js\vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/vue.js */"./resources/js/vue.js");
 
 
 /***/ })

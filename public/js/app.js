@@ -37421,9 +37421,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\sass\pappo.scss */"./resources/sass/pappo.scss");
+__webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/sass/pappo.scss */"./resources/sass/pappo.scss");
 
 
 /***/ })

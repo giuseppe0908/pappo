@@ -14,7 +14,8 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurant = Restaurant::all();
+        $restaurant = Restaurant::with('categories')->get();
+
 
         return response()->json([
           'data' => $restaurant,
