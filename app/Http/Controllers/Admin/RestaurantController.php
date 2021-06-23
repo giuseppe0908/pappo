@@ -89,9 +89,9 @@ class RestaurantController extends Controller
      */
     public function show($slug, Food $food)
     {
-        $food = Food::all();
-        $restaurant = Restaurant::where('slug', $slug)->first();
-        return view('admin.restaurants.show', compact('restaurant', 'food'));
+		$restaurant = Restaurant::where('slug', $slug)->first();
+        $foods = Food::where('restaurant_id', $restaurant->id)->orderBy('created_at', 'desc')->get();
+        return view('admin.restaurants.show', compact('restaurant', 'foods'));
     }
 
     /**
