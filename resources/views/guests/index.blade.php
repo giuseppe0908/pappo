@@ -26,6 +26,7 @@
         <div class="category-card" v-for="category in categories">
             <button>
                 @{{category.name}}
+<<<<<<< HEAD
             </button>
         </div>
         <div class="restaurants">
@@ -35,6 +36,11 @@
                     @{{restaurant.name}}
                 </button>
             </div>
+=======
+              
+            </p>
+            
+>>>>>>> apigiusta
         </div>
     </div>
 </section>
