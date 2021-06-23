@@ -17,7 +17,7 @@ class CreateFoodsTable extends Migration
             $table->id();
             $table->string('name',100);
             $table->text('description');
-            $table->string('ingredients',100);
+            $table->string('ingredients');
             $table->float('price',5,2);
             $table->boolean('available')->default(true);
             $table->string('photo');
