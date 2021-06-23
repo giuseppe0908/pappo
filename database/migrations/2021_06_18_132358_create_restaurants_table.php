@@ -20,6 +20,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('slug')->unique();
             $table->string('address', 100);
             $table->string('telephone_number', 50);
+            $table->text('photo')->nullable();
             $table->timestamps();
         });
     }
