@@ -12,7 +12,7 @@
                 <div class="line3"></div>
             </div>
             <div class="nav_btn_dropdown">
-                <div class="navcollapse flex">
+                <div class="navcollapse flex hidden">
                     @if (Route::has('login'))
                         @auth
                         <a href="{{ route('admin.index') }}">Area Personale</a>
