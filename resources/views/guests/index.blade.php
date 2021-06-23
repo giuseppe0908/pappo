@@ -19,9 +19,14 @@
     </div>
     <div class="btn-home">
         <a href="#plates">SCEGLI QUALCOSA <i class="fas fa-utensils"></i></a>
-        @foreach($categories as $category)
+<!--         @foreach($categories as $category)
             {{$category->name}}
-        @endforeach
+        @endforeach-->    
+    </div>
+</section>
+<section>
+    <div id="root">
+        
     </div>
 </section>
 

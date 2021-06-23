@@ -27,7 +27,7 @@ nav {
                     margin: 0;
                     color: #05a358;
                 }
-             }
+            }
         }
         .nav-right {
             .hamburger {
@@ -46,7 +46,7 @@ nav {
                     margin-top: 0;
                     border-radius: 7px;
                     margin-left: auto;
-
+                    transition: transform 0.4s;
                 }
                 .line2, .line3 {
                     background-color: #000;
@@ -55,6 +55,7 @@ nav {
                     margin-top: 5px;
                     border-radius: 7px;
                     margin-left: auto;
+                    transition: all 0.4s;
                 }
             }
             .nav_btn_dropdown {
@@ -74,6 +75,10 @@ nav {
                         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                         text-transform: uppercase;
                         color: #000;
+                        transition: background-color 0.4s;
+                        &:hover {
+                            background-color: #fa9269;
+                        }
                     }
                 }
             }
