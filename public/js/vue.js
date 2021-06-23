@@ -97,16 +97,28 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: "#root",
   data: {
-    categories: []
+    categories: [],
+    restaurants: []
   },
   mounted: function mounted() {
     var _this = this;
 
+    /* chiamata categorie ristoranti */
     axios.get('http://localhost:8000/api/categories').then(function (response) {
-      _this.categories = response.data;
+      _this.categories = response.data.data;
       console.log(_this.categories);
     });
+    /* chiamata per i ristoranti */
+
+    axios.get('http://localhost:8000/api/restaurants').then(function (response) {
+      _this.restaurants = response.data.data;
+      console.log(_this.restaurants);
+    });
   }
+  /*     methods: {
+          searchRestaurant: 
+      } */
+
 });
 
 /***/ }),

@@ -23,10 +23,18 @@
 </section>
 <section>
     <div id="root">
-        <div>
-            <p v-for="category in categories">
+        <div class="category-card" v-for="category in categories">
+            <button>
                 @{{category.name}}
-            </p>
+            </button>
+        </div>
+        <div class="restaurants">
+            <h1>I PIU' PAPPATI</h1>
+            <div class="category-card" v-for="restaurant in restaurants">
+                <button>
+                    @{{restaurant.name}}
+                </button>
+            </div>
         </div>
     </div>
 </section>
