@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/restaurants', 'RestaurantController@index');
+Route::get('/categories', 'CategoryController@index');

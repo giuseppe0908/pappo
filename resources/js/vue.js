@@ -6,7 +6,8 @@ var app = new Vue({
   },
   mounted: function (){
       axios.get('http://localhost:8000/api/categories').then((response)=> {
-          console.log(response);
+          this.categories = response.data;
+          console.log(this.categories);
       });
     },
       

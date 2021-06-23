@@ -100,8 +100,11 @@ var app = new Vue({
     categories: []
   },
   mounted: function mounted() {
+    var _this = this;
+
     axios.get('http://localhost:8000/api/categories').then(function (response) {
-      console.log(response);
+      _this.categories = response.data;
+      console.log(_this.categories);
     });
   }
 });
