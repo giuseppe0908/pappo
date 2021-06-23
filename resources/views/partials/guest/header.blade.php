@@ -15,7 +15,7 @@
                 <div class="navcollapse flex hidden">
                     @if (Route::has('login'))
                         @auth
-                        <a href="{{ route('admin.index') }}">Area Personale</a>
+                        <a href="{{ route('admin.index') }}">{{ Auth::user()->name }}</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
                             @if (Route::has('register'))
