@@ -51,6 +51,36 @@
   margin: 0;
 }
 
+.transparent {
+  background-color: inherit;
+}
+
+.visible {
+  background-color:#fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.show {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle.line1 {
+  transform: rotate(-45deg) translate(-6px, 5px);
+  transition: all 0.4s;
+}
+
+.toggle.line2 {
+  opacity: 0;
+}
+
+.toggle.line3 {
+  transform: rotate(45deg) translate(-6px, -5px);
+  transition: all 0.4s;
+}
 
 //margin/padding-top 10-100px
 
