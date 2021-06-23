@@ -19,6 +19,7 @@ class RestaurantSeeder extends Seeder
                 'description' => 'nduja',
                 'slug' => 'il-calabrese',
                 'address' => 'via Fasulla, 123',
+                'telephone_number' => '3333331298',
                 'photo' => 'img'
             ],
             [
@@ -27,6 +28,7 @@ class RestaurantSeeder extends Seeder
                 'description' => 'è di Dario',
                 'slug' => 'il-dario',
                 'address' => 'via Dario, 17',
+                'telephone_number' => '33845190293',
                 'photo' => 'img'
             ]
         ];
@@ -38,6 +40,7 @@ class RestaurantSeeder extends Seeder
             $restaurant_obj->description = $restaurant['description'];
             $restaurant_obj->slug = $restaurant['slug'];
             $restaurant_obj->address = $restaurant['address'];
+            $restaurant_obj->telephone_number = $restaurant['telephone_number'];          
             $restaurant_obj->photo = $restaurant['photo'];
             $restaurant_obj->save();
         }
