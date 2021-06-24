@@ -968,6 +968,9 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   margin: 0 auto;
   padding-top: 30px;
 }
+#restaurants #root .restaurants-container h1 {
+  color: teal;
+}
 #restaurants #root .restaurants-container .categories-wrapper {
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1047,6 +1050,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .restaurants .row .restaurant-card .restaurant-content .restaurant-img img {
+  height: 100%;
   width: 100%;
 }
 .restaurants .row .restaurant-card .restaurant-content .card-text {
