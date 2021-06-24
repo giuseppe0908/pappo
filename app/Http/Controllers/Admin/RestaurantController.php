@@ -79,7 +79,7 @@ class RestaurantController extends Controller
             $restaurant->categories()->attach($data['category_ids']);
           }
 
-          return redirect()->route('admin.restaurants.index');
+          return redirect()->route('admin.restaurants.index')->with('success', 'Il ristorante "' . $restaurant->name . '" è stato creato correttamente');
     }
 
     /**
@@ -144,7 +144,7 @@ class RestaurantController extends Controller
             $restaurant->categories()->detach();
           }
 
-          return redirect()->route('admin.restaurants.index');
+          return redirect()->route('admin.restaurants.index')->with('success', 'Il ristorante "' . $restaurant->name . '" è stato modificato correttamente');
     }
 
     /**
@@ -157,7 +157,7 @@ class RestaurantController extends Controller
     {
         $restaurant->delete();
 
-        return redirect()->route('admin.restaurants.index');
+        return redirect()->route('admin.restaurants.index')->with('success', 'Il ristorante "' . $restaurant->name . '" è stato cancellato correttamente');
     }
 
     private function generateSlug(string $name, bool $change = true, string $old_slug = '')
