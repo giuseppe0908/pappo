@@ -4,6 +4,7 @@
     Pappo
 @endsection
 
+
 @section('content_guest')
 <section id="home">
     <div class="home-img flex">
