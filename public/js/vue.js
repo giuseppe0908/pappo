@@ -115,10 +115,6 @@ var app = new Vue({
       console.log(_this.restaurants);
     });
   }
-  /*     methods: {
-          searchRestaurant: 
-      } */
-
 });
 
 /***/ }),

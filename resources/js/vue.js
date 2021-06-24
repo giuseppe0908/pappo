@@ -17,7 +17,4 @@ var app = new Vue({
         console.log(this.restaurants);
     }); 
     },
-/*     methods: {
-        searchRestaurant: 
-    } */
 });
