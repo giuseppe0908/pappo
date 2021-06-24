@@ -36,7 +36,7 @@ class FoodController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function getRestaurant(Request $request)
-    {   
+    {
         $restaurant = $request->all();
         return view('admin.foods.create', compact('restaurant'));
     }
@@ -63,14 +63,14 @@ class FoodController extends Controller
             'restaurant_id' => 'exists:restaurants,id',
           ]);
 
-          $data = $request->all();          
-          
+          $data = $request->all();
+
           $photo = null;
           if (array_key_exists('photo', $data)) {
               $photo = Storage::put('uploads', $data['photo']);
             }
 
-            
+
           $food = new Food();
           $food->fill($data);
           $food->photo = 'storage/'.$photo;
@@ -124,13 +124,13 @@ class FoodController extends Controller
           ]);
 
           $data = $request->all();
-          
+
           $photo = null;
           if (array_key_exists('photo', $data)) {
               $photo = Storage::put('uploads', $data['photo']);
               $data['photo'] = 'storage/'.$photo;
             }
-            
+
           $food->update($data);
 
 

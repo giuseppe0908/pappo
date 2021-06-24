@@ -36,10 +36,10 @@
 						<small class="text-danger">{{ $message }}</small>
 					@enderror
 				</div>
-				
+
 				<div class="form-group">
 					<label for="price">Price</label>
-					<input class="form-control @error('price') is-invalid @enderror" id="price" type="text" name="price" value="{{ old('price', $food->price) }}">
+					<input class="form-control @error('price') is-invalid @enderror" id="price" type="number" name="price" value="{{ old('price', $food->price) }}">
 					@error('price')
 						<small class="text-danger">{{ $message }}</small>
 					@enderror
