@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.black {
+  background-color: #343a40;
+}
+
 .auto_center {
   margin: 0 auto;
 }
@@ -1120,4 +1124,58 @@ a.navbar-brand {
 }
 #user_register .register-img-l img {
   height: 100%;
+}
+
+#user-register {
+  width: 100%;
+  height: 70vh;
+  background-image: url("/img/pan.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#user-register .container {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+#user-register .container .panel_container {
+  width: 100%;
+  height: 40%;
+  padding: 70px 70px;
+}
+#user-register .container .panel_container h1 {
+  font-weight: 800;
+  text-align: center;
+}
+#user-register .container .panel_container img {
+  width: 100%;
+}
+#user-register .container .my_card {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#user-register .container .my_card a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #114f32;
+}
+#user-register .container .my_card a:hover {
+  color: #f9a723;
+}
+#user-register .container .my_card .img_cont_cards {
+  width: 100%;
+}
+#user-register .container .my_card .img_cont_cards img {
+  width: 100%;
+  transition: 1s;
+}
+#user-register .container .my_card .img_cont_cards img:hover {
+  transform: scale(1.1);
+}
+#user-register .container .my_card .p_cont p {
+  margin-top: 20px;
 }

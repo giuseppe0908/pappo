@@ -15,6 +15,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
@@ -78,6 +79,10 @@
         <main>
             @yield('content')
         </main>
+
+        <footer>
+            @include('partials.dashboard.footer')
+        </footer>
     </div>
 </body>
 </html>
