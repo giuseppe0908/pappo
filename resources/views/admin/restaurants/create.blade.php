@@ -44,15 +44,23 @@
 					@enderror
 				</div>
 
+                <div class="form-group">
+                    <label for="telephone_number">Numero di Telefono</label>
+                    <input class="form-control @error('telephone_number') is-invalid @enderror" id="telephone_number" type="text" name="telephone_number" value="{{ old('telephone_number') }}">
+                    @error('telephone_number')
+                    <small class="text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+
 				<div class="form-group">
-					<label for="category">Restaurant Category</label>
+					<label for="category">Categoria Ristorante</label>
 					<select class="form-control @error('category_ids') is-invalid @enderror" id="category" name="category_ids[]" multiple>
-					@foreach($categories as $category)
-					<option value="{{$category->id}}">{{$category->name}}</option>
-					@endforeach
+						@foreach($categories as $category)
+						<option value="{{$category->id}}">{{$category->name}}</option>
+						@endforeach
 					</select>
 					@error('category_ids')
-					<small class="text-danger">{{ $message }}</small>
+						<small class="text-danger">{{ $message }}</small>
 					@enderror
 				</div>
 

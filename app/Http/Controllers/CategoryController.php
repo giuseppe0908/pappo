@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index(string $slug)
+    public function index()
     {
-        $category = Category::with('restaurants')->where('slug', '=', $slug)->first();
+        $category = Category::all();
 
-        return view('guests.restaurant.index')->with('restaurants', $category->restaurants);
+        return response()->json([
+          'data' => $category,
+          'success' => true
+        ]);
     }
 }

@@ -30,6 +30,14 @@
 					</div>
 
 					<div class="form-group">
+						<label for="ingredients">Ingredienti</label>
+						<input class="form-control @error('ingredients') is-invalid @enderror" id="ingredients" type="text" name="ingredients" value="{{ old('ingredients') }}">
+						@error('ingredients')
+						<small class="text-danger">{{ $message }}</small>
+						@enderror
+					</div>
+
+					<div class="form-group">
 						<label for="price">Prezzo</label>
 						<input class="form-control @error('price') is-invalid @enderror" id="price" type="number" min="1" step="any" name="price" value="{{ old('price') }}">
 						@error('price')

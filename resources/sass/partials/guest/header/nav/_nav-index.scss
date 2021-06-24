@@ -1,11 +1,11 @@
 nav {
-    background-color: lightblue;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100px;
     z-index: 3;
+    transition: all 0.4s ease;
     .container-nav {
         height: 100%;
         width: 80%;
@@ -27,7 +27,7 @@ nav {
                     margin: 0;
                     color: #05a358;
                 }
-             }
+            }
         }
         .nav-right {
             .hamburger {
@@ -38,6 +38,7 @@ nav {
                 flex-direction: column;
                 justify-content: center;
                 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                cursor: pointer;
                 .line1 {
                     background-color: #000;
                     height: 3px;
@@ -45,7 +46,7 @@ nav {
                     margin-top: 0;
                     border-radius: 7px;
                     margin-left: auto;
-
+                    transition: transform 0.4s;
                 }
                 .line2, .line3 {
                     background-color: #000;
@@ -54,6 +55,7 @@ nav {
                     margin-top: 5px;
                     border-radius: 7px;
                     margin-left: auto;
+                    transition: all 0.4s;
                 }
             }
             .nav_btn_dropdown {
@@ -73,6 +75,10 @@ nav {
                         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                         text-transform: uppercase;
                         color: #000;
+                        transition: background-color 0.4s;
+                        &:hover {
+                            background-color: #fa9269;
+                        }
                     }
                 }
             }

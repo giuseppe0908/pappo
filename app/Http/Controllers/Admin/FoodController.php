@@ -56,6 +56,7 @@ class FoodController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'description' => 'required|string',
+            'ingredients' => 'required|string',
             'price' => 'required|numeric',
             'available' => 'boolean',
             'photo' => 'image|max:100|nullable',
@@ -115,6 +116,7 @@ class FoodController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'description' => 'required|string',
+            'ingredients' => 'required|string',
             'price' => 'required|numeric',
             'available' => 'boolean',
             'photo' => 'image|max:100|nullable',
@@ -132,7 +134,7 @@ class FoodController extends Controller
           $food->update($data);
 
 
-          return redirect()->route('admin.restaurants.show');
+          return redirect()->route('admin.restaurants.index');
     }
 
     /**

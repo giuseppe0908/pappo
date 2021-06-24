@@ -23,7 +23,7 @@
 
 				<div class="form-group">
 					<label for="description">Description</label>
-					<textarea class="form-control @error('description') is-invalid @enderror" id="description" name="desrciption"> {{ old('description', $restaurant->description) }}</textarea>
+					<textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"> {{ old('description', $restaurant->description) }}</textarea>
 					@error('description')
 						<small class="text-danger">{{ $message }}</small>
 					@enderror
@@ -33,6 +33,14 @@
 					<label for="address">Address</label>
 					<input class="form-control @error('address') is-invalid @enderror" id="address" type="text" name="address" value="{{ old('address', $restaurant->address) }}">
 					@error('address')
+						<small class="text-danger">{{ $message }}</small>
+					@enderror
+				</div>
+
+				<div class="form-group">
+					<label for="telephone_number">Numero di Telefono</label>
+					<input class="form-control @error('telephone_number') is-invalid @enderror" id="telephone_number" type="text" name="telephone_number" value="{{ old('telephone_number', $restaurant->telephone_number) }}">
+					@error('telephone_number')
 						<small class="text-danger">{{ $message }}</small>
 					@enderror
 				</div>
