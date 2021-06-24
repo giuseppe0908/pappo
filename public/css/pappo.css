@@ -79,6 +79,10 @@
   transition: all 0.4s;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .mt_1 {
   margin-top: 10px;
 }
@@ -815,10 +819,12 @@ html {
 
 #home {
   height: 100vh;
+  z-index: 2;
   /*  background-color: #ffd7d2;*/
   position: relative;
   /*  background-color: #ffe3ac; */
   background-color: #d4e2fc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 #home .home-img {
   height: 100%;
@@ -862,6 +868,12 @@ html {
 }
 #home .btn-home a:hover {
   background-color: #5df596;
+}
+#home #anchor-categories {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  bottom: 99px;
 }
 
 nav {
@@ -946,8 +958,126 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   background-color: #fa9269;
 }
 
+#restaurants {
+  background-color: #fcf7ed;
+  position: relative;
+  overflow: hidden;
+}
+#restaurants #root .restaurants-container {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+#restaurants #root .restaurants-container .categories-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#restaurants #root .restaurants-container .categories-wrapper .row {
+  width: 50%;
+}
+#restaurants #root .restaurants-container .categories-wrapper .row .category-card {
+  background-color: #fff;
+  width: calc(100% / 4 - 20px);
+  margin: 15px 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#restaurants #root .restaurants-container .categories-wrapper .row .category-card .card-content {
+  border-radius: 50%;
+  width: 70%;
+  padding: 10px 0;
+}
+#restaurants #root .restaurants-container .categories-wrapper .row .category-card .card-content .category-icons {
+  justify-content: center;
+}
+#restaurants #root .restaurants-container .categories-wrapper .row .category-card .card-content .category-icons img {
+  width: 70%;
+}
+#restaurants #root .restaurants-container .categories-wrapper .row .category-card .text-center {
+  font-weight: 700;
+}
+#restaurants #root .img-up-l {
+  transform: rotate(135deg);
+  position: absolute;
+  top: -32px;
+  left: -279px;
+  z-index: 1;
+}
+#restaurants #root .img-up-l img {
+  width: 60%;
+}
+#restaurants #root .img-down-r {
+  transform: rotate(315deg);
+  position: absolute;
+  bottom: -32px;
+  right: -279px;
+  z-index: 1;
+}
+#restaurants #root .img-down-r img {
+  width: 60%;
+}
+
+.restaurants {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.restaurants h1 {
+  padding-bottom: 20px;
+}
+.restaurants .row .restaurant-card {
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  height: 350px;
+  width: calc(100% / 4 - 20px);
+  margin: 15px 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.restaurants .row .restaurant-card .restaurant-content {
+  flex-direction: column;
+  height: 100%;
+}
+.restaurants .row .restaurant-card .restaurant-content .restaurant-img {
+  border-radius: 10px 10px 0 0;
+  height: 180px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.restaurants .row .restaurant-card .restaurant-content .restaurant-img img {
+  width: 100%;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text {
+  padding-top: 10px;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text .card-title {
+  color: teal;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text .card-bottom .card-address {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text .card-bottom .card-address img {
+  width: 25px;
+  color: teal;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text .card-bottom .card-phone {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.restaurants .row .restaurant-card .restaurant-content .card-text .card-bottom .card-phone img {
+  width: 25px;
+  color: teal;
+}
+
 footer {
   background-color: #0f462d;
+  z-index: 2;
+  position: relative;
 }
 
 .footer-container {

@@ -1,9 +1,11 @@
 #home {
     height: 100vh;
+    z-index: 2;
 /*  background-color: #ffd7d2;*/
     position: relative;
 /*  background-color: #ffe3ac; */
     background-color: #d4e2fc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     .home-img {
         height: 100%;
         justify-content: space-between;
@@ -46,5 +48,11 @@
                 background-color: #5df596;
             }
         }
+    }
+    #anchor-categories {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        bottom: 99px;
     }
 }

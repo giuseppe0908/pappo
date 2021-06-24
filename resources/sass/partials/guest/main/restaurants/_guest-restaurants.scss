@@ -1,0 +1,57 @@
+.restaurants {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+        padding-bottom: 20px;
+    }
+    .row {
+        .restaurant-card {
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            height: 350px;
+            width: calc(100% / 4 - 20px);
+            margin: 15px 10px;
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            .restaurant-content {
+                flex-direction: column;
+                height: 100%;
+                .restaurant-img {
+                    border-radius: 10px 10px 0 0;
+                    height: 180px;
+                    overflow: hidden;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    img {
+                        width: 100%;
+                    }
+                } 
+                .card-text {
+                    padding-top: 10px;
+                    .card-title {
+                        color: teal;
+                    }
+                    .card-bottom {
+                        .card-address {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 10px;
+                            img {
+                                width: 25px;
+                                color: teal;
+                            }
+                        }
+                        .card-phone {
+                            position: absolute;
+                            bottom: 10px;
+                            right: 10px;
+                            img {
+                                width: 25px;
+                                color: teal;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
