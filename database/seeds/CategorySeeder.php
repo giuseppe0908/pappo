@@ -14,12 +14,46 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['Cinese', 'Giapponese', 'Hamburger', 'Indiana', 'Messicana', 'Pizza', 'Poke', 'Vegetariana' ];
-
+        $categories = [
+            [
+                'name' => 'Cinese',
+                'img' => './img/categories/cinese.png'
+            ],
+            [
+                'name' => 'Giapponese', 
+                'img' => './img/categories/giapponese.png'
+            ],
+            [
+                'name' => 'Hamburger',
+                'img' => './img/categories/hamburger.png'
+            ],
+            [
+                'name' => 'Indiana',
+                'img' => './img/categories/indiana.png'
+            ],
+            [
+                'name' => 'Messicana',
+                'img' => './img/categories/messicana.png'
+            ],
+            [
+                'name' => 'Pizza',
+                'img' => './img/categories/pizza.png'
+            ],
+            [
+                'name' => 'Poke',
+                'img' => './img/categories/poke.png'
+            ],
+            [
+                'name' => 'Vegetariana',
+                'img' => './img/categories/vegetariana.png'
+            ],
+        ];
+            
         foreach ($categories as $category) {
             
             $category_obj = new Category();
-            $category_obj->name = $category;
+            $category_obj->name = $category['name'];
+            $category_obj->img = $category['img'];
             // $category_obj->slug = Str::slug($category, '-');
 
             $category_obj->save();
