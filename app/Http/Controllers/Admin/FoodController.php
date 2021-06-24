@@ -77,7 +77,7 @@ class FoodController extends Controller
 
           $food->save();
 
-          return redirect()->route('admin.restaurants.index');
+          return redirect()->route('admin.restaurants.index')->with('success', 'Il piatto "' . $food->name . '" è stato creato correttamente');
 
     }
 
@@ -134,7 +134,7 @@ class FoodController extends Controller
           $food->update($data);
 
 
-          return redirect()->route('admin.restaurants.index');
+          return redirect()->route('admin.restaurants.index')->with('success', 'Il piatto "' . $food->name . '" è stato modificato correttamente');
     }
 
     /**
