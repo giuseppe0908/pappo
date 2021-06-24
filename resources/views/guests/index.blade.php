@@ -4,7 +4,6 @@
     Pappo
 @endsection
 
-
 @section('content_guest')
 <section id="home">
     <div class="home-img flex">
@@ -13,6 +12,23 @@
         </div>
         <div class="r">
             <img src="./img/r.svg" alt="">
+
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ route('admin.index') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
         </div>
     </div>
     <div class="title">
