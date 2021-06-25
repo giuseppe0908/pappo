@@ -1306,19 +1306,109 @@ a.navbar-brand {
   background-repeat: no-repeat;
   background-position: 0 -630px;
   background-size: cover;
+  margin-bottom: 25px;
 }
 #restaurants-index .container .row {
   flex-wrap: wrap;
 }
 #restaurants-index .container .row .card {
-  background-color: lightgreen;
   width: calc(100% / 4 - 30px);
+  border-radius: 10px;
   margin: 10px 15px;
-  height: 250px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+#restaurants-index .container .row .card .card-img {
+  margin-bottom: 10px;
 }
 #restaurants-index .container .row .card .card-img img {
   width: 100%;
   height: 100%;
+}
+#restaurants-index .container .row .card .rest-title {
+  color: teal;
+  transition: 0.4s;
+}
+#restaurants-index .container .row .card .rest-title:hover {
+  color: #f9a723;
+}
+#restaurants-index .container .row .card .card-content {
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+#restaurants-index .container .row .card .card-content .btn-edit {
+  padding: 8px 10px;
+  background-color: lightseagreen;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+}
+#restaurants-index .container .row .card .card-content .btn-edit.delete {
+  background-color: lightcoral;
+}
+#restaurants-index .container .add-rest {
+  margin-top: 35px;
+  justify-content: center;
+}
+#restaurants-index .container .add-rest .btn-add-rest {
+  padding: 15px 15px;
+  background-color: #06c167;
+  font-weight: 800;
+  transition: 0.4s;
+}
+#restaurants-index .container .add-rest .btn-add-rest:hover {
+  background-color: #02e175;
+}
+#restaurants-index .container .add-rest .btn-add-rest .btn-add {
+  color: #fff;
+}
+
+#show-rest {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+#show-rest .show-container {
+  padding: 0 5%;
+}
+#show-rest .show-container .w50 {
+  padding: 50px 0;
+  width: 50%;
+  background-color: lightcoral;
+  height: calc(100vh - 100px);
+}
+#show-rest .show-container .w50.right {
+  flex-direction: column;
+  justify-content: center;
+}
+#show-rest .show-container .w50.left {
+  justify-content: center;
+}
+#show-rest .show-container .w50 img {
+  border-radius: 50%;
+  width: 55%;
+  height: 60%;
+  max-width: 475px;
+  max-height: 500px;
+}
+#show-rest .show-container .w50 .food .card-food {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: calc(100% / 5 - 20px);
+  margin: 15px 10px;
+}
+#show-rest .show-container .w50 .food .card-food img {
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 10px;
+}
+#show-rest .show-container .w50 .food .card-food .btn-edit {
+  padding: 8px 10px;
+  background-color: lightseagreen;
+  border-radius: 4px;
+  color: #fff;
+}
+#show-rest .show-container .w50 .food .card-food .btn-edit:hover {
+  background-color: #02e175;
 }
 
 #user-register {

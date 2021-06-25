@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="panel_container">
-                <h1 class="animate__animated animate__pulse">Il Tuo Pannello di Controllo</h1>
+                <h1 class="">Il Tuo Pannello di Controllo</h1>
             </div>
             <div class="col-md-8 flex">
                 @if (session('status'))

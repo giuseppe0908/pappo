@@ -39,7 +39,7 @@
                 </div> 
             </div>
             <div class="text-center">
-                <a class="vis-all " href="">Tutti i ristoranti</a>
+            <a class="vis-all" @click="allRestaurants()">Tutti i ristoranti</a>
             </div>
             <!-- card ristoranti -->
             <div class="restaurants text-center">
@@ -55,9 +55,6 @@
                                     <a :href="'restaurants/' + restaurant.slug">
                                         <h2>@{{restaurant.name}}</h2>
                                     </a>
-                                </div>
-                                <div class="card-categories">
-                                    <p style="margin-bottom: 0px">categorie</p>
                                 </div>
                                 <div class="card-bottom">
                                     <div class="card-address flex">

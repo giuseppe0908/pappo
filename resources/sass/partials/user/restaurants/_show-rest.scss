@@ -1,0 +1,50 @@
+#show-rest {
+    max-width: 1920px;
+    margin: 0 auto;
+    .show-container {
+        padding: 0 5%;
+        .w50 {
+            padding: 50px 0;
+            width: 50%;
+            background-color: lightcoral;
+            height: calc(100vh - 100px);
+            &.right {
+                flex-direction: column;
+                justify-content: center;
+            }
+            &.left {
+                justify-content: center;
+            }
+            img {
+                border-radius: 50%;
+                width: 55%;
+                height: 60%;
+                max-width: 475px;
+                max-height: 500px;
+            }
+            .food {
+                .card-food {
+                    padding: 5px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    width: calc(100% / 5 - 20px);
+                    margin: 15px 10px;
+                    img {
+                        margin: 0 auto;
+                        display: block;
+                        padding-bottom: 10px;
+                    }
+                    .btn-edit {
+                        padding: 8px 10px;
+                        background-color: lightseagreen;
+                        border-radius: 4px;
+                        color: #fff;
+                        &:hover {
+                            background-color: #02e175;
+                        }        
+                    } 
+                }
+            }
+        }    
+    }
+}
