@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('restaurants/{slug}', 'RestaurantController@show')->name('restaurants.show');
 
 
 

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
 use App\Restaurant;
+use App\Food;
 
 class HomeController extends Controller
 {
@@ -15,7 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $categories = Category::all();
-        return view('guests.index', compact('categories'));
+        $restaurant = Restaurant::all();
+        return view('guests.index', compact('restaurant'));
     }
+
 }

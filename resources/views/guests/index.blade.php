@@ -66,22 +66,24 @@
                                 <img :src="restaurant.photo" alt="restaurant-photo">
                             </div>
                             <div class="card-text">
-                                <div class="card-title">
-                                    <h2>@{{restaurant.name}}</h2>
-                                </div>
-                                <div class="card-categories">
-                                    <p style="margin-bottom: 0px">categorie</p>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="card-address flex">
-                                        <img src="./img/location.svg" alt="location">
-                                        <p style="margin-bottom: 0px">@{{restaurant.address}}</p>
+                                <a href="{{route('restaurants.show', ['slug' => $restaurant->slug])}}">
+                                    <div class="card-title">
+                                        <h2>@{{restaurant.name}}</h2>
                                     </div>
-                                    <div class="card-phone flex">
-                                        <img src="./img/device-mobile.svg" alt="mobilephone">
-                                        <p style="margin-bottom: 0px">@{{restaurant.telephone_number}}</p>
+                                    <div class="card-categories">
+                                        <p style="margin-bottom: 0px">categorie</p>
                                     </div>
-                                </div>
+                                    <div class="card-bottom">
+                                        <div class="card-address flex">
+                                            <img src="./img/location.svg" alt="location">
+                                            <p style="margin-bottom: 0px">@{{restaurant.address}}</p>
+                                        </div>
+                                        <div class="card-phone flex">
+                                            <img src="./img/device-mobile.svg" alt="mobilephone">
+                                            <p style="margin-bottom: 0px">@{{restaurant.telephone_number}}</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>   

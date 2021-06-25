@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Restaurant;
+use App\Food;
 use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
@@ -50,9 +51,11 @@ class RestaurantController extends Controller
      * @param  \App\Restaurant  $restaurant
      * @return \Illuminate\Http\Response
      */
-    public function show(Restaurant $restaurant)
+    public function show(string $slug, Food $food)
     {
-        //
+		$restaurant = Restaurant::where('slug', $slug)->first();
+        $foods = Food::where('restaurant_id', $restaurant->id)->orderBy('created_at', 'desc')->get();
+        return view('guests.restaurants.show', compact('restaurant', 'foods'));
     }
 
     /**
