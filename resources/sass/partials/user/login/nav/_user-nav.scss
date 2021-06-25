@@ -4,5 +4,9 @@ a {
         text-transform: uppercase;
         font-weight: 900;
         font-size: 30px;
+        transition: 1s;
+    }
+    &.navbar-brand:hover {
+        transform: scale(1.1);
     }
 }
