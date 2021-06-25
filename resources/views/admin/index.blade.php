@@ -5,7 +5,7 @@
 <section id="user-register">
     <div class="container">
         <div class="panel_container">
-             <h1 class="animate__animated animate__pulse">Il Tuo Pannello di Controllo</h1>
+             <h1 class="">Il Tuo Pannello di Controllo</h1>
          </div>
 
          <div class="row justify-content-center">

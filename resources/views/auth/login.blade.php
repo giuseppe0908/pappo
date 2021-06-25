@@ -77,7 +77,6 @@
     <div class="login-img-l">
         <img src="./img/login-img-l.svg" alt="">
     </div>
-
 </section>
 
 @endsection

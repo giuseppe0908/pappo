@@ -79,10 +79,6 @@
         <main>
             @yield('content')
         </main>
-
-        <footer>
-            @include('partials.dashboard.footer')
-        </footer>
     </div>
 </body>
 </html>

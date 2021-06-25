@@ -93,6 +93,22 @@
   text-align: center;
 }
 
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right bottom, #06c167, #06b963, #05b25f, #05aa5b, #05a357); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+/* /scrollbar */
+
 //margin/padding-top 10-100px
 
 $types: m, p;
