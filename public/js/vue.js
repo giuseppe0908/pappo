@@ -98,7 +98,8 @@ var app = new Vue({
   el: "#root",
   data: {
     categories: [],
-    restaurants: []
+    restaurants: [],
+    categoryIndex: ''
   },
   mounted: function mounted() {
     var _this = this;
@@ -106,14 +107,36 @@ var app = new Vue({
     /* chiamata categorie ristoranti */
     axios.get('http://localhost:8000/api/categories').then(function (response) {
       _this.categories = response.data.data;
-      console.log(_this.categories);
+      /*console.log(this.categories) */
     });
     /* chiamata per i ristoranti */
 
     axios.get('http://localhost:8000/api/restaurants').then(function (response) {
       _this.restaurants = response.data.data;
-      console.log(_this.restaurants);
+      /* console.log(this.restaurants); */
     });
+  },
+  methods: {
+    //al click vediamo tutti i ristoranti della categoria selezionata
+    restaurantByCategory: function restaurantByCategory(category) {
+      var _this2 = this;
+
+      this.categoryIndex = category;
+      axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then(function (response) {
+        _this2.restaurants = response.data.data;
+        /* console.log(response.data.data); */
+      });
+    },
+    //al click vediamo tutti i ristoranti
+    allRestaurants: function allRestaurants() {
+      var _this3 = this;
+
+      this.categoryIndex = '';
+      axios.get('http://localhost:8000/api/restaurants').then(function (response) {
+        _this3.restaurants = response.data.data;
+        /* console.log(this.restaurants); */
+      });
+    }
   }
 });
 
@@ -126,7 +149,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fortunato/Desktop/GENERAL FOLDER/BOOLEAN/Repository/pappo/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\vue.js */"./resources/js/vue.js");
 
 
 /***/ })

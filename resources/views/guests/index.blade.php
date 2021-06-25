@@ -46,7 +46,7 @@
             <h1 class="text-center">SCEGLI COSA TI VA DI MANGIARE</h1>
             <div class="categories-wrapper flex">
                 <div class="row">
-                    <div class="category-card flex" v-for="category in categories">
+                    <div class="category-card flex" v-for="category in categories" @click="restaurantByCategory(category.id)">
                         <div class="card-content">
                             <div class="category-icons flex">
                                 <img :src="category.img" :alt="category.name">
@@ -66,24 +66,24 @@
                                 <img :src="restaurant.photo" alt="restaurant-photo">
                             </div>
                             <div class="card-text">
-                                <a href="{{route('restaurants.show', ['slug' => $restaurant->slug])}}">
-                                    <div class="card-title">
+                                <div class="card-title">
+                                    <a :href="'restaurants/' + restaurant.slug">
                                         <h2>@{{restaurant.name}}</h2>
+                                    </a>
+                                </div>
+                                <div class="card-categories">
+                                    <p style="margin-bottom: 0px">categorie</p>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="card-address flex">
+                                        <img src="./img/location.svg" alt="location">
+                                        <p style="margin-bottom: 0px">@{{restaurant.address}}</p>
                                     </div>
-                                    <div class="card-categories">
-                                        <p style="margin-bottom: 0px">categorie</p>
+                                    <div class="card-phone flex">
+                                        <img src="./img/device-mobile.svg" alt="mobilephone">
+                                        <p style="margin-bottom: 0px">@{{restaurant.telephone_number}}</p>
                                     </div>
-                                    <div class="card-bottom">
-                                        <div class="card-address flex">
-                                            <img src="./img/location.svg" alt="location">
-                                            <p style="margin-bottom: 0px">@{{restaurant.address}}</p>
-                                        </div>
-                                        <div class="card-phone flex">
-                                            <img src="./img/device-mobile.svg" alt="mobilephone">
-                                            <p style="margin-bottom: 0px">@{{restaurant.telephone_number}}</p>
-                                        </div>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>   
