@@ -38,10 +38,13 @@
                     </div>
                 </div> 
             </div>
+            <div class="text-center">
+                <a class="vis-all " href="">Tutti i ristoranti</a>
+            </div>
             <!-- card ristoranti -->
             <div class="restaurants text-center">
                 <h1>I PIU' PAPPATI</h1>
-                <div class="row">
+                <div class="row row-rest">
                     <div class="restaurant-card" v-for="restaurant in restaurants">
                         <div class="restaurant-content flex">
                             <div class="restaurant-img">

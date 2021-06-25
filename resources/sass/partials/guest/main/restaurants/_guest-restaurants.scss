@@ -1,10 +1,9 @@
 .restaurants {
-    padding-top: 50px;
+    padding-top: 70px;
     padding-bottom: 50px;
-    h1 {
-        padding-bottom: 20px;
-    }
-    .row {
+    .row-rest {
+        width: 80%;
+        margin: 0 auto;
         .restaurant-card {
             position: relative;
             border-radius: 10px 10px 0 0;

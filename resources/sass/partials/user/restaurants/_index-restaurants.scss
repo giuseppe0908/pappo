@@ -1,0 +1,29 @@
+#restaurants-index {
+/*     background-color: #addec9;
+ */    height: calc(100vh - 100px);
+    .restaurants-jumbo {
+        height: 250px;
+        background-image: url(../img/pan.svg);
+        background-repeat: no-repeat;
+        background-position: 0 -630px;
+        background-size: cover;
+    }
+    .container {
+        .row {
+            flex-wrap: wrap;
+            .card {
+                background-color: lightgreen;
+                width: calc(100% / 4 - 30px);
+                margin: 10px 15px;
+                height: 250px;
+                .card-img {
+                    img {
+                        width: 100%;
+                        height: 100%;
+    
+                    }
+                }
+            }
+        }
+    }
+}
