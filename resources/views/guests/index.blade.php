@@ -28,7 +28,7 @@
             <h1 class="text-center">SCEGLI COSA TI VA DI MANGIARE</h1>
             <div class="categories-wrapper flex">
                 <div class="row">
-                    <div class="category-card flex" v-for="category in categories">
+                    <div class="category-card flex" v-for="category in categories" @click="restaurantByCategory(category.id)">
                         <div class="card-content">
                             <div class="category-icons flex">
                                 <img :src="category.img" :alt="category.name">
@@ -52,7 +52,9 @@
                             </div>
                             <div class="card-text">
                                 <div class="card-title">
-                                    <h2>@{{restaurant.name}}</h2>
+                                    <a :href="'restaurants/' + restaurant.slug">
+                                        <h2>@{{restaurant.name}}</h2>
+                                    </a>
                                 </div>
                                 <div class="card-categories">
                                     <p style="margin-bottom: 0px">categorie</p>
