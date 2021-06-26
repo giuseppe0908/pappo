@@ -6,3 +6,18 @@ a {
         font-size: 30px;
     }
 }
+
+.dropdown-menu-right {
+    background-color: rgba(6, 193, 103, 1);
+    &:hover {
+        background-color: #04d454;
+    }
+    .dropdown-item {
+        color: #fff;
+        font-weight: 700;
+        &:hover {
+            background-color: inherit;
+            color: #fff;
+        }
+    }
+}

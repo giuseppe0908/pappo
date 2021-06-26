@@ -1,15 +1,16 @@
 #restaurants-index {
-/*     background-color: #addec9;
- */    height: calc(100vh - 100px);
-    .restaurants-jumbo {
-        height: 250px;
-        background-image: url(../img/pan.svg);
-        background-repeat: no-repeat;
-        background-position: 0 -630px;
-        background-size: cover;
-        margin-bottom: 25px;
-    }
+     background-color: #addec9;
+     height: calc(100vh - 100px);
+     position: relative;
+     overflow: hidden;
     .container {
+        .rest-index-title {
+            text-transform: uppercase;
+            padding: 25px 0;
+            h1 {
+                font-weight: 700;
+            }
+        }
         .row {
             flex-wrap: wrap;
             .card {
@@ -40,10 +41,14 @@
                         border-radius: 4px;
                         color: #fff;
                         font-weight: 700;
-                        &.delete {
-                            background-color: lightcoral;
-                        }
-                    }    
+                    }
+                    .btn-delete {
+                        padding: 8px 10px;
+                        background-color: lightcoral;
+                        border-radius: 4px;
+                        color: #fff;
+                        font-weight: 700;    
+                    }
                 }     
             }
         }
@@ -55,6 +60,7 @@
                 background-color: #06c167;
                 font-weight: 800;
                 transition: 0.4s;
+                margin-right: 15px;
                 &:hover {
                     background-color: #02e175;
                 }
@@ -62,6 +68,29 @@
                     color: #fff;
                 }
             }
+            .back {
+                padding: 15px 15px;
+                background-color: #f9a723;
+                font-weight: 800;
+                transition: 0.4s;  
+                border-radius: 3px;
+                a {
+                    color: #fff;
+                }
+                &:hover {
+                    background-color: #ffc76d;
+                }        
+            }     
         }
+    }
+    .ramen-r {
+        position: absolute;
+        right: -188px;
+        bottom: -188px;
+    }
+    .plate-l {
+        position: absolute;
+        left: -188px;
+        top: -188px;
     }
 }

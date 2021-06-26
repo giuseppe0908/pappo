@@ -45,10 +45,10 @@
 					@enderror
 				</div>
 
-				<div>
+<!-- 				<div>
 					<img src="{{asset($restaurant->photo)}}" alt="">
 				</div>
-				<div class="form-group">
+ -->				<div class="form-group">
 					<label for="photo">Photo</label>
 					<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 					@error('photo')

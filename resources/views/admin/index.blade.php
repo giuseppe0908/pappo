@@ -33,7 +33,7 @@
                         <img <img src="./img/order.png" alt="">
                     </div>
                     <div class="p_cont">
-                        <p>Rimani sempre aggiornato sulle oscillazioni delle tue vendite.</p>
+                        <p>Rimani sempre aggiornato sulle tue vendite.</p>
                     </div>
                 </div>
                 <div class="my_card">
@@ -44,7 +44,7 @@
                         <img <img src="./img/bag.png" alt="">
                     </div>
                     <div class="p_cont">
-                        <p>Scopri quali sono i piatti del tuo menu', preferiti dai nostri clienti.</p>
+                        <p>Scopri quali sono i piatti del tuo menu preferiti dai nostri clienti.</p>
                     </div>
                 </div>
             </div>

@@ -1,50 +1,105 @@
 #show-rest {
-    max-width: 1920px;
-    margin: 0 auto;
-    .show-container {
-        padding: 0 5%;
-        .w50 {
-            padding: 50px 0;
-            width: 50%;
-            background-color: lightcoral;
-            height: calc(100vh - 100px);
-            &.right {
-                flex-direction: column;
-                justify-content: center;
-            }
-            &.left {
-                justify-content: center;
-            }
-            img {
-                border-radius: 50%;
-                width: 55%;
-                height: 60%;
-                max-width: 475px;
-                max-height: 500px;
-            }
-            .food {
-                .card-food {
-                    padding: 5px;
-                    background-color: #fff;
-                    border-radius: 10px;
-                    width: calc(100% / 5 - 20px);
-                    margin: 15px 10px;
-                    img {
-                        margin: 0 auto;
-                        display: block;
-                        padding-bottom: 10px;
+    height: calc(100vh - 100px);
+    background-color: #addec9;
+    padding: 20px 0;
+    .container-show {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        .content {
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            position: relative;
+            .w50 {
+                width: 50%;
+                height: 100%;
+                padding: 50px;
+                background-color: lightcyan;
+                &.l {
+                    border-radius: 10px 0 0 10px;
+                    h1 {
+                        font-weight: 800;
+                        color: teal;
                     }
-                    .btn-edit {
-                        padding: 8px 10px;
-                        background-color: lightseagreen;
-                        border-radius: 4px;
-                        color: #fff;
-                        &:hover {
-                            background-color: #02e175;
-                        }        
-                    } 
+                    .descr {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+                    .menu {
+                        color: teal;
+                    }
+                    .menu-wrapper {
+                        flex-wrap: wrap;
+                        .menu-card {
+                            padding: 5px;
+                            width: calc(100% / 4 - 20px);
+                            margin: 8px 10px;
+                            border-radius: 10px;
+                            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                            background-color: #fff;
+                            .card-cmd {
+                                margin-bottom: 5px;
+                                .btn-edit {
+                                    padding: 5px 8px;
+                                    background-color: lightseagreen;
+                                    border-radius: 6px;
+                                    color: #fff;
+                                }    
+                            }
+                        }
+                    }
                 }
-            }
-        }    
+                &.r {
+                    .infos {
+                        padding: 30px 0;
+                        h4 {
+                            color: teal;
+                        }
+                        p {
+                            font-weight: 700;
+                        }
+                    }
+                    border-radius: 0 10px 10px 0;
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        border-radius: 10px;
+                        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    }
+                    .menu-cmd {
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        .add-food {
+                            .add-menu {
+                                margin-right: 15px;
+                                padding: 15px 15px;
+                                background-color: #06c167;
+                                color: #fff;
+                                font-weight: 800;
+                                transition: 0.4s;
+                                &:hover {
+                                    background-color: #02e175;
+                                }
+                            }
+                        }
+                        .back {
+                            padding: 15px 15px;
+                            background-color: #f9a723;
+                            font-weight: 800;
+                            transition: 0.4s;  
+                            border-radius: 3px;
+                            a {
+                                color: #fff;
+                            }
+                            &:hover {
+                                background-color: #ffc76d;
+                            }        
+                        }     
+                    }
+                } 
+            }    
+        }
     }
 }
