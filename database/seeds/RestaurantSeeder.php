@@ -31,8 +31,6 @@ class RestaurantSeeder extends Seeder
                 'name' => 'Puerto Mexico',
                 'description' => 'In origine México al 104 nel rione Monti, divenuto poi México all’Aventino per circa un ventennio, oggi il
                 ristorante, a dispetto dell’età e della sua lunga storia, ha ancora voglia di innovarsi e divertire. Ne è nato un
-                locale tutto da scoprire e vivere, nell’atmosfera intima e nel gusto, naturalmente in pieno sabor de México. In origine México al 104 nel rione Monti, divenuto poi México all’Aventino per circa un ventennio, oggi il
-                ristorante, a dispetto dell’età e della sua lunga storia, ha ancora voglia di innovarsi e divertire. Ne è nato un
                 locale tutto da scoprire e vivere, nell’atmosfera intima e nel gusto, naturalmente in pieno sabor de México.',
                 'slug' => 'puerto-mexico',
                 'address' => 'via Dario, 17',

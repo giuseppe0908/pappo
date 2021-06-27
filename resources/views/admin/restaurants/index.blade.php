@@ -30,7 +30,7 @@
 			<div class="btn btn-add-rest">
 				<a class="btn-add" href="{{route('admin.restaurants.create')}}">Nuovo Ristorante</a>
 			</div>
-			<div class="back">
+			<div class="btn back">
 				<a class="" href="{{route('admin.index')}}">Indietro</a>
 			</div>
 		</div>	

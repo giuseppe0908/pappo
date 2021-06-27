@@ -91,6 +91,10 @@
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* scrollbar */
 body::-webkit-scrollbar {
   width: 8px;
@@ -1386,7 +1390,6 @@ a.navbar-brand {
   background-color: #f9a723;
   font-weight: 800;
   transition: 0.4s;
-  border-radius: 3px;
 }
 #restaurants-index .container .add-rest .back a {
   color: #fff;
@@ -1507,6 +1510,96 @@ a.navbar-brand {
 }
 #show-rest .container-show .content .w50.r .menu-cmd .back:hover {
   background-color: #ffc76d;
+}
+
+#edit-rest {
+  height: calc(100vh - 100px);
+  background-color: #d4e2fc;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+#edit-rest .container .card-edit {
+  position: relative;
+  z-index: 2;
+  background-color: #e9f1ff;
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#edit-rest .container .card-edit .row .col-md-12.uppercase h3 {
+  font-weight: 700;
+}
+#edit-rest .container .card-edit .row .col-md-8 .form-group #description {
+  height: 140px;
+}
+#edit-rest .img-rest {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#category::-webkit-scrollbar {
+  width: 8px;
+  /* width of the entire scrollbar */
+}
+
+#category::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1);
+  /* color of the tracking area */
+}
+
+#category::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right bottom, #a0bff9, #adc8fa, #bad0fb, #c7d9fb, #d4e2fc);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+}
+
+#add-food {
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  height: calc(100vh - 100px);
+  background-color: #ffcf70;
+  position: relative;
+}
+#add-food .food-card {
+  background-color: #ffe3ac;
+  padding: 25px 10px;
+  position: relative;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#add-food .food-card .row .col-md-12.uppercase h3 {
+  font-weight: 700;
+}
+#add-food .food-card .row .col-md-8 form .form-group .form-control:focus {
+  border-color: #ffc043;
+  box-shadow: 0 0 0 0.2rem rgba(255, 227, 172, 0.8);
+}
+#add-food .food-card .row .col-md-8 form .back {
+  padding: 0.375rem 0.75rem;
+  background-color: #f9a723;
+  font-weight: 800;
+  transition: 0.4s;
+  margin-left: 15px;
+  color: #fff;
+}
+#add-food .food-card .row .col-md-8 form .back:hover {
+  background-color: #ffc76d;
+}
+#add-food .food-card .row .col-md-8 form .back:focus {
+  box-shadow: none;
+}
+#add-food .food-img {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  z-index: 1;
 }
 
 #user-register {
