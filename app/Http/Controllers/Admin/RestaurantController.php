@@ -54,8 +54,8 @@ class RestaurantController extends Controller
             'name' => 'required|string|max:100',
             'description' => 'required|string',
             'address' => 'required|string|max:100',
-            'telephone_number' => 'required|string|max:50',
-            'photo' => 'image|max:100|nullable',
+            'telephone_number' => 'required|regex:/^([0-9\-\+\(\)]*)$/|min:10',
+            'photo' => 'required|image|max:100|nullable',
             'category_ids.*' => 'exists:categories,id',
           ]);
 
@@ -121,7 +121,7 @@ class RestaurantController extends Controller
             'name' => 'required|string|max:100',
             'description' => 'required|string',
             'address' => 'required|string|max:100',
-            'telephone_number' => 'required|string|max:50',
+            'telephone_number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'photo' => 'image|max:100|nullable',
             'category_ids.*' => 'exists:categories,id',
           ]);

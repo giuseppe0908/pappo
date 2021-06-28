@@ -55,7 +55,6 @@ class FoodController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
-            'description' => 'required|string',
             'ingredients' => 'required|string',
             'price' => 'required|numeric',
             'available' => 'boolean',
@@ -115,10 +114,9 @@ class FoodController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:100',
-            'description' => 'required|string',
             'ingredients' => 'required|string',
             'price' => 'required|numeric',
-            'available' => 'boolean',
+            'available' => 'required|boolean',
             'photo' => 'image|max:100|nullable',
             'restaurant_id' => 'exists:restaurants,id',
           ]);
