@@ -1,0 +1,40 @@
+section {
+  &.edit {
+    width: 100vw;
+    height: calc(140vh - 100px);
+    background-color: #e0ffff;
+    position: relative;
+    overflow: hidden;
+    .row.justify-content-center {
+      .col-md-8 {
+        form {
+          label {
+            font-size: 18px;
+            font-weight: 700;
+            color: teal;
+          }
+          .form-control:focus {
+              border-color: #8cade0;
+              box-shadow: 0 0 0 0.2rem rgba(140, 173, 224, 0.30);
+          }
+        }
+      }
+    }
+    .img-restaurants-edit {
+        position: absolute;
+        left: 30px;
+        top: -10px;
+        img {
+          width: 350px;
+        }
+    }
+    .img-restaurants-edit-two {
+        position: absolute;
+        right: 180px;
+        top: 100px;
+        img {
+          width: 200px;
+        }
+    }
+  }
+}

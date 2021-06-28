@@ -1,0 +1,82 @@
+section {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: #addec9;
+  position: relative;
+  overflow: hidden;
+  .container {
+    .row {
+      .col-md-12 {
+        h1 {
+          text-align: center;
+          margin-top: 50px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .row.justify-content-center {
+      .col-md-8 {
+        form {
+          .form-group {
+            label {
+              font-size: 18px;
+              font-weight: 700;
+              color: teal;
+            }
+            .form-control:focus {
+                border-color: #ffd772;
+                box-shadow: 0 0 0 0.2rem rgba(252, 232, 78, 0.30);
+            }
+          }
+          .button-container {
+            button.btn-primary {
+              background-color: #343a40;
+              font-weight: 800;
+              border: transparent;
+              padding: 15px 15px;
+
+              &:hover {
+                  background-color: #02e175;;
+              }
+            }
+            .btn.back {
+                background-color: #f9a723;
+                font-weight: 800;
+                transition: background-color 0.4s;
+                border-radius: 3px;
+                margin-left: 15px;
+                border: transparent;
+                padding: 15px 15px;
+                a {
+                  color: #fff;
+                }
+                &:hover {
+                    background-color: #ffc76d;
+                }
+                &:focus {
+                  box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .img-restaurants {
+      position: absolute;
+      right: 10px;
+      bottom: 40px;
+      img {
+        width: 300px;
+      }
+  }
+  .img-restaurants-two {
+      position: absolute;
+      left: 0px;
+      top: 40px;
+      img {
+        width: 300px;
+      }
+  }
+}
