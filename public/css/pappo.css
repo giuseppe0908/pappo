@@ -1104,8 +1104,13 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text {
   padding-top: 10px;
 }
-.restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-title {
+.restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-title a {
   color: teal;
+  font-weight: 700;
+  transition: color 0.4s;
+}
+.restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-title a:hover {
+  color: #f9a723;
 }
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-bottom .card-address {
   position: absolute;
@@ -1340,7 +1345,8 @@ a.navbar-brand {
 }
 #restaurants-index .container .row .card .card-img {
   margin-bottom: 10px;
-  height: 250px;
+  height: 200px;
+  overflow: hidden;
 }
 #restaurants-index .container .row .card .card-img img {
   width: 100%;
@@ -1379,7 +1385,7 @@ a.navbar-brand {
   padding: 15px 15px;
   background-color: #06c167;
   font-weight: 800;
-  transition: 0.4s;
+  transition: background-color 0.4s;
   margin-right: 15px;
 }
 #restaurants-index .container .add-rest .btn-add-rest:hover {
@@ -1392,7 +1398,7 @@ a.navbar-brand {
   padding: 15px 15px;
   background-color: #f9a723;
   font-weight: 800;
-  transition: 0.4s;
+  transition: background-color 0.4s;
 }
 #restaurants-index .container .add-rest .back a {
   color: #fff;
@@ -1416,6 +1422,7 @@ a.navbar-brand {
   padding: 20px 0;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 100px);
 }
 #show-rest .container-show {
   width: 90%;
@@ -1432,7 +1439,7 @@ a.navbar-brand {
   width: 50%;
   height: auto;
   padding: 50px;
-  background-color: lightcyan;
+  background-color: #e0ffff;
 }
 #show-rest .container-show .content .w50.l {
   border-radius: 10px 0 0 10px;
@@ -1450,6 +1457,8 @@ a.navbar-brand {
 }
 #show-rest .container-show .content .w50.l .menu-wrapper {
   flex-wrap: wrap;
+  height: 500px;
+  overflow-y: scroll;
 }
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card {
   position: relative;
@@ -1518,7 +1527,7 @@ a.navbar-brand {
   padding: 15px 15px;
   background-color: #f9a723;
   font-weight: 800;
-  transition: 0.4s;
+  transition: background-color 0.4s;
   border-radius: 3px;
 }
 #show-rest .container-show .content .w50.r .menu-cmd .back a {
@@ -1526,6 +1535,24 @@ a.navbar-brand {
 }
 #show-rest .container-show .content .w50.r .menu-cmd .back:hover {
   background-color: #ffc76d;
+}
+
+.menu-wrapper::-webkit-scrollbar {
+  width: 8px;
+  /* width of the entire scrollbar */
+}
+
+.menu-wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1);
+  /* color of the tracking area */
+}
+
+.menu-wrapper::-webkit-scrollbar-thumb {
+  background: #addec9;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
 }
 
 #edit-rest {

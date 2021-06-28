@@ -28,7 +28,14 @@
                 .card-text {
                     padding-top: 10px;
                     .card-title {
-                        color: teal;
+                        a {
+                            color: teal;
+                            font-weight: 700;
+                            transition: color 0.4s;
+                            &:hover {
+                                color: #f9a723;
+                            }    
+                        }
                     }
                     .card-bottom {
                         .card-address {
