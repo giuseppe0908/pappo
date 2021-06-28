@@ -10,7 +10,7 @@
 			@foreach ($restaurants as $restaurant)
 				<div class="card">
 					<div class="card-img">
-						<img src=".{{$restaurant->photo}}" alt="">
+						<img src="{{asset($restaurant->photo)}}" alt="">
 					</div>
 					<a class="text-center rest-title" href="{{route('admin.restaurants.show', ['restaurant' => $restaurant->slug])}}"><h2>{{$restaurant->name}}</h2></a>
 					<div class="card-body">
