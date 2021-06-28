@@ -17,7 +17,6 @@
 				@foreach($foods as $food)
 					<div class="menu-card">
 						<h4>{{$food->name}}</h4>
-<!-- 					<p>{{$food->description}}</p>-->
 						<p>{{$food->price}} €</p>
 						{{$food->avaible}}
 						<div class="menu-img">
