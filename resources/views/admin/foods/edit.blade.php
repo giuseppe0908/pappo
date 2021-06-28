@@ -48,8 +48,8 @@
 				<div class="form-group">
 					<label for="available">Disponibilità</label>
 					<select class="form-control @error('available') is-invalid @enderror" id="available" name="available">
-						<option value="1" {{ old('available') == 1 ? 'selected' : '' }}>Disponibile</option>
-						<option value="0"{{ old('available') == 0 ? 'selected' : '' }}>Non disponibile</option>
+						<option value="1" {{ old('available', $food->available) == 1 ? 'selected' : ' ' }}>Disponibile</option>
+						<option value="0" {{ old('available', $food->available) == 0 ? 'selected' : ' ' }}>Non disponibile</option>
 					</select>
 					@error('available')
 						<small class="text-danger">{{ $message }}</small>
