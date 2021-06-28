@@ -1,23 +1,22 @@
-#show-rest {
-    background-color: #addec9;
+#guest-show {
+    margin-top: 100px;
+    background-color: #ffe3ac;
     padding: 20px 0;
-    justify-content: center;
-    align-items: center;
     height: calc(100vh - 100px);
     .container-show {
-        width: 90%;
-        height: 100%;
+        width: 80%;
         margin: 0 auto;
+        height: 100%;
         .content {
-            height: 100%;
             border-radius: 10px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             position: relative;
+            height: 100%;
             .w50 {
                 width: 50%;
                 height: auto;
                 padding: 50px;
-                background-color: #e0ffff;
+                background-color: #fff;
                 &.l {
                     border-radius: 10px 0 0 10px;
                     h1 {
@@ -53,15 +52,18 @@
                             .menu-img {
                                 height: 150px;
                                 overflow: hidden;
-                                .ingredients {
-                                    width: 50%;
-                                }
+                                flex-wrap: wrap;
                                 .menu-img-content {
-                                    width: 50%;
+                                    height: 60%;
+                                    overflow: hidden;
+                                    width: 100%;
                                     img {
                                         width: 100%;
                                     }
                                 }
+                            }
+                            .menu-title {
+                                padding-top: 10px;
                             }
                             .card-cmd {
                                 margin-bottom: 5px;
@@ -134,18 +136,3 @@
         }
     }
 }
-
-.menu-wrapper::-webkit-scrollbar {
-    width: 8px; /* width of the entire scrollbar */
-  }
-  
-.menu-wrapper::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgba(220, 220, 220, 0.1); /* color of the tracking area */
-  }
-  
- .menu-wrapper::-webkit-scrollbar-thumb {
-    background: #addec9;/* color of the scroll thumb */
-    border-radius: 20px; /* roundness of the scroll thumb */
-  }
-  

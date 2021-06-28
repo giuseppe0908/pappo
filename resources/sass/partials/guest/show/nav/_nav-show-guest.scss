@@ -1,0 +1,16 @@
+#nav-show {
+    background-color: #ffc043;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    .logo {
+        &:hover {
+            transform: scale(1);
+        }
+        p {
+        color: #fff;
+        }
+    }
+}
