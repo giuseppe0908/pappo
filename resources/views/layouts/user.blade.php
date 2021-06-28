@@ -22,6 +22,7 @@
 </head>
 <body>
     <div id="app" class="nav_login">
+    @include('flash-message')
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

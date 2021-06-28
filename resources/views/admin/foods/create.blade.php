@@ -40,7 +40,7 @@
 
 						<div class="form-group">
 							<label for="price">Prezzo</label>
-							<input class="form-control @error('price') is-invalid @enderror" id="price" type="number" min="1" step="any" name="price" value="{{ old('price') }}">
+							<input class="form-control @error('price') is-invalid @enderror" id="price" type="number" step="0.01" name="price" value="{{ old('price') }}">
 							@error('price')
 							<small class="text-danger">{{ $message }}</small>
 							@enderror
