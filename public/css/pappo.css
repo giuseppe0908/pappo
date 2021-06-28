@@ -1207,15 +1207,13 @@ a.navbar-brand {
 .dropdown-menu-right {
   background-color: #06c167;
 }
-.dropdown-menu-right:hover {
-  background-color: #04d454;
-}
 .dropdown-menu-right .dropdown-item {
   color: #fff;
   font-weight: 700;
 }
 .dropdown-menu-right .dropdown-item:hover {
   background-color: inherit;
+  background-color: #04d454;
   color: #fff;
 }
 
@@ -1533,11 +1531,19 @@ a.navbar-brand {
 #edit-rest .container .card-edit .row .col-md-8 .form-group #description {
   height: 140px;
 }
-#edit-rest .img-rest {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
+#edit-rest .container .card-edit .row .col-md-8 .btn-back {
+  background-color: #f9a723;
+  font-weight: 800;
+  transition: background-color 0.4s;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 15px;
+}
+#edit-rest .container .card-edit .row .col-md-8 .btn-back:hover {
+  background-color: #ffc76d;
+}
+#edit-rest .container .card-edit .row .col-md-8 .btn-back:focus {
+  box-shadow: none;
 }
 
 #category::-webkit-scrollbar {

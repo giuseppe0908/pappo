@@ -71,6 +71,7 @@
 						</div>
 
 						<button class="btn btn-dark" type="submit">Salva</button>
+						<a class="btn btn-back" href="{{route('admin.restaurants.index')}}">Indietro</a>
 					</form>
 				</div>
 			</div>

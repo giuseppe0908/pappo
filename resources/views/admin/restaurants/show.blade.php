@@ -46,8 +46,8 @@
 				<p class="descr">{{$restaurant->description}}</p>
 				<h4 class="menu">Menu:</h4>
 				<div class="menu-wrapper flex">
+				@foreach($foods as $food)
 					<div class="menu-card">
-						@foreach($foods as $food)
 						<h4>{{$food->name}}</h4>
 <!-- 					<p>{{$food->description}}</p>-->
 						<p>{{$food->price}} €</p>
@@ -56,8 +56,8 @@
 						<div class="card-cmd">
 							<a class="btn-edit" href="{{route('admin.foods.edit', ['food' => $food->id])}}"><i class="far fa-edit"></i></a>
 						</div>
-						@endforeach
 					</div>
+				@endforeach
 				</div>
 			</div>
 			<div class="w50 r">
