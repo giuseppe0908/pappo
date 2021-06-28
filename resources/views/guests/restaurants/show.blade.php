@@ -16,8 +16,8 @@
 			
 			@foreach($foods as $food)
 				<h4>{{$food->name}}</h4>
-				<p>{{$food->description}}</p>
 				<p>{{$food->price}}</p>
+				<p>{{$food->ingredients}}</p>
 				{{$food->avaible}}
 				<img src="{{asset($food->photo)}}" alt="{{$food->name}}">
 			@endforeach
