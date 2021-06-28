@@ -77,5 +77,8 @@
 			</div>
 		</div>
 	</div>
+	<div>
+		<img src="../img/restaurant.png" alt="vc">
+	</div>
 </section>
 @endsection

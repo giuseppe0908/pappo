@@ -1,7 +1,8 @@
 #show-rest {
-    height: calc(100vh - 100px);
     background-color: #addec9;
     padding: 20px 0;
+    justify-content: center;
+    align-items: center;
     .container-show {
         width: 90%;
         height: 100%;
@@ -13,7 +14,7 @@
             position: relative;
             .w50 {
                 width: 50%;
-                height: 100%;
+                height: auto;
                 padding: 50px;
                 background-color: lightcyan;
                 &.l {
@@ -32,14 +33,26 @@
                     .menu-wrapper {
                         flex-wrap: wrap;
                         .menu-card {
+                            position: relative;
+                            height: 285px;
                             padding: 5px;
                             width: calc(100% / 4 - 20px);
                             margin: 8px 10px;
                             border-radius: 10px;
                             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                             background-color: #fff;
+                            .menu-img {
+                                height: 150px;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                }
+                            }
                             .card-cmd {
                                 margin-bottom: 5px;
+                                position: absolute;
+                                bottom: 5px;
+                                left: 5px;
                                 .btn-edit {
                                     padding: 5px 8px;
                                     background-color: lightseagreen;
