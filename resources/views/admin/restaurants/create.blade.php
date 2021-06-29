@@ -3,16 +3,17 @@
 @section('content')
 <section class="restaurant-create">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-			<h1>Nuovo ristorante</h1>
-			</div>
-		</div>
+
 		<div class="row justify-content-center">
 			<div class="col-md-8">
 				<form action="{{route('admin.restaurants.store')}}" method="post" enctype="multipart/form-data">
 					@csrf
 					@method('POST')
+					<div class="row">
+						<div class="col-md-12">
+						<h1>Nuovo ristorante</h1>
+						</div>
+					</div>
 					<div class="form-group">
 						<label for="name">Nome</label>
 						<input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name') }}">

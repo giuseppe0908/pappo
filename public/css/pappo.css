@@ -1662,9 +1662,16 @@ section.restaurant-create {
 }
 section.restaurant-create .container .row .col-md-12 h1 {
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form {
+  background-color: #ceefe1;
+  padding: 25px 80px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 section.restaurant-create .container .row.justify-content-center .col-md-8 form .form-group label {
   font-size: 18px;
@@ -1716,7 +1723,7 @@ section.restaurant-create .img-restaurants-two {
   top: 40px;
 }
 section.restaurant-create .img-restaurants-two img {
-  width: 300px;
+  width: 350px;
 }
 
 section.edit-food {
@@ -1725,12 +1732,19 @@ section.edit-food {
 }
 section.edit-food h1 {
   text-align: center;
-  margin-top: 50px;
+  margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
 }
 section.edit-food .row.justify-content-center .col-md-8 {
   margin-bottom: 50px;
+}
+section.edit-food .row.justify-content-center .col-md-8 form {
+  background-color: #ceefe1;
+  margin-top: 50px;
+  padding: 25px 80px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 section.edit-food .row.justify-content-center .col-md-8 form label {
   font-size: 18px;
@@ -1738,8 +1752,8 @@ section.edit-food .row.justify-content-center .col-md-8 form label {
   color: teal;
 }
 section.edit-food .row.justify-content-center .col-md-8 form .form-control:focus {
-  border-color: #8cade0;
-  box-shadow: 0 0 0 0.2rem rgba(140, 173, 224, 0.3);
+  border-color: #ffd772;
+  box-shadow: 0 0 0 0.2rem rgba(252, 232, 78, 0.3);
 }
 section.edit-food .row.justify-content-center .col-md-8 form .button-container button.btn-primary {
   background-color: #343a40;

@@ -3,16 +3,18 @@
 @section('content')
 <section class="edit-food">
   <div class="container">
-      <div class="row">
-        	<div class="col-md-12">
-          	<h1>Modifica Piatto</h1>
-        	</div>
-      </div>
+
       <div class="row justify-content-center">
         	<div class="col-md-8">
             	<form action="{{route('admin.foods.update', ['food' => $food->id])}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
+
+                <div class="row">
+                    <div class="col-md-12">
+                      <h1>Modifica Piatto</h1>
+                    </div>
+                </div>
 
                 <div class="form-group">
                   <label for="name">Nome</label>

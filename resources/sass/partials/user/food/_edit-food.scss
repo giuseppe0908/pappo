@@ -4,7 +4,7 @@ section {
     background-color: #e0ffff;
     h1 {
       text-align: center;
-      margin-top: 50px;
+      margin-bottom: 20px;
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -12,14 +12,19 @@ section {
       .col-md-8 {
         margin-bottom: 50px;
         form {
+          background-color: #ceefe1;
+          margin-top: 50px;
+          padding: 25px 80px;
+          border-radius: 10px;
+          box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
           label {
             font-size: 18px;
             font-weight: 700;
             color: teal;
           }
           .form-control:focus {
-            border-color: #8cade0;
-            box-shadow: 0 0 0 0.2rem rgba(140, 173, 224, 0.30);
+            border-color: #ffd772;
+            box-shadow: 0 0 0 0.2rem rgba(252, 232, 78, 0.30);
           }
           .button-container {
             button.btn-primary {
