@@ -23,11 +23,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-        $foods = Food::where('restaurant_id', Auth::id())
-        ->orderBy('created_at', 'desc')
-        ->get();
-
-        return view('admin.restaurants.show', compact('foods'));
+        //
     }
 
     /**
@@ -43,7 +39,7 @@ class FoodController extends Controller
 
     public function create()
     {
-
+        //
     }
     /**
      * Store a newly created resource in storage.
@@ -88,7 +84,7 @@ class FoodController extends Controller
      */
     public function show(Food $food)
     {
-        return view('admin.restaurants.show',compact('food'));
+        //
     }
 
     /**
@@ -99,7 +95,7 @@ class FoodController extends Controller
      */
     public function edit(Food $food)
     {
-
+        
         return view('admin.foods.edit',compact('food'));
     }
 

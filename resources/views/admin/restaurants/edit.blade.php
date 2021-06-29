@@ -47,19 +47,19 @@
 							@enderror
 						</div>
 
-		<!-- 				<div>
-							<img src="{{asset($restaurant->photo)}}" alt="">
-						</div>
-		-->				<div class="form-group">
-							<label for="photo">IMG</label>
+						<div class="form-group">
+							<label for="photo">Fotografia</label>
 							<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 							@error('photo')
 								<small class="text-danger">{{ $message }}</small>
 							@enderror
 						</div>
+						<div>
+							<img src="{{asset($restaurant->photo)}}" alt="">
+						</div>
 
 						<div class="form-group">
-							<label for="category">Cucina</label>
+							<label for="category">Categoria Ristorante</label>
 							<select class="form-control @error('category_ids') is-invalid @enderror" id="category" name="category_ids[]" multiple>
 								@foreach($categories as $category)
 								<option value="{{$category->id}}" {{$restaurant->categories->contains($category) ? 'selected' : ''}}>{{$category->name}}</option>
