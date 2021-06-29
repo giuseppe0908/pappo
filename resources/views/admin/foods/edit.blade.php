@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('content')
-<section class="edit">
+<section class="edit-food">
   <div class="container">
       <div class="row">
         	<div class="col-md-12">

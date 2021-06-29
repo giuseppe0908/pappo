@@ -1,12 +1,16 @@
 section {
-  &.edit {
+  &.edit-food {
     width: 100vw;
-    height: calc(140vh - 100px);
     background-color: #e0ffff;
-    position: relative;
-    overflow: hidden;
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
     .row.justify-content-center {
       .col-md-8 {
+        margin-bottom: 50px;
         form {
           label {
             font-size: 18px;
@@ -14,27 +18,56 @@ section {
             color: teal;
           }
           .form-control:focus {
-              border-color: #8cade0;
-              box-shadow: 0 0 0 0.2rem rgba(140, 173, 224, 0.30);
+            border-color: #8cade0;
+            box-shadow: 0 0 0 0.2rem rgba(140, 173, 224, 0.30);
+          }
+          .button-container {
+            button.btn-primary {
+              background-color: #343a40;
+              font-weight: 800;
+              border: transparent;
+              padding: 15px 15px;
+              &:hover {
+                  background-color: #02e175;;
+              }
+            }
+            .btn.back {
+              background-color: #f9a723;
+              font-weight: 800;
+              transition: background-color 0.4s;
+              border-radius: 3px;
+              margin-left: 15px;
+              border: transparent;
+              padding: 15px 15px;
+              a {
+                color: #fff;
+              }
+              &:hover {
+                background-color: #ffc76d;
+              }
+              &:focus {
+                box-shadow: none;
+              }
+            }
           }
         }
       }
     }
     .img-restaurants-edit {
-        position: absolute;
-        left: 30px;
-        top: -10px;
-        img {
-          width: 350px;
-        }
+      position: absolute;
+      left: 70px;
+      top: 200px;
+      img {
+        width: 300px;
+      }
     }
     .img-restaurants-edit-two {
-        position: absolute;
-        right: 180px;
-        top: 100px;
-        img {
-          width: 200px;
-        }
+      position: absolute;
+      right: 110px;
+      top: 280px;
+      img {
+        width: 200px;
+      }
     }
   }
 }
