@@ -53,15 +53,18 @@
                             .menu-img {
                                 height: 150px;
                                 overflow: hidden;
-                                .ingredients {
-                                    width: 50%;
-                                }
+                                flex-wrap: wrap;
                                 .menu-img-content {
-                                    width: 50%;
+                                    height: 60%;
+                                    overflow: hidden;
+                                    width: 100%;
                                     img {
                                         width: 100%;
                                     }
                                 }
+                            }
+                            .menu-title {
+                                padding-top: 10px;
                             }
                             .card-cmd {
                                 margin-bottom: 5px;

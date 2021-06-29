@@ -3,10 +3,14 @@
     background-color: #ffe3ac;
     padding: 20px 0;
     height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
     .container-show {
         width: 80%;
         margin: 0 auto;
         height: 100%;
+        position: relative;
+        z-index: 3;
         .content {
             border-radius: 10px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -44,7 +48,7 @@
                             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                             background-color: #fff;
                             &.disabled {
-                                background-color: lightgrey;
+                                background-color: #eeeeee;
                                 img {
                                     filter: grayscale(100%);
                                 }
@@ -73,12 +77,14 @@
                                 right: 10px;
                                 justify-content: space-between;
                                 align-items: center;
-                                .btn-edit {
-                                    padding: 5px 8px;
-                                    background-color: lightseagreen;
-                                    border-radius: 6px;
+                                .cart {
+                                    padding: 5px 7px;
+                                    background-color: teal;
                                     color: #fff;
-                                }    
+                                    font-weight: 700;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                }
                             }
                         }
                     }
@@ -95,6 +101,7 @@
                     }
                     border-radius: 0 10px 10px 0;
                     img {
+                        width: 100%;
                         display: block;
                         margin: 0 auto;
                         border-radius: 10px;
@@ -134,5 +141,11 @@
                 } 
             }    
         }
+    }
+    .img-show {
+        position: absolute;
+        z-index: 1;
+        left: -100px;
+        bottom: -100px;
     }
 }

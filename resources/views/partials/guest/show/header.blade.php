@@ -2,7 +2,7 @@
     <div class="container-nav flex">
         <div class="nav-left">
             <div class="logo flex">
-                <p>PAPPO</p>
+                <p style="cursor: context-menu">PAPPO</p>
             </div>
         </div>
         <div class="nav-right">

@@ -28,9 +28,9 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
+								<p class="uppercase cart" style="margin-bottom: 0; cursor: pointer">Aggiungi <i class="fas fa-shopping-cart"></i></p>
 							</div>
 						</div>
-						
 						@else
 						<div class="menu-card disabled">
 							<div class="menu-img">
@@ -65,6 +65,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="img-show">
+		<img src="../img/restaurant.png" alt="">
 	</div>	
 </section>
 @endsection

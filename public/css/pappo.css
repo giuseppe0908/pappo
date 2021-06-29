@@ -1014,11 +1014,15 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   background-color: #ffe3ac;
   padding: 20px 0;
   height: calc(100vh - 100px);
+  position: relative;
+  overflow: hidden;
 }
 #guest-show .container-show {
   width: 80%;
   margin: 0 auto;
   height: 100%;
+  position: relative;
+  z-index: 3;
 }
 #guest-show .container-show .content {
   border-radius: 10px;
@@ -1062,7 +1066,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   background-color: #fff;
 }
 #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled {
-  background-color: lightgrey;
+  background-color: #eeeeee;
 }
 #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled img {
   filter: grayscale(100%);
@@ -1092,11 +1096,13 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   justify-content: space-between;
   align-items: center;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .btn-edit {
-  padding: 5px 8px;
-  background-color: lightseagreen;
-  border-radius: 6px;
+#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .cart {
+  padding: 5px 7px;
+  background-color: teal;
   color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+  font-size: 12px;
 }
 #guest-show .container-show .content .w50.r {
   border-radius: 0 10px 10px 0;
@@ -1111,6 +1117,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   font-weight: 700;
 }
 #guest-show .container-show .content .w50.r img {
+  width: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
@@ -1144,6 +1151,12 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 }
 #guest-show .container-show .content .w50.r .menu-cmd .back:hover {
   background-color: #ffc76d;
+}
+#guest-show .img-show {
+  position: absolute;
+  z-index: 1;
+  left: -100px;
+  bottom: -100px;
 }
 
 #restaurants {
@@ -1631,15 +1644,18 @@ a.navbar-brand {
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card .menu-img {
   height: 150px;
   overflow: hidden;
-}
-#show-rest .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .ingredients {
-  width: 50%;
+  flex-wrap: wrap;
 }
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content {
-  width: 50%;
+  height: 60%;
+  overflow: hidden;
+  width: 100%;
 }
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content img {
   width: 100%;
+}
+#show-rest .container-show .content .w50.l .menu-wrapper .menu-card .menu-title {
+  padding-top: 10px;
 }
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd {
   margin-bottom: 5px;
