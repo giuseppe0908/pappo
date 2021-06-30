@@ -99,7 +99,22 @@ var app = new Vue({
   data: {
     categories: [],
     restaurants: [],
-    categoryIndex: ''
+    categoryIndex: '',
+    quantity: 1,
+    carrello: [],
+    array: []
+  },
+  computed: {
+    carrelloTotale: function carrelloTotale() {
+      var somma = 0;
+
+      for (var key in this.carrello) {
+        somma += this.carrello[key].price * this.carrello[key].quantity;
+      }
+
+      console.log(somma);
+      return somma.toFixed(2);
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -136,6 +151,13 @@ var app = new Vue({
         _this3.restaurants = response.data.data;
         /* console.log(this.restaurants); */
       });
+    },
+    addCart: function addCart(food) {
+      var foods = food;
+      foods.quantity = this.quantity;
+      this.carrello.push(foods);
+      localStorage.carrello = JSON.stringify(this.carrello);
+      console.log(this.carrello);
     }
   }
 });
@@ -149,7 +171,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fortunato/Desktop/GENERAL FOLDER/BOOLEAN/Repository/pappo/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\vue.js */"./resources/js/vue.js");
 
 
 /***/ })

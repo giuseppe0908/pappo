@@ -58,22 +58,6 @@ var app = new Vue({
 
             console.log(this.carrello);
         },
-        aggiungi: function(){
-            this.carrello.forEach(item => {
-                item.quantity ++;
-                console.log(item);
-            });
-            console.log(this.carrello);
-        },   
-        meno: function(){
-            this.carrello.forEach(item => {
-                item.quantity --;
-                console.log(item);
-            });
-            console.log(this.carrello);
-    
-            // this.carrello[this.carrello.indexOf(quantita)].quantity += 1;
-    
-        }
+
     },
 });

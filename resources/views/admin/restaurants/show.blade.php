@@ -28,7 +28,7 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
-								<a  href="{{route('admin.foods.edit', ['food' => $food->restaurant_id])}}" class="btn btn-edit"><i class="far fa-edit"></i></a>
+								<a  href="{{route('admin.foods.edit', ['food' => $food->id])}}" class="btn btn-edit"><i class="far fa-edit"></i></a>
 							</div>
 						</div>
 						
