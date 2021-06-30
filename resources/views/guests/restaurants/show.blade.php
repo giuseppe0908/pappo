@@ -67,11 +67,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="cart flex">
-			<div class="cart-name">Piatto</div>
-			<div class="cart-quant">Q.ta</div>
-			<div class="cart-sub">Prezzo</div>
-			<div class="cart-total">Totale</div>
+		<div class="cart flex" v-if="carrello">
+			<div class="cart-name"><span>Piatto</span></div>
+			<div class="cart-quant"><span>Q.ta</span></div>
+			<div class="cart-sub"><span>Prezzo</span></div>
+			<div v-for>
+
+			
+			</div>
+			<div class="cart-total"><span>Totale</span></div>
 			<div class="cart-checkout"><a href="" class="btn">CHECKOUT</a></div>
 		</div>
 	</section>

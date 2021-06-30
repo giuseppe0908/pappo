@@ -1,10 +1,9 @@
 #root {
-    height: calc(100vh - 100px);
-    margin-top: 100px;
     #guest-show {
         background-color: #ffe3ac;
         padding: 20px 0;
-        height: 100%;
+        margin-top: 100px;
+        height: calc(100vh - 100px);
         position: relative;
         overflow: hidden;
         .container-show {
