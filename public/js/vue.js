@@ -158,20 +158,6 @@ var app = new Vue({
       this.carrello.push(foods);
       localStorage.carrello = JSON.stringify(this.carrello);
       console.log(this.carrello);
-    },
-    aggiungi: function aggiungi() {
-      this.carrello.forEach(function (item) {
-        item.quantity++;
-        console.log(item);
-      });
-      console.log(this.carrello);
-    },
-    meno: function meno() {
-      this.carrello.forEach(function (item) {
-        item.quantity--;
-        console.log(item);
-      });
-      console.log(this.carrello); // this.carrello[this.carrello.indexOf(quantita)].quantity += 1;
     }
   }
 });
@@ -185,7 +171,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fortunato/Desktop/GENERAL FOLDER/BOOLEAN/Repository/pappo/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\vue.js */"./resources/js/vue.js");
 
 
 /***/ })
