@@ -5,6 +5,19 @@ var app = new Vue({
         categories: [],
         restaurants: [],
         categoryIndex: '',
+        quantity: 1,
+        carrello:[],
+        array:[],
+    },
+    computed: {
+        carrelloTotale() {
+            let somma=0;
+            for(var key in this.carrello) {
+                somma +=(this.carrello[key].price * this.carrello[key].quantity);
+            }
+            console.log(somma);
+            return somma.toFixed(2)
+        },
     },
     mounted: function (){
         /* chiamata categorie ristoranti */
@@ -36,8 +49,31 @@ var app = new Vue({
                 /* console.log(this.restaurants); */
             }); 
         },
-        addCart: function() {
-            console.log('click!');
+        addCart: function(food) {
+            let foods = food;
+            foods.quantity = this.quantity;
+           
+            this.carrello.push(foods);
+            localStorage.carrello = JSON.stringify(this.carrello);
+
+            console.log(this.carrello);
+        },
+        aggiungi: function(){
+            this.carrello.forEach(item => {
+                item.quantity ++;
+                console.log(item);
+            });
+            console.log(this.carrello);
+        },   
+        meno: function(){
+            this.carrello.forEach(item => {
+                item.quantity --;
+                console.log(item);
+            });
+            console.log(this.carrello);
+    
+            // this.carrello[this.carrello.indexOf(quantita)].quantity += 1;
+    
         }
     },
 });
