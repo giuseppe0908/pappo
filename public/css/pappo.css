@@ -1857,6 +1857,152 @@ a.navbar-brand {
   z-index: 1;
 }
 
+section.restaurant-create {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  background-color: #addec9;
+  position: relative;
+  overflow: hidden;
+}
+section.restaurant-create .container .row .col-md-12 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form {
+  background-color: #ceefe1;
+  padding: 25px 80px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .form-group label {
+  font-size: 18px;
+  font-weight: 700;
+  color: teal;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .form-group .form-control:focus {
+  border-color: #ffd772;
+  box-shadow: 0 0 0 0.2rem rgba(252, 232, 78, 0.3);
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container button.btn-primary {
+  background-color: #343a40;
+  font-weight: 800;
+  border: transparent;
+  padding: 15px 15px;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container button.btn-primary:hover {
+  background-color: #02e175;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container .btn.back {
+  background-color: #f9a723;
+  font-weight: 800;
+  transition: background-color 0.4s;
+  border-radius: 3px;
+  margin-left: 15px;
+  border: transparent;
+  padding: 15px 15px;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container .btn.back a {
+  color: #fff;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container .btn.back:hover {
+  background-color: #ffc76d;
+}
+section.restaurant-create .container .row.justify-content-center .col-md-8 form .button-container .btn.back:focus {
+  box-shadow: none;
+}
+section.restaurant-create .img-restaurants {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+}
+section.restaurant-create .img-restaurants img {
+  width: 300px;
+}
+section.restaurant-create .img-restaurants-two {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+}
+section.restaurant-create .img-restaurants-two img {
+  width: 350px;
+}
+
+section.edit-food {
+  width: 100vw;
+  background-color: #e0ffff;
+}
+section.edit-food h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+section.edit-food .row.justify-content-center .col-md-8 {
+  margin-bottom: 50px;
+}
+section.edit-food .row.justify-content-center .col-md-8 form {
+  background-color: #ceefe1;
+  margin-top: 50px;
+  padding: 25px 80px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+section.edit-food .row.justify-content-center .col-md-8 form label {
+  font-size: 18px;
+  font-weight: 700;
+  color: teal;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .form-control:focus {
+  border-color: #ffd772;
+  box-shadow: 0 0 0 0.2rem rgba(252, 232, 78, 0.3);
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container button.btn-primary {
+  background-color: #343a40;
+  font-weight: 800;
+  border: transparent;
+  padding: 15px 15px;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container button.btn-primary:hover {
+  background-color: #02e175;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container .btn.back {
+  background-color: #f9a723;
+  font-weight: 800;
+  transition: background-color 0.4s;
+  border-radius: 3px;
+  margin-left: 15px;
+  border: transparent;
+  padding: 15px 15px;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container .btn.back a {
+  color: #fff;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container .btn.back:hover {
+  background-color: #ffc76d;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .button-container .btn.back:focus {
+  box-shadow: none;
+}
+section.edit-food .img-restaurants-edit {
+  position: absolute;
+  left: 70px;
+  top: 200px;
+}
+section.edit-food .img-restaurants-edit img {
+  width: 300px;
+}
+section.edit-food .img-restaurants-edit-two {
+  position: absolute;
+  right: 110px;
+  top: 280px;
+}
+section.edit-food .img-restaurants-edit-two img {
+  width: 200px;
+}
+
 #user-register {
   width: 100vw;
   height: calc(100vh - 100px);
