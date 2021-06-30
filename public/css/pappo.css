@@ -1009,53 +1009,56 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   color: #fff;
 }
 
-#guest-show {
+#root {
+  height: calc(100vh - 100px);
   margin-top: 100px;
+}
+#root #guest-show {
   background-color: #ffe3ac;
   padding: 20px 0;
-  height: calc(100vh - 100px);
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
-#guest-show .container-show {
+#root #guest-show .container-show {
   width: 80%;
   margin: 0 auto;
   height: 100%;
   position: relative;
   z-index: 3;
 }
-#guest-show .container-show .content {
+#root #guest-show .container-show .content {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   height: 100%;
 }
-#guest-show .container-show .content .w50 {
+#root #guest-show .container-show .content .w50 {
   width: 50%;
   height: auto;
   padding: 50px;
   background-color: #fff;
 }
-#guest-show .container-show .content .w50.l {
+#root #guest-show .container-show .content .w50.l {
   border-radius: 10px 0 0 10px;
 }
-#guest-show .container-show .content .w50.l h1 {
+#root #guest-show .container-show .content .w50.l h1 {
   font-weight: 800;
   color: teal;
 }
-#guest-show .container-show .content .w50.l .descr {
+#root #guest-show .container-show .content .w50.l .descr {
   font-weight: 700;
   font-size: 18px;
 }
-#guest-show .container-show .content .w50.l .menu {
+#root #guest-show .container-show .content .w50.l .menu {
   color: teal;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper {
+#root #guest-show .container-show .content .w50.l .menu-wrapper {
   flex-wrap: wrap;
   height: 55%;
   overflow-y: scroll;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card {
   position: relative;
   height: 285px;
   padding: 5px;
@@ -1065,29 +1068,29 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: #fff;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled {
   background-color: #eeeeee;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled img {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled img {
   filter: grayscale(100%);
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img {
   height: 150px;
   overflow: hidden;
   flex-wrap: wrap;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content {
   height: 60%;
   overflow: hidden;
   width: 100%;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content img {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content img {
   width: 100%;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-title {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-title {
   padding-top: 10px;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd {
   margin-bottom: 5px;
   position: absolute;
   bottom: 5px;
@@ -1096,7 +1099,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   justify-content: space-between;
   align-items: center;
 }
-#guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .cart {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .cart {
   padding: 5px 7px;
   background-color: teal;
   color: #fff;
@@ -1104,31 +1107,31 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   border-radius: 4px;
   font-size: 12px;
 }
-#guest-show .container-show .content .w50.r {
+#root #guest-show .container-show .content .w50.r {
   border-radius: 0 10px 10px 0;
 }
-#guest-show .container-show .content .w50.r .infos {
+#root #guest-show .container-show .content .w50.r .infos {
   padding: 30px 0;
 }
-#guest-show .container-show .content .w50.r .infos h4 {
+#root #guest-show .container-show .content .w50.r .infos h4 {
   color: teal;
 }
-#guest-show .container-show .content .w50.r .infos p {
+#root #guest-show .container-show .content .w50.r .infos p {
   font-weight: 700;
 }
-#guest-show .container-show .content .w50.r img {
+#root #guest-show .container-show .content .w50.r img {
   width: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-#guest-show .container-show .content .w50.r .menu-cmd {
+#root #guest-show .container-show .content .w50.r .menu-cmd {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
-#guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu {
+#root #guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu {
   margin-right: 15px;
   padding: 15px 15px;
   background-color: #06c167;
@@ -1136,27 +1139,48 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   font-weight: 800;
   transition: 0.4s;
 }
-#guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu:hover {
+#root #guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu:hover {
   background-color: #02e175;
 }
-#guest-show .container-show .content .w50.r .menu-cmd .back {
+#root #guest-show .container-show .content .w50.r .menu-cmd .back {
   padding: 15px 15px;
   background-color: #f9a723;
   font-weight: 800;
   transition: background-color 0.4s;
   border-radius: 3px;
 }
-#guest-show .container-show .content .w50.r .menu-cmd .back a {
+#root #guest-show .container-show .content .w50.r .menu-cmd .back a {
   color: #fff;
 }
-#guest-show .container-show .content .w50.r .menu-cmd .back:hover {
+#root #guest-show .container-show .content .w50.r .menu-cmd .back:hover {
   background-color: #ffc76d;
 }
-#guest-show .img-show {
+
+.cart {
   position: absolute;
-  z-index: 1;
-  left: -100px;
-  bottom: -100px;
+  top: 105px;
+  right: 50px;
+  background-color: #fff;
+  z-index: 4;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.cart .cart-name, .cart .cart-quant, .cart .cart-sub {
+  width: calc(100% / 3);
+  background-color: khaki;
+  border: 1px solid black;
+}
+.cart .cart-total {
+  width: 50%;
+}
+.cart .cart-checkout {
+  width: 50%;
+  padding: 10px;
+}
+.cart .cart-checkout a {
+  padding: 5px 7px;
+  background-color: lightgreen;
 }
 
 #restaurants {

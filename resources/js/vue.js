@@ -36,5 +36,8 @@ var app = new Vue({
                 /* console.log(this.restaurants); */
             }); 
         },
+        addCart: function() {
+            console.log('click!');
+        }
     },
 });
