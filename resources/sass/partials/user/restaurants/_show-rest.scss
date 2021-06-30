@@ -33,29 +33,47 @@
                     }
                     .menu-wrapper {
                         flex-wrap: wrap;
-                        height: 500px;
+                        height: 55%;
                         overflow-y: scroll;
                         .menu-card {
                             position: relative;
                             height: 285px;
                             padding: 5px;
-                            width: calc(100% / 4 - 20px);
+                            width: calc(100% / 2 - 20px);
                             margin: 8px 10px;
                             border-radius: 10px;
                             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                             background-color: #fff;
+                            &.disabled {
+                                background-color: lightgrey;
+                                img {
+                                    filter: grayscale(100%);
+                                }
+                            }
                             .menu-img {
                                 height: 150px;
                                 overflow: hidden;
-                                img {
+                                flex-wrap: wrap;
+                                .menu-img-content {
+                                    height: 60%;
+                                    overflow: hidden;
                                     width: 100%;
+                                    img {
+                                        width: 100%;
+                                    }
                                 }
+                            }
+                            .menu-title {
+                                padding-top: 10px;
                             }
                             .card-cmd {
                                 margin-bottom: 5px;
                                 position: absolute;
                                 bottom: 5px;
                                 left: 5px;
+                                right: 10px;
+                                justify-content: space-between;
+                                align-items: center;
                                 .btn-edit {
                                     padding: 5px 8px;
                                     background-color: lightseagreen;

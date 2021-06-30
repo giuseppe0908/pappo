@@ -15,18 +15,41 @@
 				<h4 class="menu">Menu:</h4>
 				<div class="menu-wrapper flex">
 				@foreach($foods as $food)
-					<div class="menu-card">
-						<h4>{{$food->name}}</h4>
-						<p>{{$food->price}} €</p>
-						{{$food->avaible}}
-						<div class="menu-img">
-							<img src="{{asset($food->photo)}}" alt="{{$food->name}}">
+						@if($food->available == 1)
+						<div class="menu-card">
+ 							<div class="menu-img">
+								<img src="{{asset($food->photo)}}" alt="{{$food->name}}">
+							</div>
+							<div class="menu-title">
+								<h4>{{$food->name}}</h4>
+							</div>
+							<div class="menu-ingredients">
+								<p>Ingredienti: {{$food->ingredients}}</p>
+							</div>
+							<div class="card-cmd flex">
+								<p style="margin-bottom: 0">{{$food->price}} €</p>
+								<a  href="{{route('admin.foods.edit', ['food' => $food->id])}}" class="btn btn-edit"><i class="far fa-edit"></i></a>
+							</div>
 						</div>
-						<div class="card-cmd">
-							<a class="btn-edit" href="{{route('admin.foods.edit', ['food' => $food->id])}}"><i class="far fa-edit"></i></a>
+						
+						@else
+						<div class="menu-card disabled">
+							<div class="menu-img">
+								<img src="{{asset($food->photo)}}" alt="{{$food->name}}">
+							</div>
+							<div class="menu-title">
+								<h4>{{$food->name}}</h4>
+							</div>
+							<div class="menu-ingredients">
+								<p>Ingredienti: {{$food->ingredients}}</p>
+							</div>
+							<div class="card-cmd flex">
+								<p style="margin-bottom: 0">{{$food->price}} €</p>
+								<a href="{{route('admin.foods.edit', ['food' => $food->id])}}" class="btn btn-edit"><i class="far fa-edit"></i></a>
+							</div>
 						</div>
-					</div>
-				@endforeach
+						@endif
+					@endforeach
 				</div>
 			</div>
 			<div class="w50 r">

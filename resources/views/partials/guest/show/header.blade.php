@@ -1,14 +1,11 @@
-<nav class="transparent flex">
+<nav id="nav-show" class="flex">
     <div class="container-nav flex">
         <div class="nav-left">
             <div class="logo flex">
-                <p>PAPPO</p>
+                <p style="cursor: context-menu">PAPPO</p>
             </div>
         </div>
-        <div class="nav-right flex">
-            <div class="carrello">
-                <i style="color: teal; font-size: 30px; margin-right: 20px" class="fas fa-shopping-cart"></i>
-            </div>
+        <div class="nav-right">
             <div class="hamburger flex">
                 <div class="line1"></div>
                 <div class="line2"></div>
