@@ -18,7 +18,7 @@ class Restaurant extends Model
       ];
       
       public function user(){
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User');
       }
 
       public function categories(){
@@ -26,7 +26,7 @@ class Restaurant extends Model
       } 
 
       public function foods(){
-        return $this->belongsTo('App\Food');
+        return $this->hasMany('App\Food', 'id', 'restaurant_id');
       }
 
       public function orders(){

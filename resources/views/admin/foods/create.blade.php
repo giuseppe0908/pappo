@@ -50,7 +50,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="photo">Foto</label>
+							<label for="photo">Fotografia</label>
 							<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 								@error('photo')
 								<small class="text-danger">{{ $message }}</small>

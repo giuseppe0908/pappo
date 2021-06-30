@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-		<h3>New Restaurants</h3>
+		<h3>Nuovo Ristorante </h3>
 		</div>
 	</div>
 	<div class="row justify-content-center">
@@ -13,7 +13,7 @@
 				@csrf
 				@method('POST')
 				<div class="form-group">
-					<label for="name">Name</label>
+					<label for="name">Nome</label>
 					<input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name') }}">
 					@error('name')
 					<small class="text-danger">{{ $message }}</small>
@@ -21,7 +21,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="description">description</label>
+					<label for="description">Descrizione</label>
 					<textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"> {{ old('description') }}</textarea>
 					@error('description')
 					<small class="text-danger">{{ $message }}</small>
@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="address">Address</label>
+					<label for="address">Indirizzp</label>
 					<input class="form-control @error('address') is-invalid @enderror" id="address" type="text" name="address" value="{{ old('address') }}">
 					@error('address')
 					<small class="text-danger">{{ $message }}</small>
@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="photo">Photo</label>
+					<label for="photo">Fotografia</label>
 					<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 					@error('photo')
 					<small class="text-danger">{{ $message }}</small>
@@ -64,7 +64,7 @@
 					@enderror
 				</div>
 
-				<button class="btn btn-primary" type="submit">Save</button>
+				<button class="btn btn-primary" type="submit">Salva</button>
 			</form>
 		</div>
 	</div>

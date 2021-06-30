@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
 				@method('PATCH')
 
 				<div class="form-group">
-					<label for="name">Name</label>
+					<label for="name">Nome</label>
 					<input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name" value="{{ old('name', $food->name) }}">
 					@error('name')
 						<small class="text-danger">{{ $message }}</small>
@@ -30,7 +30,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="price">Price</label>
+					<label for="price">Prezzo</label>
 					<input class="form-control @error('price') is-invalid @enderror" id="price" type="number" step="0.01" name="price" value="{{ old('price', $food->price) }}">
 					@error('price')
 						<small class="text-danger">{{ $message }}</small>
@@ -48,17 +48,18 @@
 					@enderror
 				</div>
 
-				<div>
-					<img src="{{asset($food->photo)}}" alt="">
-				</div>
 				<div class="form-group">
-					<label for="photo">Photo</label>
+					<label for="photo">Fotografia</label>
 					<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 					@error('photo')
 						<small class="text-danger">{{ $message }}</small>
 					@enderror
 				</div>
-				<button class="btn btn-primary" type="submit">Save</button>
+				<div>
+					<img src="{{asset($food->photo)}}" alt="">
+				</div>
+				<button class="btn btn-primary" type="submit">Salva</button>
+				<a class="btn back" href="{{route('admin.restaurants.index')}}">Indietro</a>
           	</form>
       	</div>
     </div>
