@@ -31,7 +31,7 @@
 								<a  href="{{route('admin.foods.edit', ['food' => $food->id])}}" class="btn btn-edit"><i class="far fa-edit"></i></a>
 							</div>
 						</div>
-						
+
 						@else
 						<div class="menu-card disabled">
 							<div class="menu-img">

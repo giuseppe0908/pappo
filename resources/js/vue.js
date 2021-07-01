@@ -17,9 +17,9 @@ var app = new Vue({
             for (var key in this.carrello) {
                 somma += (this.carrello[key].price * this.carrello[key].quantity);
             }
-            // console.log(somma);
             return somma.toFixed(2)
-        },
+        }
+
     },
     mounted: function () {
         if (localStorage.carrello) {
@@ -28,15 +28,11 @@ var app = new Vue({
         /* chiamata categorie ristoranti */
         axios.get('http://localhost:8000/api/categories').then((response) => {
             this.categories = response.data.data;
-            /*console.log(this.categories) */
         });
         /* chiamata per i ristoranti */
         axios.get('http://localhost:8000/api/restaurants').then((response) => {
             this.restaurants = response.data.data;
-            /* console.log(this.restaurants); */
         });
-
-        // console.log(this.carrello);
     },
     methods: {
         //al click vediamo tutti i ristoranti della categoria selezionata
@@ -45,7 +41,6 @@ var app = new Vue({
             this.categoryIndex = category;
             axios.get("http://localhost:8000/api/restaurants/".concat(this.categoryIndex), {}).then((response) => {
                 this.restaurants = response.data.data;
-                /* console.log(response.data.data); */
             });
         },
         //al click vediamo tutti i ristoranti
@@ -53,7 +48,6 @@ var app = new Vue({
             this.categoryIndex = '';
             axios.get('http://localhost:8000/api/restaurants').then((response) => {
                 this.restaurants = response.data.data;
-                /* console.log(this.restaurants); */
             });
         },
         addCart: function (food, quantity) {
@@ -64,24 +58,18 @@ var app = new Vue({
 
                 food.quantity = quantity
                 this.carrello.push(food);
-                console.log("Carrello vuoto")
 
             } else {
                 food.quantity = quantity
                 let flag = false;
-                console.log("già pieno", food)
                 this.carrello.forEach(element => {
                     if (element.id === food.id) {
-                        console.log("id trovato")
                         element.quantity++;
                         flag = true;
-
-
                     }
                 });
 
                 if (!flag) {
-                    console.log("Aggiornamento carrello non svuotato")
                     this.carrello.push(food);
                 }
             }
@@ -92,7 +80,6 @@ var app = new Vue({
             this.carrello.forEach(item => {
                 if (item.id === id1) {
                     item.quantity++;
-                    // console.log(item);
                     localStorage.carrello = JSON.stringify(this.carrello);
                 }
             });
@@ -104,12 +91,10 @@ var app = new Vue({
                         item.quantity--;
                         localStorage.carrello = JSON.stringify(this.carrello);
                     } else {
-                       /* console.log("ciao sono dentro if CAZZO");*/
                         this.carrello.splice(index, 1);
                         localStorage.removeItem('carrello');
                         this.soldatino = true;
                     }
-                    console.log(item.quantity);
                 }
             });
             if (!this.soldatino) {
@@ -118,9 +103,23 @@ var app = new Vue({
 
             if (this.carrello.length === 0) {
                 window.localStorage.clear();
-                console.log("bernini <3");
             }
-            console.log(this.carrello);
+        },
+
+        svuota:function() {
+            this.carrello.forEach((element, index) => {
+                this.carrello.splice(index);
+                localStorage.carrello = JSON.stringify(this.carrello);
+            });
+        },
+
+        cancellaItem: function(id1) {
+            this.carrello.forEach((element, index) => {
+                if (element.id === id1) {
+                    this.carrello.splice(index, 1);
+                    localStorage.carrello = JSON.stringify(this.carrello);    
+                }
+            });
         }
     },
 });
