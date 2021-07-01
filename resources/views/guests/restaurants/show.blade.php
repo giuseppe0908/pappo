@@ -29,8 +29,7 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
-								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}})">Aggiungi <i class="fas fa-shopping-cart"></i></p>
-							</div>
+								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>							</div>
 						</div>
 						@else
 						<div class="menu-card disabled">
@@ -67,21 +66,22 @@
 			</div>
 		</div>
 		<div class="cart flex" id="carrello" style="width: 480px" v-if="carrello != '' ">
-			<div class="cart-name head"><span>Piatto</span></div>
-			<div class="cart-quant head"><span>Q.ta</span></div>
-			<div class="cart-sub head"><span>Prezzo</span></div>
-			<div v-for="order in carrello" class="flex riga" style="flex-wrap: wrap; width: 100%; background-color: #fff">
-				<div class="cart-name"><span>@{{order.name}}</span></div>
-				<div class="cart-quant">
-					<span @click="meno()" class="head">-</span>
-					<span style="padding:0 5 px">@{{order.quantity}}</span>
-					<span @click="aggiungi()" class="head">+</span>
-				</div>
-				<div class="cart-sub"><span>@{{order.price}} €</span></div>
-			</div>
-			<div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
-			<div class="cart-checkout flex"><a href="" class="btn">CHECKOUT</a></div>
-		</div>
+            <div class="cart-name head"><span>Piatto</span></div>
+            <div class="cart-quant head"><span>Q.ta</span></div>
+            <div class="cart-sub head"><span>Prezzo</span></div>
+            <div v-for="order in carrello" class="flex riga" style="flex-wrap: wrap; width: 100%; background-color: #fff">
+                <div class="cart-name"><span>@{{order.name}}</span></div>
+                <div class="cart-quant">
+                    <span @click="meno(order.id)" class="head">-</span>
+                    <span style="padding:0 5 px">@{{order.quantity}}</span>
+                    <span @click="aggiungi(order.id)" class="head">+</span>
+                </div>
+                <div class="cart-sub"><span>@{{order.price}} €</span></div>
+            </div>
+            <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
+            <div class="cart-checkout flex"><a href="" class="btn">CHECKOUT</a></div>
+        </div>
+
 	</section>
 </div>
 @endsection
