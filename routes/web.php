@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('restaurants/{slug}', 'RestaurantController@show')->name('restaurants.show');
+Route::post('order', 'OrderController@getRestaurant')->name('getrestaurant');
+Route::resource('orders', 'OrderController');
 
 
 
