@@ -124,7 +124,7 @@ $('.hamburger').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\js\nav-bar.js */"./resources/js/nav-bar.js");
+module.exports = __webpack_require__(/*! /Users/andrea/Desktop/BOOLEAN/ESERCIZI/FINAL_PROJECT/pappo/resources/js/nav-bar.js */"./resources/js/nav-bar.js");
 
 
 /***/ })

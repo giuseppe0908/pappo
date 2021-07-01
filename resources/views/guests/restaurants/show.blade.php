@@ -29,7 +29,7 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
-								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>							
+								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>
 							</div>
 						</div>
 						@else
@@ -81,7 +81,10 @@
                 <div class="cart-sub"><span>@{{order.price}} €</span></div>
             </div>
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
-            <div class="cart-checkout flex"><a href="" class="btn">CHECKOUT</a></div>
+            <div class="cart-checkout flex">
+                <a href="" class="btn">CHECKOUT</a>
+                <p @click="svuota()" href="" class="btn">X</p>
+            </div>
         </div>
 
 	</section>
