@@ -1170,6 +1170,15 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   flex-wrap: wrap;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+.cart .cart-sub {
+  justify-content: space-around;
+}
+.cart .cart-sub .del {
+  display: block;
+  margin-left: auto;
+  color: lightcoral;
+  font-weight: 800;
+}
 .cart .cart-name, .cart .cart-quant, .cart .cart-sub {
   padding: 8px;
   width: calc(100% / 3);
@@ -1205,7 +1214,9 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 .cart .cart-checkout {
   width: 50%;
   padding: 10px;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .cart .cart-checkout a {
   padding: 5px 7px;
@@ -1215,6 +1226,16 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 }
 .cart .cart-checkout a:hover {
   background-color: #01d66f;
+}
+.cart .cart-checkout p {
+  margin-top: 5px;
+  padding: 5px 7px;
+  background-color: lightcoral;
+  color: #fff;
+  font-weight: 800;
+}
+.cart .cart-checkout p:hover {
+  background-color: #e96f6f;
 }
 
 #carrello::-webkit-scrollbar {
@@ -1810,11 +1831,13 @@ a.navbar-brand {
 }
 
 #edit-rest {
-  height: calc(100vh - 100px);
   background-color: #d4e2fc;
   position: relative;
   flex-direction: column;
   justify-content: center;
+}
+#edit-rest .container {
+  padding: 20px 20px;
 }
 #edit-rest .container .card-edit {
   position: relative;
@@ -1824,11 +1847,24 @@ a.navbar-brand {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-#edit-rest .container .card-edit .row .col-md-12.uppercase h3 {
+#edit-rest .container .card-edit .row .col-md-12.uppercase {
+  margin: 20px 20px;
+}
+#edit-rest .container .card-edit .row .col-md-12.uppercase h1 {
   font-weight: 700;
+  font-weight: bold;
 }
 #edit-rest .container .card-edit .row .col-md-8 .form-group #description {
-  height: 140px;
+  height: 110px;
+}
+#edit-rest .container .card-edit .row .col-md-8 .form-group label {
+  font-size: 18px;
+  font-weight: 700;
+  color: teal;
+}
+#edit-rest .container .card-edit .row .col-md-8 .form-group .form-control:focus {
+  border-color: #ef8896;
+  box-shadow: 0 0 0 0.2rem rgba(234, 85, 105, 0.2);
 }
 #edit-rest .container .card-edit .row .col-md-8 .btn-back {
   background-color: #f9a723;
@@ -1843,6 +1879,14 @@ a.navbar-brand {
 }
 #edit-rest .container .card-edit .row .col-md-8 .btn-back:focus {
   box-shadow: none;
+}
+#edit-rest .img-chips {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#edit-rest .img-chips img {
+  width: 500px;
 }
 
 #category::-webkit-scrollbar {

@@ -218,6 +218,17 @@ var app = new Vue({
 
         localStorage.carrello = JSON.stringify(_this6.carrello);
       });
+    },
+    cancellaItem: function cancellaItem(id1) {
+      var _this7 = this;
+
+      this.carrello.forEach(function (element, index) {
+        if (element.id === id1) {
+          _this7.carrello.splice(index, 1);
+
+          localStorage.carrello = JSON.stringify(_this7.carrello);
+        }
+      });
     }
   }
 });
@@ -231,7 +242,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/andrea/Desktop/BOOLEAN/ESERCIZI/FINAL_PROJECT/pappo/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! /Users/fortunato/Desktop/GENERAL FOLDER/BOOLEAN/Repository/pappo/resources/js/vue.js */"./resources/js/vue.js");
 
 
 /***/ })
