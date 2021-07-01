@@ -85,8 +85,16 @@
             </div>
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
             <div class="cart-checkout flex">
-                <a href="" class="btn">CHECKOUT</a>
-                <p style="margin-bottom: 0" @click="svuota()" class="btn uppercase">svuota</p>
+			<div class="add-food">
+						<span class="btn add-menu" onclick="event.preventDefault();
+						document.getElementById('getRestaurant').submit();">Checkout</span>
+						<form id="getRestaurant" action="{{route('getrestaurant', ['id' => $restaurant->id])}}" method="post">
+							@csrf
+							@method('POST')
+							<input type="hidden" name="id" value="{{ $restaurant->id }}">
+						</form>
+					</div>
+                <p @click="svuota()" href="" class="btn">X</p>
             </div>
         </div>
 
