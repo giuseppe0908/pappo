@@ -16,7 +16,7 @@
                 @endif
                 <div class="my_card">
                     <a href="{{route('admin.restaurants.index')}}">
-                        Il Tuo Ristorante
+                        I Tuoi Ristoranti
                     </a>
                     <div class="img_cont_cards">
                         <img <img src="./img/box.png" alt="">

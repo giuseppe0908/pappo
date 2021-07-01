@@ -9,6 +9,7 @@
 				<form action="{{route('admin.restaurants.store')}}" method="post" enctype="multipart/form-data">
 					@csrf
 					@method('POST')
+					
 					<div class="row">
 						<div class="col-md-12">
 						<h1>Nuovo ristorante</h1>

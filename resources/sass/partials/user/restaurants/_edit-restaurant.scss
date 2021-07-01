@@ -1,11 +1,10 @@
 #edit-rest {
-    height: calc(100vh - 100px);
     background-color: #d4e2fc;
     position: relative;
     flex-direction: column;
     justify-content: center;
-
     .container {
+        padding: 20px 20px;
         .card-edit {
             position: relative;
             z-index: 2;
@@ -15,8 +14,11 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             .row {
                 .col-md-12.uppercase {
-                    h3 {
+                    margin: 20px 20px;
+                    h1 {
                         font-weight: 700;
+                        font-weight: bold;
+
                     }
                 }
             }
@@ -24,39 +26,57 @@
                 .col-md-8 {
                     .form-group {
                             #description {
-                                height: 140px;
-                            }   
+                                height: 110px;
+                            }
+                            label {
+                                font-size: 18px;
+                                font-weight: 700;
+                                color: teal;
+                            }
+                            .form-control:focus {
+                              border-color: #ef8896;
+                              box-shadow: 0 0 0 0.2rem rgba(234, 85, 105, 0.20);
+                            }
                     }
                     .btn-back {
                         background-color: #f9a723;
                         font-weight: 800;
-                        transition: background-color 0.4s;  
+                        transition: background-color 0.4s;
                         border-radius: 3px;
                         color: #fff;
                         margin-left: 15px;
                         &:hover {
                             background-color: #ffc76d;
-                        }  
+                        }
                         &:focus {
                             box-shadow: none;
-                        }      
+                        }
                     }
                 }
             }
         }
     }
+    .img-chips {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        img {
+            width: 500px;
+        }
+    }
+
 }
 
 
 #category::-webkit-scrollbar {
     width: 8px; /* width of the entire scrollbar */
   }
-  
+
 #category::-webkit-scrollbar-track {
     border-radius: 10px;
     background: rgba(220, 220, 220, 0.1); /* color of the tracking area */
   }
-  
+
 #category::-webkit-scrollbar-thumb {
     background: linear-gradient(to right bottom, #a0bff9, #adc8fa, #bad0fb, #c7d9fb, #d4e2fc); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */

@@ -13,6 +13,7 @@ class Order extends Model
         'customer_phone_number',
         'customer_email',
         'total',
+        'restaurant_id',
     ];
 
     public function foods(){
