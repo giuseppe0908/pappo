@@ -29,7 +29,8 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
-								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>							</div>
+								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>							
+							</div>
 						</div>
 						@else
 						<div class="menu-card disabled">
