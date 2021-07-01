@@ -45,6 +45,7 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
+								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: no-drop; background-color: lightcoral">Non Disponibile <i class="fas fa-ban"></i></p>							
 							</div>
 						</div>
 						@endif
