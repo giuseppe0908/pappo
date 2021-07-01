@@ -102,7 +102,8 @@ var app = new Vue({
     categoryIndex: '',
     quantity: 1,
     carrello: [],
-    array: []
+    array: [],
+    soldatino: false
   },
   computed: {
     carrelloTotale: function carrelloTotale() {
@@ -110,16 +111,21 @@ var app = new Vue({
 
       for (var key in this.carrello) {
         somma += this.carrello[key].price * this.carrello[key].quantity;
-      }
+      } // console.log(somma);
 
-      console.log(somma);
+
       return somma.toFixed(2);
     }
   },
   mounted: function mounted() {
     var _this = this;
 
+    if (localStorage.carrello) {
+      this.carrello = JSON.parse(localStorage.carrello);
+    }
     /* chiamata categorie ristoranti */
+
+
     axios.get('http://localhost:8000/api/categories').then(function (response) {
       _this.categories = response.data.data;
       /*console.log(this.categories) */
@@ -129,7 +135,7 @@ var app = new Vue({
     axios.get('http://localhost:8000/api/restaurants').then(function (response) {
       _this.restaurants = response.data.data;
       /* console.log(this.restaurants); */
-    });
+    }); // console.log(this.carrello);
   },
   methods: {
     //al click vediamo tutti i ristoranti della categoria selezionata
@@ -152,11 +158,72 @@ var app = new Vue({
         /* console.log(this.restaurants); */
       });
     },
-    addCart: function addCart(food) {
-      var foods = food;
-      foods.quantity = this.quantity;
-      this.carrello.push(foods);
+    addCart: function addCart(food, quantity) {
+      /*throw new Error("Something went badly wrong!");*/
+      if (this.carrello.length === 0) {
+        food.quantity = quantity;
+        this.carrello.push(food);
+        console.log("Carrello vuoto");
+      } else {
+        food.quantity = quantity;
+        var flag = false;
+        console.log("già pieno", food);
+        this.carrello.forEach(function (element) {
+          if (element.id === food.id) {
+            console.log("id trovato");
+            element.quantity++;
+            flag = true;
+          }
+        });
+
+        if (!flag) {
+          console.log("Aggiornamento carrello non svuotato");
+          this.carrello.push(food);
+        }
+      }
+
       localStorage.carrello = JSON.stringify(this.carrello);
+    },
+    aggiungi: function aggiungi(id1) {
+      var _this4 = this;
+
+      this.carrello.forEach(function (item) {
+        if (item.id === id1) {
+          item.quantity++; // console.log(item);
+
+          localStorage.carrello = JSON.stringify(_this4.carrello);
+        }
+      });
+    },
+    meno: function meno(id1) {
+      var _this5 = this;
+
+      this.carrello.forEach(function (item, index) {
+        if (item.id === id1) {
+          if (item.quantity > 1) {
+            item.quantity--;
+            localStorage.carrello = JSON.stringify(_this5.carrello);
+          } else {
+            /* console.log("ciao sono dentro if CAZZO");*/
+            _this5.carrello.splice(index, 1);
+
+            localStorage.removeItem('carrello');
+            _this5.soldatino = true;
+          }
+
+          console.log(item.quantity);
+        }
+      });
+
+      if (!this.soldatino) {
+        localStorage.carrello = JSON.stringify(this.carrello);
+      }
+
+      if (this.carrello.length === 0) {
+        window.localStorage.clear();
+        console.log("bernini <3");
+      }
+
       console.log(this.carrello);
     }
   }
@@ -171,7 +238,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\js\vue.js */"./resources/js/vue.js");
 
 
 /***/ })

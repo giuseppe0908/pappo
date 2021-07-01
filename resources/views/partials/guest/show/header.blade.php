@@ -2,7 +2,7 @@
     <div class="container-nav flex">
         <div class="nav-left">
             <div class="logo flex">
-                <p style="cursor: context-menu">PAPPO</p>
+                <a href="{{ route('index') }}" style="cursor: context-menu">PAPPO</a>
             </div>
         </div>
         <div class="nav-right">

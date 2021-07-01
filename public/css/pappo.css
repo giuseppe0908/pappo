@@ -1005,8 +1005,9 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 #nav-show .logo:hover {
   transform: scale(1);
 }
-#nav-show .logo p {
+#nav-show .logo a {
   color: #fff;
+  cursor: pointer;
 }
 
 #root #guest-show {
@@ -1057,7 +1058,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 }
 #root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card {
   position: relative;
-  height: 285px;
+  height: 350px;
   padding: 5px;
   width: calc(100% / 2 - 20px);
   margin: 8px 10px;
@@ -1096,13 +1097,17 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   justify-content: space-between;
   align-items: center;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .cart {
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .carrellino {
   padding: 5px 7px;
   background-color: teal;
   color: #fff;
   font-weight: 700;
   border-radius: 4px;
   font-size: 12px;
+  transition: background-color 0.4s;
+}
+#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .carrellino:hover {
+  background-color: #05bbbb;
 }
 #root #guest-show .container-show .content .w50.r {
   border-radius: 0 10px 10px 0;
@@ -1154,8 +1159,10 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 }
 
 .cart {
+  max-height: 600px;
+  overflow-y: scroll;
   position: absolute;
-  top: 105px;
+  top: 15px;
   right: 50px;
   background-color: #fff;
   z-index: 4;
@@ -1164,20 +1171,68 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .cart .cart-name, .cart .cart-quant, .cart .cart-sub {
+  padding: 8px;
   width: calc(100% / 3);
-  background-color: khaki;
-  border: 1px solid black;
+}
+.cart .cart-name.head, .cart .cart-quant.head, .cart .cart-sub.head {
+  color: teal;
+  font-size: 18px;
+  font-weight: 800;
+}
+.cart .riga {
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  font-weight: 600;
+  padding: 2px 0;
+}
+.cart .riga .cart-quant span.head {
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  background-color: teal;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
 }
 .cart .cart-total {
+  padding: 5px;
   width: 50%;
+  color: teal;
+  font-size: 25px;
+  font-weight: 800;
+  align-items: center;
 }
 .cart .cart-checkout {
   width: 50%;
   padding: 10px;
+  justify-content: center;
 }
 .cart .cart-checkout a {
   padding: 5px 7px;
-  background-color: lightgreen;
+  background-color: #06c167;
+  color: #fff;
+  font-weight: 800;
+}
+.cart .cart-checkout a:hover {
+  background-color: #01d66f;
+}
+
+#carrello::-webkit-scrollbar {
+  width: 8px;
+  /* width of the entire scrollbar */
+}
+
+#carrello::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1);
+  /* color of the tracking area */
+}
+
+#carrello::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right bottom, #06c167, #06b963, #05b25f, #05aa5b, #05a357);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
 }
 
 #restaurants {
@@ -1267,7 +1322,6 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 .restaurants .row-rest .restaurant-card {
   position: relative;
   border-radius: 10px 10px 0 0;
-  height: 350px;
   width: calc(100% / 4 - 20px);
   margin: 15px 10px;
   background-color: #fff;
@@ -1299,18 +1353,14 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   color: #f9a723;
 }
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-bottom .card-address {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  margin: 15px 0;
 }
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-bottom .card-address img {
   width: 25px;
   color: teal;
 }
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-bottom .card-phone {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  padding-bottom: 10px;
 }
 .restaurants .row-rest .restaurant-card .restaurant-content .card-text .card-bottom .card-phone img {
   width: 25px;
@@ -1648,8 +1698,8 @@ a.navbar-brand {
 }
 #show-rest .container-show .content .w50.l .menu-wrapper .menu-card {
   position: relative;
-  height: 285px;
   padding: 5px;
+  height: 350px;
   width: calc(100% / 2 - 20px);
   margin: 8px 10px;
   border-radius: 10px;
@@ -1949,6 +1999,12 @@ section.edit-food .row.justify-content-center .col-md-8 form {
   padding: 25px 80px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+section.edit-food .row.justify-content-center .col-md-8 form .food-img {
+  width: 200px;
+}
+section.edit-food .row.justify-content-center .col-md-8 form .food-img img {
+  width: 100%;
 }
 section.edit-food .row.justify-content-center .col-md-8 form label {
   font-size: 18px;
