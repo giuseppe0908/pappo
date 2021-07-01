@@ -155,9 +155,15 @@ var app = new Vue({
     addCart: function addCart(food) {
       var foods = food;
       foods.quantity = this.quantity;
-      this.carrello.push(foods);
-      localStorage.carrello = JSON.stringify(this.carrello);
-      console.log(this.carrello);
+
+      if (!this.carrello.includes(food)) {
+        this.carrello.push(foods);
+        localStorage.carrello = JSON.stringify(this.carrello);
+      } else {
+        foods.quantity++;
+      }
+
+      console.log(foods.quantity);
     }
   }
 });
@@ -171,7 +177,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! C:\Users\leona\Desktop\ESERCIZI\pappo\resources\js\vue.js */"./resources/js/vue.js");
 
 
 /***/ })

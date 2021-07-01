@@ -53,10 +53,14 @@ var app = new Vue({
             let foods = food;
             foods.quantity = this.quantity;
            
-            this.carrello.push(foods);
-            localStorage.carrello = JSON.stringify(this.carrello);
+            if (!this.carrello.includes(food)) {
+                this.carrello.push(foods);
+                localStorage.carrello = JSON.stringify(this.carrello);    
+            } else {
+                foods.quantity++;
+            }
 
-            console.log(this.carrello);
+            console.log(foods.quantity);
         },
 
     },
