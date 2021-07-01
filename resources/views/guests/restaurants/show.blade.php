@@ -78,12 +78,15 @@
                     <span style="padding:0 5 px">@{{order.quantity}}</span>
                     <span @click="aggiungi(order.id)" class="head">+</span>
                 </div>
-                <div class="cart-sub"><span>@{{order.price}} €</span></div>
+                <div class="cart-sub flex">
+					<span>@{{order.price * order.quantity}} €</span>
+					<span @click="cancellaItem(order.id)" class="del">x</span>
+				</div>
             </div>
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
             <div class="cart-checkout flex">
                 <a href="" class="btn">CHECKOUT</a>
-                <p @click="svuota()" href="" class="btn">X</p>
+                <p style="margin-bottom: 0" @click="svuota()" class="btn uppercase">svuota</p>
             </div>
         </div>
 

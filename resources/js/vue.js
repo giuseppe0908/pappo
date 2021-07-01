@@ -18,7 +18,8 @@ var app = new Vue({
                 somma += (this.carrello[key].price * this.carrello[key].quantity);
             }
             return somma.toFixed(2)
-        },
+        }
+
     },
     mounted: function () {
         if (localStorage.carrello) {
@@ -65,8 +66,6 @@ var app = new Vue({
                     if (element.id === food.id) {
                         element.quantity++;
                         flag = true;
-
-
                     }
                 });
 
@@ -111,6 +110,15 @@ var app = new Vue({
             this.carrello.forEach((element, index) => {
                 this.carrello.splice(index);
                 localStorage.carrello = JSON.stringify(this.carrello);
+            });
+        },
+
+        cancellaItem: function(id1) {
+            this.carrello.forEach((element, index) => {
+                if (element.id === id1) {
+                    this.carrello.splice(index, 1);
+                    localStorage.carrello = JSON.stringify(this.carrello);    
+                }
             });
         }
     },
