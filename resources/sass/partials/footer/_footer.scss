@@ -79,3 +79,32 @@ footer {
         }
     }
 }
+
+@media all and (max-width: 768px) {
+    .footer-container .footer-up .col25 ul li h2 {
+        font-size: 16px;
+    }
+
+    .footer-container .footer-up .col25 ul li a {
+        font-size: 13px;
+    }
+
+}
+
+@media all and (max-width: 567px) {
+    .footer-container .footer-up {
+        flex-wrap: wrap;
+    }
+
+    .footer-container .footer-up .col25 {
+        width: calc(100% / 2);
+    }
+
+    .footer-container .footer-down {
+        flex-wrap: wrap;
+    }
+
+    .footer-container .footer-down .col33 {
+        width: calc(100% / 2);
+    }
+}

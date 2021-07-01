@@ -16,7 +16,7 @@ section.restaurant-create {
       }
     }
     .row.justify-content-center {
-      .col-md-8 {
+      .col-md-10 {
         form {
           background-color: #ceefe1;
           padding: 25px 80px;
@@ -65,6 +65,7 @@ section.restaurant-create {
           }
         }
       }
+
     }
   }
   .img-restaurants {
@@ -83,4 +84,43 @@ section.restaurant-create {
       width: 350px;
     }
   }
+}
+
+@media all and (max-width: 1024px) {
+  section.restaurant-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.restaurant-create .img-restaurants-two {
+    z-index: 1;
+    top: -37px;
+  }
+
+  section.restaurant-create .container .row.justify-content-center .col-md-10 form {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+  }
+}
+
+@media all and (max-width: 567px) {
+  section.restaurant-create {
+    height: fit-content;
+    padding: 10px 0;
+  }
+
+  section.restaurant-create .container .row.justify-content-center .col-md-10 form {
+    padding: 10px 5px;
+  }
+
+  .container, .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
+    width: 100%;
+  }
+
+  section.restaurant-create .img-restaurants-two {
+  display: none;
+  }
+
 }

@@ -4,7 +4,7 @@
 <section id="show-rest" class="flex">
 	<div class="container-show">
 		<div class="content flex">
-			<div class="w50 l">
+			<div class="w50 lef">
 				<h1>{{$restaurant->name}}</h1>
 				<p>Category:
 				@foreach($restaurant->categories as $category)
@@ -52,7 +52,7 @@
 					@endforeach
 				</div>
 			</div>
-			<div class="w50 r">
+			<div class="w50 rig">
 				<img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
 				<div class="infos">
 					<h4>Info</h4>

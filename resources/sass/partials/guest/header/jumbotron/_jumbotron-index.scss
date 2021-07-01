@@ -56,3 +56,50 @@
         bottom: 99px;
     }
 }
+
+@media all and (max-width: 1024px) {
+    .r {
+        display: none;
+    }
+
+    .l {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    #home .title {
+        width: 70%;
+        font-size: 45px;
+    }
+
+    #home .btn-home {
+        top: 46%;
+    }
+}
+
+@media all and (max-width: 567px) {
+    #home .title {
+        top: 23%;
+        font-size: 40px;
+    }
+
+    #home .btn-home {
+        top: 55%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    #home .title {
+        font-size: 30px;
+        width: 85%;
+    }
+
+    #home .btn-home {
+        top: 51%;
+    }
+}

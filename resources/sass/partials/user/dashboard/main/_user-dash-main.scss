@@ -61,3 +61,40 @@
         }
     }
 }
+
+@media all and (max-width: 768px) {
+    #user-register .container .my_card {
+        width: calc(100% / 3 - 20px);
+        margin: 0 10px;
+    }
+
+    .col-md-8 {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+@media all and (max-width: 567px) {
+    #user-register .container .my_card {
+        width: calc(100% - 20px);
+        margin: 15px 10px;
+    }
+
+    .col-md-8 {
+        max-width: 100%;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+
+    #user-register {
+        height: fit-content;
+    }
+
+    #user-register .container .panel_container h1 {
+        font-size: 30px;
+    }
+
+    #user-register .container .panel_container {
+        padding: 20px;
+    }
+}

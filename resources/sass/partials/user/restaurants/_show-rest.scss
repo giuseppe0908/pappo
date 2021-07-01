@@ -18,7 +18,7 @@
                 height: auto;
                 padding: 50px;
                 background-color: #e0ffff;
-                &.l {
+                &.lef {
                     border-radius: 10px 0 0 10px;
                     h1 {
                         font-weight: 800;
@@ -84,7 +84,7 @@
                         }
                     }
                 }
-                &.r {
+                &.rig {
                     .infos {
                         padding: 30px 0;
                         h4 {
@@ -152,3 +152,56 @@
     border-radius: 20px; /* roundness of the scroll thumb */
   }
   
+  @media all and (max-width: 1024px) {
+    #show-rest .container-show .content .w50.rig img {
+        width: 100%;
+    }
+
+    #show-rest .container-show .content .w50.lef .menu-wrapper .menu-card {
+        width: calc(100% - 20px);
+    }
+  }
+
+@media all and (max-width: 768px) {
+    #show-rest .container-show .content {
+        flex-wrap: wrap;
+    }
+
+    #show-rest .container-show .content .w50 {
+        width: 100%;
+    }
+
+    #show-rest {
+        height: fit-content;
+    }
+
+    #show-rest .container-show .content .w50.lef .menu-wrapper {
+        height: 77%;
+    }
+}
+
+@media all and (max-width: 567px) {
+    #show-rest .container-show .content .w50 {
+        padding: 15px;
+    }
+
+    #show-rest .container-show .content .w50.lef .menu-wrapper {
+        height: 65%;
+    }
+
+    #show-rest .container-show .content .w50.rig .menu-cmd .add-food .add-menu {
+        padding: 7px 7px;
+        font-size: 12px;
+        margin-right: 5px
+    }
+    
+    #show-rest .container-show .content .w50.rig .menu-cmd .back {
+        padding: 7px 7px;
+        font-size: 12px;
+    }
+
+    #show-rest .container-show .content .w50.rig .menu-cmd {
+        bottom: 10px;
+        right: 10px;
+    }
+}

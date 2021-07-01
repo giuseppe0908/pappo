@@ -57,3 +57,52 @@
         }
     }
 }
+
+@media all and (max-width: 1024px) {
+    .restaurants .row-rest {
+        width: 100%;
+        .restaurant-card {
+            width: calc(100% / 3 - 20px);
+        }
+    }
+
+    #restaurants #root .img-up-l {
+        top: -81px;
+        left: -328px;
+    }
+
+    #restaurants #root .img-down-r {
+        bottom: -81px;
+        right: -328px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #restaurants #root .img-down-r {
+        display: none;
+    }
+
+    #restaurants #root .restaurants-container {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 567px) {
+    #restaurants #root .img-up-l {
+        display: none;
+    }
+
+    #restaurants #root .restaurants-container .categories-wrapper .row .category-card {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .restaurants .row-rest .restaurant-card {
+        width: calc(100% - 20px);
+    }
+}
+
+@media all and (max-width: 320px) {
+    #restaurants #root .restaurants-container {
+        width: 100%;
+    }
+}

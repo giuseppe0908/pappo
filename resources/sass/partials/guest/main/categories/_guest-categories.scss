@@ -75,3 +75,9 @@
         }
     }
 }
+
+@media all and (max-width: 1024px) {
+    #restaurants #root .restaurants-container .categories-wrapper .row {
+        width: 100%;
+    }
+}
