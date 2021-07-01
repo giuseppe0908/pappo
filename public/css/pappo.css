@@ -1810,11 +1810,13 @@ a.navbar-brand {
 }
 
 #edit-rest {
-  height: calc(100vh - 100px);
   background-color: #d4e2fc;
   position: relative;
   flex-direction: column;
   justify-content: center;
+}
+#edit-rest .container {
+  padding: 20px 20px;
 }
 #edit-rest .container .card-edit {
   position: relative;
@@ -1824,11 +1826,24 @@ a.navbar-brand {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-#edit-rest .container .card-edit .row .col-md-12.uppercase h3 {
+#edit-rest .container .card-edit .row .col-md-12.uppercase {
+  margin: 20px 20px;
+}
+#edit-rest .container .card-edit .row .col-md-12.uppercase h1 {
   font-weight: 700;
+  font-weight: bold;
 }
 #edit-rest .container .card-edit .row .col-md-8 .form-group #description {
-  height: 140px;
+  height: 110px;
+}
+#edit-rest .container .card-edit .row .col-md-8 .form-group label {
+  font-size: 18px;
+  font-weight: 700;
+  color: teal;
+}
+#edit-rest .container .card-edit .row .col-md-8 .form-group .form-control:focus {
+  border-color: #ef8896;
+  box-shadow: 0 0 0 0.2rem rgba(234, 85, 105, 0.2);
 }
 #edit-rest .container .card-edit .row .col-md-8 .btn-back {
   background-color: #f9a723;
@@ -1843,6 +1858,14 @@ a.navbar-brand {
 }
 #edit-rest .container .card-edit .row .col-md-8 .btn-back:focus {
   box-shadow: none;
+}
+#edit-rest .img-chips {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+#edit-rest .img-chips img {
+  width: 500px;
 }
 
 #category::-webkit-scrollbar {

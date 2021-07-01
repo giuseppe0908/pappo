@@ -6,7 +6,7 @@
 		<div class="card-edit">
 			<div class="row">
 				<div class="col-md-12 text-center uppercase">
-					<h3>Modifica il tuo ristorante</h3>
+					<h1>Modifica il tuo ristorante</h1>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -30,7 +30,7 @@
 								<small class="text-danger">{{ $message }}</small>
 							@enderror
 						</div>
-						
+
 						<div class="form-group">
 							<label for="address">Indirizzo</label>
 							<input class="form-control @error('address') is-invalid @enderror" id="address" type="text" name="address" value="{{ old('address', $restaurant->address) }}">
@@ -48,7 +48,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="photo">Fotografia</label>
+							<label for="photo">IMG</label>
 							<input class="form-control-file @error('photo') is-invalid @enderror" id="photo" type='file' name="photo">
 							@error('photo')
 								<small class="text-danger">{{ $message }}</small>
@@ -77,8 +77,8 @@
 			</div>
 		</div>
 	</div>
-	<div>
-		<img src="../img/restaurant.png" alt="vc">
+	<div class="img-chips">
+		<img src="/img/restaurant.png" alt="vc">
 	</div>
 </section>
 @endsection
