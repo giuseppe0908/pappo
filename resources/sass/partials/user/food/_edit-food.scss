@@ -1,7 +1,10 @@
 section {
  	 &.edit-food {
 		width: 100vw;
+        height: 100vh;
 		background-color: #e0ffff;
+        position: relative;
+        overflow: hidden;
 		h1 {
 			text-align: center;
 			margin-bottom: 20px;
@@ -61,15 +64,15 @@ section {
 					}
 				}
 			}
-			}
 		}
 	}
+}
 		.img-restaurants-edit {
 			position: absolute;
 			left: 70px;
 			top: 200px;
 			img {
-				width: 300px;
+				width: 400px;
 			}
 		}
 		.img-restaurants-edit-two {
@@ -77,8 +80,71 @@ section {
 			right: 110px;
 			top: 280px;
 			img {
-				width: 200px;
+				width: 300px;
 			}
 		}
 	}
+}
+@media all and (max-width: 1609px) {
+    section.edit-food .row.justify-content-center .col-md-8 form {
+        position: relative;
+        z-index: 2;
+    }
+    
+    section.edit-food .img-restaurants-edit-two img {
+         width: 200px;
+    }
+
+    section.edit-food .img-restaurants-edit img {
+         width: 260px;
+    }
+}
+
+@media all and (max-width: 1030px) {
+    section.edit-food .row.justify-content-center .col-md-8 form {
+        position: relative;
+        z-index: 2;
+    }
+
+    section.edit-food .img-restaurants-edit-two img {
+        z-index: 1;
+    }
+}
+
+@media all and (max-width: 567px) {
+    section.edit-food .row.justify-content-center .col-md-8 form {
+        height: 100%;
+        margin-top: 10px;
+        padding: 15px 10px;
+    }
+
+    .button-container {
+        margin-top: 40px;
+    }
+
+    section.edit-food .img-restaurants-edit-two img {
+         display: none;
+    }
+
+    section.edit-food .img-restaurants-edit img {
+         display: none;
+    }
+
+    section.edit-food {
+        overflow: scroll;
+    }
+}
+
+@media all and (max-width: 320px) {
+    section.edit-food .img-restaurants-edit-two img {
+         display: none;
+    }
+
+    section.edit-food .img-restaurants-edit img {
+         display: none;
+    }
+
+    section.edit-food {
+        overflow: scroll;
+    }
 }
