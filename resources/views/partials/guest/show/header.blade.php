@@ -5,7 +5,7 @@
                 <a href="{{ route('index') }}" style="cursor: context-menu">PAPPO</a>
             </div>
         </div>
-        <div class="nav-right">
+        <div class="nav-right flex">
             <div class="hamburger flex">
                 <div class="line1"></div>
                 <div class="line2"></div>

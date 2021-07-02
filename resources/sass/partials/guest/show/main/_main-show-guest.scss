@@ -22,7 +22,7 @@
                     height: auto;
                     padding: 50px;
                     background-color: #fff;
-                    &.l {
+                    &.left {
                         border-radius: 10px 0 0 10px;
                         h1 {
                             font-weight: 800;
@@ -94,7 +94,7 @@
                             }
                         }
                     }
-                    &.r {
+                    &.right {
                         .infos {
                             padding: 30px 0;
                             h4 {
@@ -211,7 +211,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        a {
+        span {
             padding: 5px 7px;
             background-color: #06c167;
             color: #fff;
@@ -233,6 +233,10 @@
     }
 }
 
+#carrello {
+    width: 480px;
+}
+
 #carrello::-webkit-scrollbar {
     width: 8px; /* width of the entire scrollbar */
   }
@@ -247,3 +251,65 @@
     border-radius: 20px; /* roundness of the scroll thumb */
   }
 
+@media all and (max-width: 1024px) {
+    #root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card {
+        width: calc(100% - 20px);
+    }
+}
+
+@media all and (max-width: 768px) {
+    #root #guest-show {
+        height: fit-content;
+    }
+
+    #root #guest-show .container-show .content .w50 {
+        padding: 8px;
+        width: 100%;
+    }
+
+    #root #guest-show .container-show .content {
+        flex-wrap: wrap;
+    }
+
+    #root #guest-show .container-show .content .w50.left .menu-wrapper {
+        height: 74%;
+    }
+
+    .nav-right {
+        align-items: center;
+    }
+
+}
+
+@media all and (max-width: 567px) {
+    #root #guest-show .container-show .content .w50.left .menu-wrapper {
+        height: 63%;
+    }
+
+    #root #guest-show .container-show .content .w50.left .descr {
+        font-size: 15px;
+    }
+
+    #carrello {
+        width: 300px;
+        max-width: 300px;
+        right: 37px;
+        top: 10px;
+    }
+
+    .cart .cart-total {
+        font-size: 18px;
+    }
+
+    .cart .cart-checkout span {
+        font-size: 12px;
+    }
+
+    .cart .cart-checkout p {
+        font-size: 12px;
+    }
+
+    .cart {
+        max-height: 300px;
+    }
+}

@@ -1081,26 +1081,26 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   padding: 50px;
   background-color: #fff;
 }
-#root #guest-show .container-show .content .w50.l {
+#root #guest-show .container-show .content .w50.left {
   border-radius: 10px 0 0 10px;
 }
-#root #guest-show .container-show .content .w50.l h1 {
+#root #guest-show .container-show .content .w50.left h1 {
   font-weight: 800;
   color: teal;
 }
-#root #guest-show .container-show .content .w50.l .descr {
+#root #guest-show .container-show .content .w50.left .descr {
   font-weight: 700;
   font-size: 18px;
 }
-#root #guest-show .container-show .content .w50.l .menu {
+#root #guest-show .container-show .content .w50.left .menu {
   color: teal;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper {
+#root #guest-show .container-show .content .w50.left .menu-wrapper {
   flex-wrap: wrap;
   height: 55%;
   overflow-y: scroll;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card {
   position: relative;
   height: 350px;
   padding: 5px;
@@ -1110,29 +1110,29 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: #fff;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card.disabled {
   background-color: #eeeeee;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card.disabled img {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card.disabled img {
   filter: grayscale(100%);
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .menu-img {
   height: 150px;
   overflow: hidden;
   flex-wrap: wrap;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .menu-img .menu-img-content {
   height: 60%;
   overflow: hidden;
   width: 100%;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-img .menu-img-content img {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .menu-img .menu-img-content img {
   width: 100%;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .menu-title {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .menu-title {
   padding-top: 10px;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .card-cmd {
   margin-bottom: 5px;
   position: absolute;
   bottom: 5px;
@@ -1141,7 +1141,7 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   justify-content: space-between;
   align-items: center;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .carrellino {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .card-cmd .carrellino {
   padding: 5px 7px;
   background-color: teal;
   color: #fff;
@@ -1150,34 +1150,34 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   font-size: 12px;
   transition: background-color 0.4s;
 }
-#root #guest-show .container-show .content .w50.l .menu-wrapper .menu-card .card-cmd .carrellino:hover {
+#root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card .card-cmd .carrellino:hover {
   background-color: #05bbbb;
 }
-#root #guest-show .container-show .content .w50.r {
+#root #guest-show .container-show .content .w50.right {
   border-radius: 0 10px 10px 0;
 }
-#root #guest-show .container-show .content .w50.r .infos {
+#root #guest-show .container-show .content .w50.right .infos {
   padding: 30px 0;
 }
-#root #guest-show .container-show .content .w50.r .infos h4 {
+#root #guest-show .container-show .content .w50.right .infos h4 {
   color: teal;
 }
-#root #guest-show .container-show .content .w50.r .infos p {
+#root #guest-show .container-show .content .w50.right .infos p {
   font-weight: 700;
 }
-#root #guest-show .container-show .content .w50.r img {
+#root #guest-show .container-show .content .w50.right img {
   width: 100%;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd {
+#root #guest-show .container-show .content .w50.right .menu-cmd {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu {
+#root #guest-show .container-show .content .w50.right .menu-cmd .add-food .add-menu {
   margin-right: 15px;
   padding: 15px 15px;
   background-color: #06c167;
@@ -1185,20 +1185,20 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   font-weight: 800;
   transition: 0.4s;
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd .add-food .add-menu:hover {
+#root #guest-show .container-show .content .w50.right .menu-cmd .add-food .add-menu:hover {
   background-color: #02e175;
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd .back {
+#root #guest-show .container-show .content .w50.right .menu-cmd .back {
   padding: 15px 15px;
   background-color: #f9a723;
   font-weight: 800;
   transition: background-color 0.4s;
   border-radius: 3px;
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd .back a {
+#root #guest-show .container-show .content .w50.right .menu-cmd .back a {
   color: #fff;
 }
-#root #guest-show .container-show .content .w50.r .menu-cmd .back:hover {
+#root #guest-show .container-show .content .w50.right .menu-cmd .back:hover {
   background-color: #ffc76d;
 }
 
@@ -1263,13 +1263,13 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   justify-content: space-around;
   align-items: center;
 }
-.cart .cart-checkout a {
+.cart .cart-checkout span {
   padding: 5px 7px;
   background-color: #06c167;
   color: #fff;
   font-weight: 800;
 }
-.cart .cart-checkout a:hover {
+.cart .cart-checkout span:hover {
   background-color: #01d66f;
 }
 .cart .cart-checkout p {
@@ -1281,6 +1281,10 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
 }
 .cart .cart-checkout p:hover {
   background-color: #e96f6f;
+}
+
+#carrello {
+  width: 480px;
 }
 
 #carrello::-webkit-scrollbar {
@@ -1301,6 +1305,67 @@ nav .container-nav .nav-right .nav_btn_dropdown .navcollapse a:hover {
   /* roundness of the scroll thumb */
 }
 
+@media all and (max-width: 1024px) {
+  #root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card {
+    width: calc(100% - 20px);
+  }
+}
+@media all and (max-width: 768px) {
+  #root #guest-show {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  #root #guest-show .container-show .content .w50 {
+    padding: 8px;
+    width: 100%;
+  }
+
+  #root #guest-show .container-show .content {
+    flex-wrap: wrap;
+  }
+
+  #root #guest-show .container-show .content .w50.left .menu-wrapper {
+    height: 74%;
+  }
+
+  .nav-right {
+    align-items: center;
+  }
+}
+@media all and (max-width: 567px) {
+  #root #guest-show .container-show .content .w50.left .menu-wrapper {
+    height: 63%;
+  }
+
+  #root #guest-show .container-show .content .w50.left .descr {
+    font-size: 15px;
+  }
+
+  #carrello {
+    width: 300px;
+    max-width: 300px;
+    right: 37px;
+    top: 10px;
+  }
+
+  .cart .cart-total {
+    font-size: 18px;
+  }
+
+  .cart .cart-checkout span {
+    font-size: 12px;
+  }
+
+  .cart .cart-checkout p {
+    font-size: 12px;
+  }
+
+  .cart {
+    max-height: 300px;
+  }
+}
 #restaurants {
   background-color: #fcf7ed;
   position: relative;

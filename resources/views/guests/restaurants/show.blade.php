@@ -5,7 +5,7 @@
 	<section id="guest-show">
 		<div class="container-show">
 			<div class="content flex">
-				<div class="w50 l">
+				<div class="w50 left">
 					<h1>{{$restaurant->name}}</h1>
 					<p>Category:
 					@foreach($restaurant->categories as $category)
@@ -52,7 +52,7 @@
 					@endforeach
 					</div>
 				</div>
-				<div class="w50 r">
+				<div class="w50 right">
 					<img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
 					<div class="infos">
 						<h4>Info</h4>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="cart flex" id="carrello" style="width: 480px" v-if="carrello != '' ">
+		<div class="cart flex" id="carrello" v-if="carrello != '' ">
             <div class="cart-name head"><span>Piatto</span></div>
             <div class="cart-quant head"><span>Q.ta</span></div>
             <div class="cart-sub head"><span>Prezzo</span></div>
@@ -85,16 +85,14 @@
             </div>
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
             <div class="cart-checkout flex">
-			<div class="add-food">
-						<span class="btn add-menu" onclick="event.preventDefault();
-						document.getElementById('getRestaurant').submit();">Checkout</span>
-						<form id="getRestaurant" action="{{route('getrestaurant', ['id' => $restaurant->id])}}" method="post">
-							@csrf
-							@method('POST')
-							<input type="hidden" name="id" value="{{ $restaurant->id }}">
-						</form>
-					</div>
-                <p @click="svuota()" href="" class="btn">X</p>
+				<span class="btn add-menu uppercase" onclick="event.preventDefault();
+				document.getElementById('getRestaurant').submit();">Checkout</span>
+				<form id="getRestaurant" action="{{route('getrestaurant', ['id' => $restaurant->id])}}" method="post">
+					@csrf
+					@method('POST')
+					<input type="hidden" name="id" value="{{ $restaurant->id }}">
+				</form>
+				<p @click="svuota()" class="btn uppercase">svuota</p>
             </div>
         </div>
 
