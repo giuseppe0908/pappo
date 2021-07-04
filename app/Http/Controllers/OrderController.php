@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Order;
-use App\getRestaurant;
+use App\Food;
 use Illuminate\Http\Request;
 
 use Braintree\Gateway;
-use App\Models\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Orders\OrderRequest;
 
@@ -132,8 +131,10 @@ class OrderController extends Controller
 
             // $product = Product::find($request->product);
 
+            $amount = Food::find($request->amount);
+
             $result = $gateway->transaction()->sale([
-                'amount' => $request->amount,
+                'amount' => $amount->price,
                 'paymentMethodNonce' => $request->token,
                 'options' => [
                     'submitForSettlement' => true

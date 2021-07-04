@@ -242,7 +242,7 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fortunato/Desktop/GENERAL FOLDER/BOOLEAN/Repository/pappo/resources/js/vue.js */"./resources/js/vue.js");
+module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/vue.js */"./resources/js/vue.js");
 
 
 /***/ })

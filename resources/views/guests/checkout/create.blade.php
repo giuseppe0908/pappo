@@ -10,7 +10,7 @@
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<form action="{{route('orders.store')}}" method="post" enctype="multipart/form-data">
+				<form id="payment-form" action="{{route('orders.store')}}" method="post" enctype="multipart/form-data">
 					@csrf
 					@method('POST')
 					<input type="hidden" name="restaurant_id" value="{{ $restaurant['id'] }}">
@@ -62,6 +62,38 @@
 								<small class="text-danger">{{ $message }}</small>
 							@enderror
 						</div>
+
+						<form>
+						<div id="payment-form"></div>
+						<div class="wrapper">
+							<div id="dropin-container"></div>
+						</div>
+						<button id="submit-button" type="submit">Submit Order</button>
+						</form>
+
+						<script>
+					
+
+						$( document ).ready(function() {
+						var button = document.querySelector('#submit-button');
+						braintree.dropin.create({
+						authorization: "{{ Braintree\ClientToken::generate() }}",
+						container: '#dropin-container'
+						}, function (createErr, instance) {
+						button.addEventListener('click', function () {
+							instance.requestPaymentMethod(function (err, payload) {
+							$.get('{{ route('payment.make',['amount' => $restaurant->id]) }}', {payload}, function (response) {
+								if (response.success) {
+								alert('Payment successfull!');
+								} else {
+								alert('Payment failed');
+								}
+							}, 'json');
+							});
+						});
+						});
+						});
+						</script>
 
 					<button class="btn btn-dark" type="submit">Conferma</button>
 					<a class="btn back" href="{{route('index')}}">Annulla</a>

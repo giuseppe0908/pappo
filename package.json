@@ -21,5 +21,9 @@
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0",
         "vue-template-compiler": "^2.6.14"
+    },
+    "dependencies": {
+        "braintree-dropin-vue": "0.0.7",
+        "vue-braintree": "^2.0.3"
     }
 }
