@@ -103,7 +103,14 @@ var app = new Vue({
     quantity: 1,
     carrello: [],
     array: [],
-    soldatino: false
+    customer_name: "",
+    customer_surname: "",
+    customer_address: "",
+    customer_phone_number: "",
+    customer_email: "",
+    total: 0,
+    soldatino: false,
+    scompari: true
   },
   computed: {
     carrelloTotale: function carrelloTotale() {
@@ -132,6 +139,27 @@ var app = new Vue({
 
     axios.get('http://localhost:8000/api/restaurants').then(function (response) {
       _this.restaurants = response.data.data;
+    });
+    var button = document.querySelector('#submit-button');
+    braintree.dropin.create({
+      authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
+      selector: '#dropin-container'
+    }, function (err, instance) {
+      if (err) {
+        // An error in the create call is likely due to
+        // incorrect configuration values or network issues
+        return;
+      }
+
+      button.addEventListener('click', function () {
+        instance.requestPaymentMethod(function (err, payload) {
+          if (err) {
+            // An appropriate error will be shown in the UI
+            return;
+          } // Submit payload.nonce to your server
+
+        });
+      });
     });
   },
   methods: {
@@ -229,6 +257,22 @@ var app = new Vue({
           localStorage.carrello = JSON.stringify(_this7.carrello);
         }
       });
+    },
+    paga: function paga() {
+      var order = JSON.stringify({
+        "customer_name": this.customer_name,
+        "customer_surnname": this.customer_surname,
+        "customer_address": this.customer_address,
+        "customer_phone_number": this.customer_phone_number,
+        "customer_email": this.customer_email,
+        "total": this.total
+      });
+      axios.post('http://localhost:8000/api/orders/make/payment', order).then(function (response) {
+        console.log(respose.data);
+      });
+    },
+    salvataggio: function salvataggio() {
+      this.scompari = false;
     }
   }
 });

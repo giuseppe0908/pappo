@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/restaurants', 'RestaurantController@index');
 Route::get('/restaurants/{categoryIndex}', 'RestaurantController@restaurantByCategory');
 Route::get('/categories', 'CategoryController@index');
-Route::get('products','ProductController@index');
-Route::get('orders/generate','OrderController@generate');
+
+// Route::get('orders/generate','OrderController@generate');
 Route::post('orders/make/payment','OrderController@makePayment');

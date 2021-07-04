@@ -26,10 +26,10 @@ class ValidFood implements Rule
      */
     public function passes($attribute, $value)
     {
-        if(Food::find($value)){
-            return true;
-        }
-        return false;
+        // if(Food::find($value)){
+        //     return true;
+        // }
+        // return false;
     }
 
     /**

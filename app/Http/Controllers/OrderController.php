@@ -22,11 +22,11 @@ class OrderController extends Controller
         //
     }
 
-    public function getRestaurant(Request $request)
-    {
-        $restaurant = $request->all();
-        return view('guests.checkout.create', compact('restaurant'));
-    }
+    // public function getRestaurant(Request $request)
+    // {
+    //     $restaurant = $request->all();
+    //     return view('guests.checkout.create', compact('restaurant'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -116,26 +116,28 @@ class OrderController extends Controller
     }
 
     // Braintree
-        public function generate(Request $request,Gateway $gateway){
-            $token = $gateway->clientToken()->generate();
+        // public function generate(Request $request,Gateway $gateway){
+        //     $token = $gateway->clientToken()->generate();
 
-            $data = [
-                'success' => true,
-                'token' => $token
-            ];
+        //     $data = [
+        //         'success' => true,
+        //         'token' => $token
+        //     ];
 
-            return response()->json($data,200);
-        }
+        //     return response()->json($data,200);
+        // }
 
         public function makePayment(OrderRequest $request,Gateway $gateway){
 
             // $product = Product::find($request->product);
-
-            $amount = Food::find($request->amount);
+            $token = $gateway->clientToken()->generate();
+            $data = $request->all();
+            // $amount = Food::find($request->amount);
 
             $result = $gateway->transaction()->sale([
-                'amount' => $amount->price,
-                'paymentMethodNonce' => $request->token,
+                
+                'amount' => $data['total'],
+                'paymentMethodNonce' => "fake-valid-nonce",
                 'options' => [
                     'submitForSettlement' => true
                 ]
