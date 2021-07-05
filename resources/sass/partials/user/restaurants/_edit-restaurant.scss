@@ -14,11 +14,10 @@
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
             .row {
                 .col-md-12.uppercase {
-                    margin: 20px 20px;
                     h1 {
+                        padding: 20px 20px;
                         font-weight: 700;
                         font-weight: bold;
-
                     }
                 }
             }
@@ -61,12 +60,10 @@
         left: 0px;
         top: 0px;
         img {
-            width: 500px;
+            width: 700px;
         }
     }
-
 }
-
 
 #category::-webkit-scrollbar {
     width: 8px; /* width of the entire scrollbar */
@@ -80,4 +77,35 @@
 #category::-webkit-scrollbar-thumb {
     background: linear-gradient(to right bottom, #a0bff9, #adc8fa, #bad0fb, #c7d9fb, #d4e2fc); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
+  }
+
+  @media all and (max-width: 1024px) {
+      .img-chips {
+          display: none;
+      }
+  }
+
+  @media all and (max-width: 768px) {
+      .col-md-12.uppercase {
+          h1 {
+              font-size: 600;
+              margin: 0 auto;
+          }
+      }
+  }
+
+  @media all and (max-width: 567px) {
+      #edit-rest .container {
+          padding: 5px 10px;
+      }
+  }
+
+  @media all and (max-width: 320px) {
+      #edit-rest .container {
+          padding: 5px 5px;
+      }
+
+      img {
+          width: 150px;
+      }
   }
