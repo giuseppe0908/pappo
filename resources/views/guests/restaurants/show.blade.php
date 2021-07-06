@@ -164,19 +164,20 @@
 
 						<div class="form-group">
 							<label for="total">Totale</label>
-
+							<p id="total" name="total">@{{carrelloTotale}} €</p>
+							<!-- <p v-model="total"> </p> -->
 							<input type="number" id="total" name="total">
 
 						</div>
 
-						<form>
+						
 						<div id="payment-form"></div>
 						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
 						</div> -->
 						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Purchase</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
-						</form>
+						
 
 					
 
@@ -192,7 +193,7 @@
 </div>
 		
 <style>
-	.flex{
+	.checkout{
 		padding-top: 100px;
 	}
 </style>
