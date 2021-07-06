@@ -54,6 +54,7 @@ class OrderController extends Controller
             'customer_email' => 'required|string|email|max:255',
             'total' => 'required|numeric',
             'restaurant_id' => 'exists:restaurants,id',
+            'food_ids.*' => 'exists:foods,id'
           ]);
 
           $data = $request->all();
@@ -65,6 +66,9 @@ class OrderController extends Controller
 
           if (array_key_exists('restaurant_ids', $data)) {
             $order->restaurants()->attach($data['restaurant_ids']);
+          }
+          if (array_key_exists('food_ids', $data)) {
+            $order->foods()->attach($data['food_ids']);
           }
 
           return redirect()->route('index');

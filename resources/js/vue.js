@@ -23,7 +23,9 @@ var app = new Vue({
             let somma = 0;
             for (var key in this.carrello) {
                 somma += (this.carrello[key].price * this.carrello[key].quantity);
+
             }
+            this.total = somma;
             return somma.toFixed(2)
         }
 

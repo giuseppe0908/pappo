@@ -120,6 +120,7 @@ var app = new Vue({
         somma += this.carrello[key].price * this.carrello[key].quantity;
       }
 
+      this.total = somma;
       return somma.toFixed(2);
     }
   },
