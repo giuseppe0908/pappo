@@ -114,6 +114,16 @@ $('.hamburger').click(function () {
     $('.navcollapse').removeClass('show');
   }
 });
+var button = document.querySelector('#submit-button');
+braintree.dropin.create({
+  authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
+  selector: '#dropin-container'
+}, function (err, instance) {
+  button.addEventListener('click', function () {
+    instance.requestPaymentMethod(function (err, payload) {// Submit payload.nonce to your server
+    });
+  });
+});
 
 /***/ }),
 
@@ -124,7 +134,7 @@ $('.hamburger').click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Uolter\Desktop\Progetto\pappo\resources\js\nav-bar.js */"./resources/js/nav-bar.js");
+module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/nav-bar.js */"./resources/js/nav-bar.js");
 
 
 /***/ })

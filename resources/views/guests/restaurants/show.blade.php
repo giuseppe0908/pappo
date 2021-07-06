@@ -180,7 +180,7 @@
 						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
 						</div> -->
-						<button id="submit-button" class="button button--small button--green btn btn-dark">Procedi con l'ordine</button>
+						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Procedi con l'ordine</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
 						
 
