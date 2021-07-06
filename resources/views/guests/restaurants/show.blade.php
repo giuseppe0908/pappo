@@ -2,7 +2,7 @@
 
 @section('content')
 
-<script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
+<!-- <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script> -->
 
 <div id="root">
 	<section id="guest-show" v-if="scompari">
@@ -109,7 +109,6 @@
 
 	<div class="checkout" v-if="!scompari">
 	<section id="add-food " class="flex">
-	<div id="root ok">
 	<div class="container food-card">
 		<div class="row">
 			<div class="col-md-12 text-center uppercase">
@@ -118,9 +117,9 @@
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-8">
-				<form id="payment-form"  enctype="multipart/form-data">
-					
-					
+				<form id="payment-form" action="{{route('orders.store')}}" method="post"  enctype="multipart/form-data">
+					@csrf
+					@method('POST')
 					<input type="hidden" name="restaurant_id" value="{{ $restaurant['id'] }}">
 
 						<div class="form-group">
@@ -165,18 +164,16 @@
 
 						<div class="form-group">
 							<label for="total">Totale</label>
-							<!-- <input  v-model="total"  class="form-control @error('total') is-invalid @enderror" id="total" type="number" step="0.01" name="total" value="{{ old('total') }}"> -->
-							<p v-model="total"> @{{carrelloTotale}} €</p>
-							<!-- @error('total')
-								<small class="text-danger">{{ $message }}</small>
-							@enderror -->
+
+							<input type="number" id="total" name="total">
+
 						</div>
 
 						<form>
 						<div id="payment-form"></div>
-						<div class="wrapper">
+						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
-						</div>
+						</div> -->
 						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Purchase</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
 						</form>
@@ -191,7 +188,7 @@
 	</div>
 	</div>
 </section>
-	</div>
+
 </div>
 		
 <style>

@@ -153,25 +153,24 @@ var app = new Vue({
             });
         },
         paga: function(){
-            const order = JSON.stringify({
+            // const order = JSON.stringify({
              
-                "customer_name": this.customer_name,
-                "customer_surnname": this.customer_surname,
-                "customer_address": this.customer_address,
-                "customer_phone_number": this.customer_phone_number,
-                "customer_email": this.customer_email,
-                "total": this.total,
+            //     "customer_name": this.customer_name,
+            //     "customer_surnname": this.customer_surname,
+            //     "customer_address": this.customer_address,
+            //     "customer_phone_number": this.customer_phone_number,
+            //     "customer_email": this.customer_email,
+            //     "total": this.total,
                 
-             });
+            //  });
   
-            axios.post('http://localhost:8000/api/orders/make/payment', order).then((response) => {
-                console.log(respose.data);
-            });
+            // axios.post('http://localhost:8000/api/orders/make/payment', order).then((response) => {
+            //     console.log(respose.data);
+            // });
+            window.localStorage.clear();
         },
         salvataggio: function(){
             this.scompari = false;
-
-
         }
     },
 });
