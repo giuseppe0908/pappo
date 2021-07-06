@@ -71,7 +71,7 @@ class OrderController extends Controller
             $order->foods()->attach($data['food_ids']);
           }
 
-          return redirect()->route('index');
+          return view('guests.checkout.index');
     }
 
     /**

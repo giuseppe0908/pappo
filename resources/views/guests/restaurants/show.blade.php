@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script> -->
+<script src="https://js.braintreegateway.com/web/dropin/1.30.1/js/dropin.js"></script>
 
 <div id="root">
 	<section id="guest-show" v-if="scompari">
@@ -168,22 +168,19 @@
 							<label for="total">Totale</label>
 							<input v-model="total"  id="total" name="total" class="form-control @error('total') is-invalid @enderror" value="{{ old('total') }}" required autocomplete="total" readonly>
 
-							<!-- <input  v-model="total" type="number" id="total" name="total"> -->
-							<!-- <p id="total" name="total" value="{{ old('customer_name') }}" >@{{carrelloTotale}} €</p> -->
 							@error('total')
 								<small class="text-danger">{{ $message }}</small>
-							@enderror
-							<!-- <p v-model="total"> </p> -->
-							
-
+							@enderror							
 						</div>
+
+						<div id="dropin-container"></div>
 
 						
 						<div id="payment-form"></div>
 						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
 						</div> -->
-						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Purchase</button>
+						<button id="submit-button" class="button button--small button--green btn btn-dark">Procedi con l'ordine</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
 						
 
@@ -205,4 +202,15 @@
 		padding-top: 100px;
 	}
 </style>
+<script> 
+braintree.dropin.create({
+  selector: '#dropin-container'
+}, function (err, instance) {
+  button.addEventListener('click', function () {
+    instance.requestPaymentMethod(function (err, payload) {
+      // Submit payload.nonce to your server
+    });
+  })
+});
+</script>
 @endsection
