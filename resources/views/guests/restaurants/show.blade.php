@@ -1,8 +1,11 @@
 @extends('layouts.guest_show')
 
 @section('content')
+
+<script src="https://js.braintreegateway.com/web/dropin/1.30.1/js/dropin.js"></script>
+
 <div id="root">
-	<section id="guest-show">
+	<section id="guest-show" v-if="scompari">
 		<div class="container-show">
 			<div class="content flex">
 				<div class="w50 left">
@@ -94,8 +97,116 @@
 				</form>
 				<p @click="svuota()" class="btn uppercase">svuota</p>
             </div>
+
+			
         </div>
 
 	</section>
+
+	<div class="checkout" v-if="!scompari">
+	<section id="add-food " class="flex">
+	<div class="container food-card">
+		<div class="row">
+			<div class="col-md-12 text-center uppercase">
+				<h3>Conferma Ordine</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<form id="payment-form" action="{{route('orders.store')}}" method="post"  enctype="multipart/form-data">
+					@csrf
+					@method('POST')
+					<input type="hidden" name="restaurant_id" value="{{ $restaurant['id'] }}">
+
+						<div class="form-group">
+							<label for="customer_name">Nome</label>
+							<input v-model="customer_name" class="form-control @error('customer_name') is-invalid @enderror" id="customer_name" type="text" name="customer_name" value="{{ old('customer_name') }}">
+							@error('customer_name')
+								<small class="text-danger">{{ $message }}</small>
+							@enderror
+						</div>
+
+						<div class="form-group">
+							<label for="customer_surname">Cognome</label>
+							<input  v-model="customer_surname" class="form-control @error('customer_surname') is-invalid @enderror" id="customer_surname" type="text" name="customer_surname" value="{{ old('customer_surname') }}">
+							@error('customer_surname')
+								<small class="text-danger">{{ $message }}</small>
+							@enderror
+						</div>
+
+						<div class="form-group">
+							<label for="customer_address">Indirizzo</label>
+							<input v-model="customer_address" class="form-control @error('customer_address') is-invalid @enderror" id="customer_address" type="text" name="customer_address" value="{{ old('customer_address') }}">
+							@error('customer_address')
+								<small class="text-danger">{{ $message }}</small>
+							@enderror
+						</div>
+
+						<div class="form-group">
+	                    	<label for="customer_phone_number">Numero di Telefono</label>
+	                    	<input v-model="customer_phone_number"  class="form-control @error('customer_phone_number') is-invalid @enderror" id="customer_phone_number" type="text" name="customer_phone_number" value="{{ old('customer_phone_number') }}">
+	                   		@error('customer_phone_number')
+	                   			<small class="text-danger">{{ $message }}</small>
+	                    	@enderror
+	                	</div>
+
+						<div class="form-group row">
+                            <label for="customer_email">E-mail</label>
+                            <input v-model="customer_email" class="form-control @error('customer_email') is-invalid @enderror" id="customer_email" type="email"  name="customer_email" value="{{ old('customer_email') }}" required autocomplete="customer_email">
+                            @error('customer_email')
+								<small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+
+
+						<div class="form-group">
+							<label for="total">Totale</label>
+							<input v-model="total"  id="total" name="total" class="form-control @error('total') is-invalid @enderror" value="{{ old('total') }}" required autocomplete="total" readonly>
+
+							@error('total')
+								<small class="text-danger">{{ $message }}</small>
+							@enderror							
+						</div>
+
+						<div id="dropin-container"></div>
+
+						
+						<div id="payment-form"></div>
+						<!-- <div class="wrapper">
+							<div id="dropin-container"></div>
+						</div> -->
+						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Procedi con l'ordine</button>
+						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
+						
+
+					
+
+					<!-- <button class="btn btn-dark" type="submit">Conferma</button> -->
+					<a class="btn back" href="{{route('index')}}">Annulla</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
 </div>
+		
+<style>
+	.checkout{
+		padding-top: 100px;
+	}
+</style>
+<script> 
+braintree.dropin.create({
+  selector: '#dropin-container'
+}, function (err, instance) {
+  button.addEventListener('click', function () {
+    instance.requestPaymentMethod(function (err, payload) {
+      // Submit payload.nonce to your server
+    });
+  })
+});
+</script>
 @endsection

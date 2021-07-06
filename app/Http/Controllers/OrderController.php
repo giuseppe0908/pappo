@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Order;
-use App\getRestaurant;
+use App\Food;
 use Illuminate\Http\Request;
+
+use Braintree\Gateway;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Orders\OrderRequest;
 
 class OrderController extends Controller
 {
@@ -18,11 +22,11 @@ class OrderController extends Controller
         //
     }
 
-    public function getRestaurant(Request $request)
-    {
-        $restaurant = $request->all();
-        return view('guests.checkout.create', compact('restaurant'));
-    }
+    // public function getRestaurant(Request $request)
+    // {
+    //     $restaurant = $request->all();
+    //     return view('guests.checkout.create', compact('restaurant'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -50,6 +54,7 @@ class OrderController extends Controller
             'customer_email' => 'required|string|email|max:255',
             'total' => 'required|numeric',
             'restaurant_id' => 'exists:restaurants,id',
+            'food_ids.*' => 'exists:foods,id'
           ]);
 
           $data = $request->all();
@@ -62,8 +67,11 @@ class OrderController extends Controller
           if (array_key_exists('restaurant_ids', $data)) {
             $order->restaurants()->attach($data['restaurant_ids']);
           }
+          if (array_key_exists('food_ids', $data)) {
+            $order->foods()->attach($data['food_ids']);
+          }
 
-          return redirect()->route('index');
+          return view('guests.checkout.index');
     }
 
     /**
@@ -110,4 +118,47 @@ class OrderController extends Controller
     {
         //
     }
+
+    // Braintree
+        // public function generate(Request $request,Gateway $gateway){
+        //     $token = $gateway->clientToken()->generate();
+
+        //     $data = [
+        //         'success' => true,
+        //         'token' => $token
+        //     ];
+
+        //     return response()->json($data,200);
+        // }
+
+        public function makePayment(OrderRequest $request,Gateway $gateway){
+
+            // $product = Product::find($request->product);
+            $token = $gateway->clientToken()->generate();
+            $data = $request->all();
+            // $amount = Food::find($request->amount);
+
+            $result = $gateway->transaction()->sale([
+                
+                'amount' => $data['total'],
+                'paymentMethodNonce' => "fake-valid-nonce",
+                'options' => [
+                    'submitForSettlement' => true
+                ]
+            ]);
+
+            if($result->success){
+                $data = [
+                    'success' => true,
+                    'message' => "Transazione eseguita con Successo!"
+                ];
+                return response()->json($data,200);
+            }else{
+                $data = [
+                    'success' => false,
+                    'message' => "Transazione Fallita!!"
+                ];
+                return response()->json($data,401);
+            }
+        }
 }

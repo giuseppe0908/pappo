@@ -81,60 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/nav-bar.js":
-/*!*********************************!*\
-  !*** ./resources/js/nav-bar.js ***!
-  \*********************************/
+/***/ "./resources/js/checkout.js":
+/*!**********************************!*\
+  !*** ./resources/js/checkout.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(window).scroll(function () {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('visible');
-    $('nav').removeClass('transparent');
-  } else {
-    $('nav').removeClass('visible');
-    $('nav').addClass('transparent');
-  }
-});
-$('.hamburger').click(function () {
-  console.log('click');
-  $(".hamburger > div").toggleClass("toggle");
-
-  if ($('.navcollapse').hasClass('hidden')) {
-    $('.navcollapse').removeClass('hidden');
-    $('.navcollapse').addClass('show');
-  } else {
-    $('.navcollapse').addClass('hidden');
-    $('.navcollapse').removeClass('show');
-  }
-});
-var button = document.querySelector('#submit-button');
-braintree.dropin.create({
-  authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
-  selector: '#dropin-container'
-}, function (err, instance) {
-  button.addEventListener('click', function () {
-    instance.requestPaymentMethod(function (err, payload) {// Submit payload.nonce to your server
-    });
-  });
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/checkout.js'");
 
 /***/ }),
 
-/***/ 1:
-/*!***************************************!*\
-  !*** multi ./resources/js/nav-bar.js ***!
-  \***************************************/
+/***/ 3:
+/*!****************************************!*\
+  !*** multi ./resources/js/checkout.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/nav-bar.js */"./resources/js/nav-bar.js");
+module.exports = __webpack_require__(/*! /Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/checkout.js */"./resources/js/checkout.js");
 
 
 /***/ })
