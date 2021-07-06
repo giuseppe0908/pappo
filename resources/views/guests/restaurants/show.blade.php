@@ -162,6 +162,8 @@
                             @enderror
                         </div>
 
+
+
 						<div class="form-group">
 							<label for="total">Totale</label>
 							<input v-model="total"  id="total" name="total" class="form-control @error('total') is-invalid @enderror" value="{{ old('total') }}" required autocomplete="total" readonly>
