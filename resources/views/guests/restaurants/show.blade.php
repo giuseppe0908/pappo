@@ -164,9 +164,12 @@
 
 						<div class="form-group">
 							<label for="total">Totale</label>
-							<p id="total" name="total">@{{carrelloTotale}} €</p>
+							<p id="total" name="total" value="{{ old('customer_name') }}" >@{{carrelloTotale}} €</p>
+							@error('total')
+								<small class="text-danger">{{ $message }}</small>
+							@enderror
 							<!-- <p v-model="total"> </p> -->
-							<input type="number" id="total" name="total">
+							<!-- <input type="number" id="total" name="total"> -->
 
 						</div>
 
