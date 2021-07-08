@@ -8,7 +8,7 @@
 	<section id="guest-show" v-if="scompari">
 		<div class="container-show">
 			<div class="content flex">
-				<div class="w50 left">
+				<div class="w50 l">
 					<h1>{{$restaurant->name}}</h1>
 					<p>Category:
 					@foreach($restaurant->categories as $category)
@@ -55,7 +55,7 @@
 					@endforeach
 					</div>
 				</div>
-				<div class="w50 right">
+				<div class="w50 r">
 					<img src="{{asset($restaurant->photo)}}" alt="{{$restaurant->name}}">
 					<div class="infos">
 						<h4>Info</h4>
@@ -70,12 +70,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="cart flex" id="carrello" v-if="carrello != '' ">
+		<div class="cart flex" id="carrello" style="width: 480px" v-if="carrello != '' ">
             <div class="cart-name head"><span>Piatto</span></div>
             <div class="cart-quant head"><span>Q.ta</span></div>
             <div class="cart-sub head"><span>Prezzo</span></div>
             <div v-for="order in carrello" class="flex riga" style="flex-wrap: wrap; width: 100%; background-color: #fff">
                 <div class="cart-name"><span>@{{order.name}}</span></div>
+
                 <div class="cart-quant">
                     <span @click="meno(order.id)" class="head">-</span>
                     <span style="padding:0 5 px">@{{order.quantity}}</span>
@@ -88,14 +89,11 @@
             </div>
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
             <div class="cart-checkout flex">
-				<span class="btn add-menu uppercase" onclick="event.preventDefault();
-				document.getElementById('getRestaurant').submit();">Checkout</span>
-				<form id="getRestaurant" action="{{route('getrestaurant', ['id' => $restaurant->id])}}" method="post">
-					@csrf
-					@method('POST')
-					<input type="hidden" name="id" value="{{ $restaurant->id }}">
-				</form>
-				<p @click="svuota()" class="btn uppercase">svuota</p>
+			<div class="add-food">
+			
+			<a @click="salvataggio" class="uppercase btn"> Checkout </a>
+					</div>
+                <p @click="svuota()" href="" class="btn uppercase">svuota</p>
             </div>
 
 			
@@ -157,6 +155,15 @@
 								<small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
+					{{--	<div v-for="order in carrello" class="flex riga">
+						<div class="cart-name"><span>@{{order.name}}</span></div>
+						<div class="cart-quant">
+							<span @click="meno(order.id)" class="head">-</span>
+							<span style="padding:0 5 px">@{{order.quantity}}</span>
+							<span @click="aggiungi(order.id)" class="head">+</span>
+						</div>
+						</div>
+						</div>--}}
 
 
 
@@ -176,7 +183,7 @@
 						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
 						</div> -->
-						<button id="submit-button" class="button button--small button--green btn btn-dark" @click="paga()">Procedi con l'ordine</button>
+						<button id="submit-button" class="button button--small button--green btn btn-dark">Procedi con l'ordine</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
 						
 

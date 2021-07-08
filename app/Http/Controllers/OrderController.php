@@ -22,11 +22,11 @@ class OrderController extends Controller
         //
     }
 
-    // public function getRestaurant(Request $request)
-    // {
-    //     $restaurant = $request->all();
-    //     return view('guests.checkout.create', compact('restaurant'));
-    // }
+    public function getRestaurant(Request $request)
+    {
+        $restaurant = $request->all();
+        return view('guests.checkout.create', compact('restaurant'));
+    }
 
     /**
      * Show the form for creating a new resource.

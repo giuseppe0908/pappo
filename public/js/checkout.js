@@ -93,7 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/giuseppeplacida/Documents/git_hub/pappo/resources/js/checkout.js'");
+// Vue.config.devtools = true;
+// var app = new Vue({
+//     el: "#root",
+//     data: {
+//         carrello_2: 0,
+//     },
+//     mounted: function(){
+//         // this.carrello_2 = localStorage.getItem('carrello');
+//         // console.log(this.carrello_2);
+//         console.log( localStorage.getItem('carrello'));
+//     }
+// });
 
 /***/ }),
 

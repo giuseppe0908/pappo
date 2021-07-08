@@ -33,6 +33,8 @@ var app = new Vue({
     mounted: function () {
         if (localStorage.carrello) {
             this.carrello = JSON.parse(localStorage.carrello);
+
+           
         }
         /* chiamata categorie ristoranti */
         axios.get('http://localhost:8000/api/categories').then((response) => {

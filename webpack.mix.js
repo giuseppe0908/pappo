@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/nav-bar.js', 'public/js');
 mix.js('resources/js/vue.js', 'public/js');
 
+
 mix.sass('resources/sass/app.scss', 'public/css')
    .options({
        processCssUrls: false
