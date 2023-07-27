@@ -199,7 +199,7 @@ var app = new Vue({
           this.carrello.push(food);
         }
       }
-
+      console.log(this.carrello);
       localStorage.carrello = JSON.stringify(this.carrello);
     },
     aggiungi: function aggiungi(id1) {

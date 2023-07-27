@@ -31,8 +31,12 @@
 								<p>Ingredienti: {{$food->ingredients}}</p>
 							</div>
 							<div class="card-cmd flex">
+								<div class="w-100">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
+								</div>
+								<div class="w1-00">
 								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: pointer" @click="addCart({{$food}},1)">Aggiungi <i class="fas fa-shopping-cart"></i></p>
+								</div>
 							</div>
 						</div>
 						@else
@@ -48,7 +52,7 @@
 							</div>
 							<div class="card-cmd flex">
 								<p style="margin-bottom: 0">{{$food->price}} €</p>
-								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: no-drop; background-color: lightcoral">Non Disponibile <i class="fas fa-ban"></i></p>							
+								<p class="uppercase carrellino" style="margin-bottom: 0; cursor: no-drop; background-color: lightcoral">Non Disponibile <i class="fas fa-ban"></i></p>
 							</div>
 						</div>
 						@endif
@@ -90,13 +94,13 @@
             <div class="cart-total flex" v-if="carrello != '' " ><span>Totale: @{{carrelloTotale}} €</span></div>
             <div class="cart-checkout flex">
 			<div class="add-food">
-			
+
 			<a @click="salvataggio" class="uppercase btn"> Checkout </a>
 					</div>
                 <p @click="svuota()" href="" class="btn uppercase">svuota</p>
             </div>
 
-			
+
         </div>
 
 	</section>
@@ -106,7 +110,7 @@
 	<div class="container food-card">
 		<div class="row">
 			<div class="col-md-12 text-center uppercase">
-				<h3>Conferma Ordine</h3>
+				<h3 >Conferma Ordine</h3>
 			</div>
 		</div>
 		<div class="row justify-content-center">
@@ -115,6 +119,8 @@
 					@csrf
 					@method('POST')
 					<input type="hidden" name="restaurant_id" value="{{ $restaurant['id'] }}">
+					<input type="hidden" id="food" name="food_ids[]" value="{{ $food->id}}">
+					<!-- <input type="hidden" id="quantity" name="quantity" value="@{{order.quantity}}"> -->
 
 						<div class="form-group">
 							<label for="customer_name">Nome</label>
@@ -173,21 +179,21 @@
 
 							@error('total')
 								<small class="text-danger">{{ $message }}</small>
-							@enderror							
+							@enderror
 						</div>
 
 						<div id="dropin-container"></div>
 
-						
+
 						<div id="payment-form"></div>
 						<!-- <div class="wrapper">
 							<div id="dropin-container"></div>
 						</div> -->
-						<button id="submit-button" class="button button--small button--green btn btn-dark">Procedi con l'ordine</button>
+						<button href="http://localhost:8000/api/orders/make/payment" @click="paga({{ $restaurant['id'] }})" id="submit-button" class="button button--small button--green btn btn-dark">Procedi con l'ordine</button>
 						<!-- <button id="submit-button" type="submit">Submit Order</button> -->
-						
 
-					
+
+
 
 					<!-- <button class="btn btn-dark" type="submit">Conferma</button> -->
 					<a class="btn back" href="{{route('index')}}">Annulla</a>
@@ -199,13 +205,13 @@
 </section>
 
 </div>
-		
+
 <style>
 	.checkout{
 		padding-top: 100px;
 	}
 </style>
-<script> 
+<script>
 braintree.dropin.create({
   selector: '#dropin-container'
 }, function (err, instance) {

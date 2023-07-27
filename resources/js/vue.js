@@ -34,7 +34,7 @@ var app = new Vue({
         if (localStorage.carrello) {
             this.carrello = JSON.parse(localStorage.carrello);
 
-           
+
         }
         /* chiamata categorie ristoranti */
         axios.get('http://localhost:8000/api/categories').then((response) => {
@@ -45,29 +45,9 @@ var app = new Vue({
             this.restaurants = response.data.data;
         });
 
-        // var button = document.querySelector('#submit-button');
-			
-		// 	braintree.dropin.create({
-		// 	authorization: 'sandbox_g42y39zw_348pk9cgf3bgyw2b',
-		// 	selector: '#dropin-container'
-		// 	}, function (err, instance) {
-		// 	if (err) {
-		// 		// An error in the create call is likely due to
-		// 		// incorrect configuration values or network issues
-		// 		return;
-			// }
+        this.carrello = [];
+        console.log("ciao");
 
-			// button.addEventListener('click', function () {
-			// 	instance.requestPaymentMethod(function (err, payload) {
-			// 	if (err) {
-			// 		// An appropriate error will be shown in the UI
-			// 		return;
-			// 	}
-
-			// 	// Submit payload.nonce to your server
-			// 	});
-			// })
-			// });		
     },
     methods: {
         //al click vediamo tutti i ristoranti della categoria selezionata
@@ -107,8 +87,11 @@ var app = new Vue({
                 if (!flag) {
                     this.carrello.push(food);
                 }
+
+                console.log(this.carrello + 'iygv');
             }
             localStorage.carrello = JSON.stringify(this.carrello);
+            console.log(localStorage.carrello);
         },
         aggiungi: function (id1) {
 
@@ -152,25 +135,26 @@ var app = new Vue({
             this.carrello.forEach((element, index) => {
                 if (element.id === id1) {
                     this.carrello.splice(index, 1);
-                    localStorage.carrello = JSON.stringify(this.carrello);    
+                    localStorage.carrello = JSON.stringify(this.carrello);
                 }
             });
         },
-        paga: function(){
-            // const order = JSON.stringify({
-             
-            //     "customer_name": this.customer_name,
-            //     "customer_surnname": this.customer_surname,
-            //     "customer_address": this.customer_address,
-            //     "customer_phone_number": this.customer_phone_number,
-            //     "customer_email": this.customer_email,
-            //     "total": this.total,
-                
-            //  });
-  
-            // axios.post('http://localhost:8000/api/orders/make/payment', order).then((response) => {
-            //     console.log(respose.data);
-            // });
+        paga: function(id){
+            const order = JSON.stringify({
+
+                "customer_name": this.customer_name,
+                "customer_surnname": this.customer_surname,
+                "customer_address": this.customer_address,
+                "customer_phone_number": this.customer_phone_number,
+                "customer_email": this.customer_email,
+                "total": this.total,
+                "restaurant_id": this.id
+
+             });
+
+            axios.post('http://localhost:8000/api/orders/make/payment', order).then((response) => {
+                console.log(respose);
+            });
             window.localStorage.clear();
         },
         salvataggio: function(){

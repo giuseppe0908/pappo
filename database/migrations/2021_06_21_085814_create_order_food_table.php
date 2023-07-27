@@ -28,7 +28,6 @@ class CreateOrderFoodTable extends Migration
                 ->on('foods')
                 ->onDelete('cascade');
 
-            $table->tinyInteger('quantity');
         });
     }
 

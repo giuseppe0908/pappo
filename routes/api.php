@@ -19,4 +19,4 @@ Route::get('/restaurants/{categoryIndex}', 'RestaurantController@restaurantByCat
 Route::get('/categories', 'CategoryController@index');
 
 // Route::get('orders/generate','OrderController@generate');
-Route::post('orders/make/payment','OrderController@makePayment');
+Route::post('orders/make/payment','OrderController@store');

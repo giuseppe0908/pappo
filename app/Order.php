@@ -14,13 +14,14 @@ class Order extends Model
         'customer_email',
         'total',
         'restaurant_id',
+        
     ];
 
     public function foods(){
-        return $this->belongsToMany('App\Food');
+        return $this->belongsToMany(Food::class, 'order_food', 'order_id', 'food_id');
     }
 
     public function restaurants(){
-        return $this->hasMany('App\Restaurant');
+        return $this->belongsTo('App\Restaurant');
     }
 }

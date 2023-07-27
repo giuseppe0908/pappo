@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\Food;
 use Illuminate\Http\Request;
+use App\Restaurant;
+use Illuminate\Support\Facades\Auth;
 
 use Braintree\Gateway;
 use App\Http\Controllers\Controller;
@@ -19,7 +21,15 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        // $restaurants = Restaurant::where('user_id', Auth::id())
+        // ->orderBy('created_at', 'desc')
+        // ->get();
+        // $order = Order::where('restaurant_id', $restaurants->id)->orderBy('created_at', 'desc')->get();
+
+        // $orders = Auth::user()->restaurant->orders;
+        $foods = Food::where('restaurant_id', Restaurant::where('user_id', Auth::id())->first()->id)->get();
+        $orders = Order::where('restaurant_id', Restaurant::where('user_id', Auth::id())->first()->id)->orderBy('created_at', 'desc')->get();
+        return view('admin.order.show', compact('orders'));
     }
 
     public function getRestaurant(Request $request)
@@ -54,22 +64,30 @@ class OrderController extends Controller
             'customer_email' => 'required|string|email|max:255',
             'total' => 'required|numeric',
             'restaurant_id' => 'exists:restaurants,id',
-            'food_ids.*' => 'exists:foods,id'
+            'food_id.*' => 'exists:foods,id'
           ]);
 
           $data = $request->all();
 
           $order = new Order();
           $order->fill($data);
-
+        //   $order->restaurant_id = $data['restaurant_id'];
+        //   $order->food_id = $data['food_id'];
+        //   var_dump($data['food_id']);
           $order->save();
+          
 
-          if (array_key_exists('restaurant_ids', $data)) {
-            $order->restaurants()->attach($data['restaurant_ids']);
+          if (array_key_exists('restaurants_id', $data)) {
+            $order->restaurants()->attach($data['restaurant_id']);
           }
+          dd($data);
           if (array_key_exists('food_ids', $data)) {
-            $order->foods()->attach($data['food_ids']);
+            foreach ($data as $food) {
+                $order->foods()->attach($food['food_ids']);
+            }
           }
+          
+          $summary = Order::with('foods', 'restaurants')->where('id', '=', $order->id)->first();
 
           return view('guests.checkout.index');
     }
@@ -82,7 +100,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        
     }
 
     /**

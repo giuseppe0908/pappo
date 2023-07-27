@@ -34,6 +34,11 @@ class RestaurantController extends Controller
     {
 		$restaurant = Restaurant::where('slug', $slug)->first();
         $foods = Food::where('restaurant_id', $restaurant->id)->orderBy('created_at', 'desc')->get();
+        
+        if(empty($foods)){
+          abort(404);
+        }
+        
         return view('guests.restaurants.show', compact('restaurant', 'foods'));
     }
 

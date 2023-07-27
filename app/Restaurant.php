@@ -30,7 +30,7 @@ class Restaurant extends Model
       }
 
       public function orders(){
-        return $this->belongsTo('App\Order');
+        return $this->hasMany('App\Order');
       }
 
 }

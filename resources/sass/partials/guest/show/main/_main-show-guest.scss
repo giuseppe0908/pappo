@@ -22,7 +22,7 @@
                     height: auto;
                     padding: 50px;
                     background-color: #fff;
-                    &.left {
+                    &.l {
                         border-radius: 10px 0 0 10px;
                         h1 {
                             font-weight: 800;
@@ -37,11 +37,11 @@
                         }
                         .menu-wrapper {
                             flex-wrap: wrap;
-                            height: 55%;
+                            height: 50%;
                             overflow-y: scroll;
                             .menu-card {
                                 position: relative;
-                                height: 350px;
+                                height: 300px;
                                 padding: 5px;
                                 width: calc(100% / 2 - 20px);
                                 margin: 8px 10px;
@@ -251,10 +251,20 @@
     border-radius: 20px; /* roundness of the scroll thumb */
   }
 
+@media all and (max-width: 1160px) {
+    .card-cmd {
+
+        .w-100{
+            width: 100%;
+        }
+    } 
+}    
+
 @media all and (max-width: 1024px) {
     #root #guest-show .container-show .content .w50.left .menu-wrapper .menu-card {
         width: calc(100% - 20px);
     }
+       
 }
 
 @media all and (max-width: 768px) {
@@ -312,4 +322,6 @@
     .cart {
         max-height: 300px;
     }
+
+    
 }

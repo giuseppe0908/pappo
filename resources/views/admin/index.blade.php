@@ -19,7 +19,7 @@
                         I Tuoi Ristoranti
                     </a>
                     <div class="img_cont_cards">
-                        <img <img src="./img/box.png" alt="">
+                        <img src="./img/box.png" alt="">
                     </div>
                     <div class="p_cont">
                         <p>Gestisci i dati del tuo Ristorante o aggiungine uno nuovo.</p>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="my_card">
-                    <a href="{{route('admin.restaurants.index')}}">
+                    <a href="{{route('orders.index')}}">
                         Ordini Ricevuti
                     </a>
                     <div class="img_cont_cards">
