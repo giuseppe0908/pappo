@@ -80,7 +80,7 @@ class OrderController extends Controller
           if (array_key_exists('restaurants_id', $data)) {
             $order->restaurants()->attach($data['restaurant_id']);
           }
-          dd($data);
+          
           if (array_key_exists('food_ids', $data)) {
             foreach ($data as $food) {
                 $order->foods()->attach($food['food_ids']);

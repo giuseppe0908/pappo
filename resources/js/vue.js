@@ -87,11 +87,10 @@ var app = new Vue({
                 if (!flag) {
                     this.carrello.push(food);
                 }
-
-                console.log(this.carrello + 'iygv');
             }
             localStorage.carrello = JSON.stringify(this.carrello);
-            console.log(localStorage.carrello);
+            console.log(this.carrello);
+            
         },
         aggiungi: function (id1) {
 
@@ -148,7 +147,7 @@ var app = new Vue({
                 "customer_phone_number": this.customer_phone_number,
                 "customer_email": this.customer_email,
                 "total": this.total,
-                "restaurant_id": this.id
+                "food_ids.*": this.carrello.food.id
 
              });
 

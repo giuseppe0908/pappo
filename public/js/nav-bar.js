@@ -105,7 +105,6 @@ $(window).scroll(function () {
 $('.hamburger').click(function () {
   console.log('click');
   $(".hamburger > div").toggleClass("toggle");
-
   if ($('.navcollapse').hasClass('hidden')) {
     $('.navcollapse').removeClass('hidden');
     $('.navcollapse').addClass('show');
@@ -120,7 +119,8 @@ braintree.dropin.create({
   selector: '#dropin-container'
 }, function (err, instance) {
   button.addEventListener('click', function () {
-    instance.requestPaymentMethod(function (err, payload) {// Submit payload.nonce to your server
+    instance.requestPaymentMethod(function (err, payload) {
+      // Submit payload.nonce to your server
     });
   });
 });
